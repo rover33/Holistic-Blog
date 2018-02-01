@@ -19,7 +19,6 @@ import { ProductPreviewComponent } from './products/product-preview/product-prev
 import { ProductService } from './services/product.service';
 import { BlogPreviewComponent } from './blogs/blog-preview/blog-preview.component';
 import { BlogService } from './services/blog.service';
-import { AllBlogsComponent } from './blogs/all-blogs/all-blogs.component';
 import { BlogIndexComponent } from './blogs/blog-index/blog-index.component';
 import { BlogAllComponent } from './blogs/blog-all/blog-all.component';
 import { ProductAllComponent } from './products/product-all/product-all.component';
