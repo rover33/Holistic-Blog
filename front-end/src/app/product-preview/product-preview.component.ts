@@ -32,6 +32,8 @@ export class ProductPreviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    
   }
 
 }
