@@ -15,7 +15,8 @@
         <mat-card-content class="blog-author">{{blog.date}}</mat-card-content>
         <mat-card-actions>
             <button mat-button>LIKE</button>
-            <button (click)="getOneBlog(blog._id)" mat-button>More Info</button>
+            <button mat-button>More Info</button>
+            <!-- <a routerLink="/blog/{{blog._id}}"></a> -->
         </mat-card-actions>
     </mat-card>
 

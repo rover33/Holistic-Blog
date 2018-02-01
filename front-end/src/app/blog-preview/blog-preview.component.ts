@@ -39,16 +39,17 @@ export class BlogPreviewComponent implements OnInit {
     console.log('initiliazing blog component...');
     this.blogsService.getAllBlogs()
       .subscribe( response => {
-        console.log(response);
-        console.log("Successfully retreived BLOGS : ", response.json());
+        // console.log(response);
+        // console.log("Successfully retreived BLOGS : ", response.json());
         this.allBlogs = response.json();
       })
   }
 
   // Get More info on single blog
   getOneBlog(blogId){
-    console.log('Getting ONE Blog');
-    console.log('Blog Id: ', blogId);
+    console.log('Getting ONE Blog. Blog Id: ', blogId);
+
+    
   }
 
 }

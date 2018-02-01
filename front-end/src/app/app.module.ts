@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -36,6 +37,7 @@ import { BlogIndexComponent } from './blog-index/blog-index.component';
     MaterialModule,
     FormsModule,
     HttpModule,
+    RouterModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [BlogService],

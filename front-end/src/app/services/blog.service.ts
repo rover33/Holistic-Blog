@@ -14,11 +14,7 @@ export class BlogService {
 		return this.http.get(`${this.baseUrl}/blogs`);
 	}
 
-  getOneBlog(blogId) {
-    console.log(blogId);
-    console.log('hit getOneBlog function');
-		return this.http.get(`${this.baseUrl}/blogs/${blogId}`);	
-	}
+
 
 }
 
