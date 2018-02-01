@@ -1,19 +1,21 @@
 
 <div class= "blog-parent-container">
    
-    <mat-card id="custom-shadow" class="blog-card"  *ngFor="let blog of blogsArray">
+    <mat-card id="custom-shadow" class="blog-card"  *ngFor="let blog of allBlogs">
       
-        <mat-card-title>{{blog.title}}</mat-card-title>
-        <img mat-card-lg-image src="{{blog.image}}">
+        <mat-card-title>{{blog.blogTitle}}</mat-card-title>
+        <!-- <img mat-card-lg-image src="{{blog.image}}"> -->
+        <hr>
         <mat-card-content>
             <p>
-                {{blog.body}}
+                {{blog.blogBody}}
             </p>
         </mat-card-content>
-        <mat-card-content class="blog-author">{{blog.author}}</mat-card-content>
+        <!-- <mat-card-content class="blog-author">{{blog.author}}</mat-card-content> -->
+        <mat-card-content class="blog-author">{{blog.date}}</mat-card-content>
         <mat-card-actions>
             <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
+            <button mat-button>More Info</button>
         </mat-card-actions>
     </mat-card>
 

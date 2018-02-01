@@ -8,7 +8,8 @@ export class BlogService {
   baseUrl = 'http://localhost:3000';
 
   getAllBlogs() {
-		return this.http.get(`${this.baseUrl}/`);
+    console.log('hit getallblog function');
+		return this.http.get(`${this.baseUrl}`);
 	}
 
 
