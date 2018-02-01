@@ -5,22 +5,24 @@
         height: 200px;
         padding: 15px;
         position: relative;
+        margin-bottom: 20px;
 
-        border: 3px solid blue;
+        // border: 3px solid blue;
 
         h1 {
-            font-size: 75px;
+            font-size: 60px;
             font-family: 'Dancing Script';
             width: 400px;
             height: 100px;
             color: #417505;
+            // margin-top: 
 
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
 
             text-align: center;
-            border: 3px solid blue;
+            // border: 3px solid blue;
         }
 
         .login-cart-container {
@@ -29,7 +31,6 @@
             position: absolute;
             right: 0;
             top: 25%;
-            color: #417505;
             // border: 3px solid red;
 
             a {
@@ -38,7 +39,7 @@
                 margin-right: 20px;
 
                 &:visited {
-                    color: #417505;
+                    color: black;
                 }
             }
         }
@@ -62,7 +63,6 @@
                 text-decoration: none;
                 font-size: 30px;
                 color: #417505;
-                margin-right: 100px;
 
                 &:visited {
                     color: #417505;
@@ -73,13 +73,12 @@
     } // End Main Container
 
 
-    .home-banner {
-        height: 30%;
-        width: 100%;
-        border: 5px solid blueviolet;
+    .jumbotron {
+        height: 400px;
         background: url('/assets/images/home-banner.png');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
+        background-size: 100% 100%;
     }
 
    
