@@ -7,12 +7,18 @@ export class BlogService {
 
   baseUrl = 'http://localhost:3000';
 
+  constructor( private http: Http ) { }
+
   getAllBlogs() {
-    console.log('hit getallblog function');
+    // console.log('hit getallblog function');
 		return this.http.get(`${this.baseUrl}/blogs`);
 	}
 
-
-  constructor( private http: Http ) { }
+  getOneBlog(blogId) {
+    console.log(blogId);
+    console.log('hit getOneBlog function');
+		return this.http.get(`${this.baseUrl}/blogs/${blogId}`);	
+	}
 
 }
+
