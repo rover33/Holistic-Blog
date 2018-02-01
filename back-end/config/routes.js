@@ -7,9 +7,13 @@ const controllers = require('../controllers/controllers');
   });
 This is commented out for testing purposes until the front end index is ready
   */
-router.route('/')
-	.get(function(request, response){
+/*router.route('/')
+	.get((request, response) => {
 		controllers.getRoot(response);
+	});*/
+router.route('/blogs')
+	.get((request, response) => {
+		controllers.getBlogs(response);
 	});
 
 module.exports = router;

@@ -1,7 +1,7 @@
 require('../models/index');
 const Blog = require('../models/blog');
 
-function getRoot(response){
+function getBlogs(response){
 	//res.sendFile(path.join(__dirname + '/dist/index.html'));
 	// blog = new Blog();
 	// blog.blogTitle = `random ${Math.random()}`;
@@ -13,4 +13,4 @@ function getRoot(response){
 		response.json(results)});
 };
 
-module.exports.getRoot = getRoot;
+module.exports.getBlogs = getBlogs;
