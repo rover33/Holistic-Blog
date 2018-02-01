@@ -37,12 +37,14 @@ export class ProductPreviewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
     this.productsService.getAllProducts()
       .subscribe ( response => {
         console.log(response);
         console.log("Successfully retrived Products: ", response.json());
         this.allProducts = response.json();
       })
+
   }
 
 }

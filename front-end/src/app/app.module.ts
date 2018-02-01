@@ -17,6 +17,7 @@ import { MaterialModule } from './material.module';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { BlogService } from './services/blog.service';
+import { AllBlogsComponent } from './all-blogs/all-blogs.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { BlogService } from './services/blog.service';
     AppComponent,
     LoginComponent,
     ProductPreviewComponent,
-    BlogPreviewComponent
+    BlogPreviewComponent,
+    AllBlogsComponent
   ],
   imports: [
     BrowserModule,

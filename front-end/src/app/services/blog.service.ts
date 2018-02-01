@@ -9,7 +9,7 @@ export class BlogService {
 
   getAllBlogs() {
     console.log('hit getallblog function');
-		return this.http.get(`${this.baseUrl}`);
+		return this.http.get(`${this.baseUrl}/blogs`);
 	}
 
 
