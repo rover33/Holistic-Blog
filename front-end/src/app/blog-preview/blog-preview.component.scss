@@ -4,6 +4,8 @@
 
     display: flex;
     justify-content: space-between;
+
+    font-family: 'Roboto';
     // border: 2px solid red;
 
     #custom-shadow {
@@ -12,11 +14,17 @@
 
     }
 
-
     .blog-card{
         width: 25%;
         height: 100%;
 
+        mat-card-title {
+            font-family: 'Dancing Script';
+        }
+
+        p {
+            margin: 15px 0;
+        }
         
         // display: flex;
         // flex-direction: row;

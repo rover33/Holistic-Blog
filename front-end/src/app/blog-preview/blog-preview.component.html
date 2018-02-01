@@ -4,7 +4,7 @@
     <mat-card id="custom-shadow" class="blog-card"  *ngFor="let blog of blogsArray">
       
         <mat-card-title>{{blog.title}}</mat-card-title>
-        <img mat-card-lg-image src ="http://planmyhealth.in/Healthyblog/wp-content/uploads/2016/11/pppp.jpg">
+        <img mat-card-lg-image src="{{blog.image}}">
         <mat-card-content>
             <p>
                 {{blog.body}}
