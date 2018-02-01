@@ -1,26 +1,21 @@
 //Comment for testing 
 const express = require('express');
 const app = express();
-const path = require('path')
-require('dotenv').config()
+const routes = require('./config/routes');
+const path = require('path');
 
-
-app.use(express.static(__dirname + '/dist'));
-
-app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
-  });
+require('dotenv').config();
 
 let PORT = process.env.PORT || 3000;
 
+app.use(express.static(__dirname + '/dist'));
 app.use(function(request, response, next){
 	console.log('Hit');
 	next();
-})
+});
 
-app.get('/', function(request, response){
-	response.send('Home Page');
-})
+app.use('/', routes);
+
 app.listen(PORT, function(){
 	console.log('Listening');
 });
