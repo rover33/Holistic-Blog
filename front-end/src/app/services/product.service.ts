@@ -11,10 +11,10 @@ export class ProductService {
     return this.http.get(`${this.baseUrl}`)
   }
 
-  // getOneProduct(productId){
-  //   console.log(productId);
-  //   return this.http.get(`${this.baseUrl}`)
-  // }
+  getOneProduct(productId){
+    console.log(productId);
+    return this.http.get(`${this.baseUrl}`)
+  }
 
 
   constructor( private http: Http ) { }
