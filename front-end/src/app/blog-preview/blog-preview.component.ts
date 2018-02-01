@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-preview.component.scss']
 })
 export class BlogPreviewComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
