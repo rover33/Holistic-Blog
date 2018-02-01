@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-index',
@@ -8,10 +9,19 @@ import { ProductService } from '../../services/product.service'
 })
 export class ProductIndexComponent implements OnInit {
 
+  oneProduct;
+
   constructor(
-    private productsService : ProductService
+    private productsService : ProductService,
+    private route : ActivatedRoute
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.forEach( param => {
+      this.productsService.getOneProduct(param.id)
+      .subscribe(response => {
+        console.log(response.json());
+        this.oneProduct = response.json();
+      })
 
-}
+    }
