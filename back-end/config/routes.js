@@ -3,7 +3,7 @@ const router = express.Router();
 const controllers = require('../controllers/controllers');
 
 /*app.get('/*', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
+    
   });
 This is commented out for testing purposes until the front end index is ready
   */
