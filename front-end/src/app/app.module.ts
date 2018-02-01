@@ -14,12 +14,14 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material.module';
-import { ProductPreviewComponent } from './product-preview/product-preview.component';
+import { ProductPreviewComponent } from './products/product-preview/product-preview.component';
 import { ProductService } from './services/product.service';
-import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+import { BlogPreviewComponent } from './blogs/blog-preview/blog-preview.component';
 import { BlogService } from './services/blog.service';
-import { AllBlogsComponent } from './all-blogs/all-blogs.component';
-import { BlogIndexComponent } from './blog-index/blog-index.component';
+import { AllBlogsComponent } from './blogs/all-blogs/all-blogs.component';
+import { BlogIndexComponent } from './blogs/blog-index/blog-index.component';
+import { BlogAllComponent } from './blogs/blog-all/blog-all.component';
+import { ProductAllComponent } from './products/product-all/product-all.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { BlogIndexComponent } from './blog-index/blog-index.component';
     ProductPreviewComponent,
     BlogPreviewComponent,
     AllBlogsComponent,
-    BlogIndexComponent
+    BlogIndexComponent,
+    BlogAllComponent,
+    ProductAllComponent
   ],
   imports: [
     BrowserModule,
