@@ -1,29 +1,21 @@
 //Comment for testing 
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
 const routes = require('./config/routes');
-mongoose.connect(process.env.MONGODB_URI||
-                 process.env.MONGOLAB_URI||
-                 process.env.MONGOHQ_URL ||
-                 'mongodb://localhost/test');
-const path = require('path')
-require('dotenv').config()
+const path = require('path');
 
-
-
-app.use(express.static(__dirname + '/dist'));
-
-
+require('dotenv').config();
 
 let PORT = process.env.PORT || 3000;
 
+app.use(express.static(__dirname + '/dist'));
 app.use(function(request, response, next){
 	console.log('Hit');
 	next();
-})
+});
 
 app.use('/', routes);
+
 app.listen(PORT, function(){
 	console.log('Listening');
 });
