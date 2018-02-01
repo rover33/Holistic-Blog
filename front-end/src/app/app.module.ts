@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+import { BlogService } from './services/blog.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
     FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
