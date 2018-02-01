@@ -46,8 +46,9 @@ export class BlogPreviewComponent implements OnInit {
   }
 
   // Get More info on single blog
-  getOneBlog(){
+  getOneBlog(blogId){
     console.log('Getting ONE Blog');
+    console.log('Blog Id: ', blogId);
   }
 
 }
