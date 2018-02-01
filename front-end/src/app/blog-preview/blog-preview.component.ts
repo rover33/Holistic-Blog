@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from '../services/blog.service';
 
 @Component({
   selector: 'app-blog-preview',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-preview.component.scss']
 })
 export class BlogPreviewComponent implements OnInit {
+
+  allBlogs = [];
 
   blogsArray = [
     {
@@ -28,9 +31,16 @@ export class BlogPreviewComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private blogsService : BlogService
+  ) { }
 
   ngOnInit() {
+    this.blogsService.getAllBlogs()
+      .subscribe( response => {
+        console.log("Successfully retreived BLOGS : ", response.json());
+        this.allBlogs = response.json();
+      })
   }
 
 }
