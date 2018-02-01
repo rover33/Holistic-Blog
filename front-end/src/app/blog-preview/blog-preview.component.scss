@@ -1,0 +1,19 @@
+.parent-container{
+    width: 30%;
+    height: 30%;
+}
+
+.blog-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 50vh;
+    border: 2px solid black;
+}
+
+.order1{
+    order:1;
+    align-items: flex-start;
+}
