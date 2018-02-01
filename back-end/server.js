@@ -10,7 +10,7 @@ let PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/dist'));
 app.use(function(request, response, next){
-	console.log('Hit');
+	console.log('Hit: ', Date());
 	next();
 });
 
