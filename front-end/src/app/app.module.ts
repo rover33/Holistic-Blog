@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material.module';
 import { ProductPreviewComponent } from './product-preview/product-preview.component';
+import { ProductService } from './services/product.service';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { BlogService } from './services/blog.service';
 import { AllBlogsComponent } from './all-blogs/all-blogs.component';
@@ -36,7 +37,7 @@ import { AllBlogsComponent } from './all-blogs/all-blogs.component';
     HttpModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [BlogService],
+  providers: [BlogService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
