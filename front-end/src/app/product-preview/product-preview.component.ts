@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-preview',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-preview.component.scss']
 })
 export class ProductPreviewComponent implements OnInit {
+
+  allProducts = []
 
   productsArray = [
     {
@@ -29,11 +32,19 @@ export class ProductPreviewComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(
+    private productsService : ProductService
+  ) { }
 
   ngOnInit() {
-
     
+    this.productsService.getAllProducts()
+      .subscribe ( response => {
+        console.log(response);
+        console.log("Successfully retrived Products: ", response.json());
+        this.allProducts = response.json();
+      })
+
   }
 
 }
