@@ -15,5 +15,9 @@ router.route('/blogs')
 	.get((request, response) => {
 		controllers.getBlogs(response);
 	});
+router.route('/products')
+	.get((request, response) => {
+		controllers.getProducts(response);
+	})
 
 module.exports = router;
