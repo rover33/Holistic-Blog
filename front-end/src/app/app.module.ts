@@ -23,7 +23,7 @@ import { BlogIndexComponent } from './blogs/blog-index/blog-index.component';
 import { BlogAllComponent } from './blogs/blog-all/blog-all.component';
 import { ProductAllComponent } from './products/product-all/product-all.component';
 import { ProductIndexComponent } from './products/product-index/product-index.component';
-import { ProductShowComponent } from './products/product-show/product-show.component';
+
 
 
 @NgModule({
@@ -35,8 +35,7 @@ import { ProductShowComponent } from './products/product-show/product-show.compo
     BlogIndexComponent,
     BlogAllComponent,
     ProductAllComponent,
-    ProductIndexComponent,
-    ProductShowComponent
+    ProductIndexComponent
   ],
   imports: [
     BrowserModule,
