@@ -30,7 +30,6 @@ import { ProductAllComponent } from './products/product-all/product-all.componen
     LoginComponent,
     ProductPreviewComponent,
     BlogPreviewComponent,
-    AllBlogsComponent,
     BlogIndexComponent,
     BlogAllComponent,
     ProductAllComponent
