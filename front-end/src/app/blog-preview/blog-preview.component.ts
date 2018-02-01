@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogPreviewComponent implements OnInit {
 
+  blogInfo = <any>{}
+
   constructor() { }
 
   ngOnInit() {
