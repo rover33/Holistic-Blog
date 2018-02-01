@@ -24,17 +24,25 @@
         }
 
         .login-cart-container {
-            width: 10%;
+            width: 15%;
             font-size: 20px;
             position: absolute;
             right: 0;
             top: 25%;
             // border: 3px solid red;
+            button {
+                display: inline-block;
+                margin-right: 30px;
+            }
 
             a {
                 font-family: 'Roboto';
                 text-decoration: none;
-                margin-right: 30px;
+                padding: 5px;
+                
+                &:hover {
+                    color:black;
+                }
 
                 &:visited {
                     color: black;
@@ -73,11 +81,12 @@
 
     .jumbotron {
         height: 400px;
-        width: 100%;
+        width: 100vw;
         background: url('/assets/images/home-banner.png');
         background-size: cover;
+        background-position-y: 45%; 
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        // background-size: 100% 100%;
     }
 
    
@@ -86,16 +95,16 @@
         height: 100%;
         width: 100%;
         text-align: center;
-        padding: 20px;
+        padding: 0;
         font-family: 'Dancing Script';
         color: #417505;
+        
 
         hr {
             width: 30%;
             margin: 0 auto;
         }
 
-        border: 5px solid black;
 
         h1 {
             padding-top: 50px;
@@ -103,16 +112,20 @@
         }
 
         .blog-card-container {
-            display: flex;
+            width: 95vw;
+            margin: 0 auto;
             justify-content: space-between;
-            // border: 3px solid red;
+            // border: 3px solid purple;
+            padding: 15px;
             
         }
 
         .product-card-container {
-            display: flex;
+            width: 95vw;
+            margin: 0 auto;
             justify-content: space-between;
-
+            // border: 3px solid purple;
+            padding: 15px;
            
         }
 
