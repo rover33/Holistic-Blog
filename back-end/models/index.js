@@ -7,8 +7,6 @@ mongoose.connect(process.env.MONGODB_URI||
                  process.env.MONGOHQ_URL ||
                  'mongodb://localhost/holisticBlog', () => console.log('connected to mongodb'));
 
-
-
 let user = os.userInfo().username, sequelize;;
 if(user === 'miladabujarada') {
 	sequelize = new Sequelize('postgres://miladabujarada@localhost:5432/holistic');
@@ -23,7 +21,6 @@ if(user === 'miladabujarada') {
 };
 
 //console.log(sequelize);
-
 
 console.log('connected to postgres');
 
