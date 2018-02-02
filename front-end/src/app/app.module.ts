@@ -33,9 +33,6 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    // ProductPreviewComponent,
-    // ProductAllComponent,
-    // ProductIndexComponent,
     HomeComponent
   ],
   imports: [

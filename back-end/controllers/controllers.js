@@ -9,6 +9,7 @@ let getBlogs = (response) => {
 	blog.blogBody = `lorem Epsom ${Math.random()}`;
 	blog.date = Date();
 	blog.save();*/
+
 	Blog.find({}, null, {sort:{date: -1}}, (err, results) => {
 		response.json(results)});
 };
