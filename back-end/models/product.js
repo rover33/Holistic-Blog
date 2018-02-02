@@ -1,21 +1,21 @@
-const Sequelize = require('sequelize');
-let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://Remy@localhost:5432/holistic_blog');
+const dbConnection = require('./index');
 
-var Product = sequelize.define('product', {
+var Product = dbConnection.sequelize.define('product', {
 	product_id: {
-		type: Sequelize.INTEGER, primaryKey: true 
+		type: dbConnection.Sequelize.INTEGER, 
+		primaryKey: true 
 	},
 	name: {
-		type: Sequelize.STRING
+		type: dbConnection.Sequelize.STRING
 	},
 	description: {
-		type: Sequelize.STRING
+		type: dbConnection.Sequelize.STRING
 	},
 	price: {
-		type: Sequelize.REAL
+		type: dbConnection.Sequelize.REAL
 	},
 	image_url: {
-		type: Sequelize.STRING
+		type: dbConnection.Sequelize.STRING
 	}
 	} , {
 	    timestamps: false

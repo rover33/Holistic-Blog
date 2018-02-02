@@ -1,19 +1,21 @@
-/*const router = require('express').Router(),
-request = require('request'),
-path = require("path");*/
 const Sequelize = require('sequelize');
 const mongoose = require('mongoose');
+
 mongoose.connect(process.env.MONGODB_URI||
                  process.env.MONGOLAB_URI||
                  process.env.MONGOHQ_URL ||
-                 'mongodb://localhost/holisticBlog', function(){
-                 	console.log('connected to mongodb');
-                 });
-let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://Remy@localhost:5432/holistic_blog');
-/*sequelize.query('select * from products;').then(products => console.log(products[0][0].product_id));*/
-require('dotenv').config()
+                 'mongodb://localhost/holisticBlog', () => console.log('connected to mongodb'));
 
-/*const locDb = process.env.localDb*/
+let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://miladabujarada@localhost:5432/holistic');
+console.log('connected to postgres');
 
+module.exports.Sequelize = Sequelize;
+module.exports.sequelize = sequelize;
 
+const Product = require('./product');
+const Blog = require('./blog');
 
+module.exports.models = {
+Blog : Blog,
+Product: Product
+};
