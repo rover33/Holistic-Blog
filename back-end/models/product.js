@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://miladabujarada@localhost:5432/holistic');
+let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://Remy@localhost:5432/holistic_blog');
 
 var Product = sequelize.define('product', {
 	product_id: {

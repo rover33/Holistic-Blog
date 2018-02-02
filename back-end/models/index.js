@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGODB_URI||
                  'mongodb://localhost/holisticBlog', function(){
                  	console.log('connected to mongodb');
                  });
-let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://miladabujarada@localhost:5432/holistic');
+let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://Remy@localhost:5432/holistic_blog');
 /*sequelize.query('select * from products;').then(products => console.log(products[0][0].product_id));*/
 require('dotenv').config()
 
