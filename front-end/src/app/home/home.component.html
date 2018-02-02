@@ -1,6 +1,69 @@
 
+<div class="card-container">
+    <hr>
+    <h1>The Latest Blogs</h1>
+    <hr>
+    <br>
 
-<h2>testing sucks balls</h2>
+    
+    <div class="blog-card-container">
 
-<h1>GIT HUB : (</h1>
+        <div class= "blog-parent-container">
+   
+            <mat-card id="custom-shadow" class="blog-card"  *ngFor="let blog of threeBlogs">
+              
+                <mat-card-title>{{blog.blogTitle}}</mat-card-title>
+                <!-- <img mat-card-lg-image src="{{blog.image}}"> -->
+                <hr>
+                <mat-card-content>
+                    <p>
+                        {{blog.blogBody}}
+                    </p>
+                </mat-card-content>
+                <!-- <mat-card-content class="blog-author">{{blog.author}}</mat-card-content> -->
+                <mat-card-content class="blog-author">{{blog.date}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>More Info</button>
+                    <!-- <a routerLink="/blog/{{blog._id}}"></a> -->
+                </mat-card-actions>
+            </mat-card>
+        
+        </div>
 
+    </div>
+
+    <hr>  
+    <h1>Popular Products</h1>
+    <hr>
+    <br>
+    <br>
+
+    <div class="product-card-container">
+
+        <div class= "blog-parent-container">
+   
+            <mat-card id="custom-shadow" class= "blog-card"  *ngFor="let product of threeProducts">
+         
+                <mat-card-title>{{product.name}}</mat-card-title>
+               
+                <img mat-card-lg-image src ={{product.image_url}}>
+                <mat-card-content>
+                    <p>
+                        {{product.description}}
+                    </p>
+                </mat-card-content>
+                <mat-card-content>{{product.price}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        
+        </div>
+    
+        
+    </div>
+    
+
+</div>

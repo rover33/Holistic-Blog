@@ -2,7 +2,7 @@
 
 <div class="main-content-container fadeIn">
     <!-- 1   -->
-    <h1>Holistic</h1>
+    <h1 routerLink="/">Holistic</h1>
     
     <!-- 2 -->
     <div class="login-cart-container">
@@ -12,8 +12,8 @@
 
     <!-- 3 -->
     <div class="main-links-container">
-        <button mat-button>Blog</button>
-        <button mat-button>Shop</button>
+        <button mat-button routerLink="/blogs">Blog</button>
+        <button mat-button routerLink="/products">Shop</button>
         <button mat-button>About Us</button>
 
         <!-- <a href="#">Blog</a>
@@ -26,6 +26,12 @@
     <div class="jumbo-image"></div>
 </div>
 
+<router-outlet></router-outlet>
+
+
+
+
+<!-- 
 <div class="card-container">
     <hr>
     <h1>The Latest Blogs</h1>
@@ -52,6 +58,6 @@
     </div>
     
 
-</div>
+</div> -->
 
 

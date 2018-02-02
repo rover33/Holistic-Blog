@@ -1,3 +1,5 @@
+import { ProductService } from './../services/product.service';
+import { BlogService } from './../services/blog.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  threeBlogs = [];
+  threeProducts = [];
+
+  constructor(
+    private blogService : BlogService,
+    private productService : ProductService
+  ) { }
 
   ngOnInit() {
-  }
+    console.log('initiliazing blog/products ...');
+    this.blogService.getAllBlogs()
+      .subscribe( response => {
+        // console.log(response);
+        // console.log("Successfully retreived BLOGS : ", response.json());
+        this.threeBlogs = response.json().splice(0, 3);
+      });
 
+      this.productService.getAllProducts()
+      .subscribe( response => {
+        console.log(response);
+        // console.log("Successfully retreived BLOGS : ", response.json());
+        this.threeProducts = response.json().splice(0, 3);
+      })
+  }
 }

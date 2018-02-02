@@ -1,29 +1,31 @@
+
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+
 import { AppComponent } from './app.component';
 
+import { MaterialModule } from './material.module';
 import { environment } from '../environments/environment';
+
+import { BlogService } from './services/blog.service';
+import { ProductService } from './services/product.service';
+
+import { AppRoutingModule } from './app-routing.module';
+import { BlogsModule } from './blogs/blogs.module';
+import { ProductsModule } from './products/products.module';
+
 
 import { LoginComponent } from './login/login.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MaterialModule } from './material.module';
-import { ProductPreviewComponent } from './products/product-preview/product-preview.component';
-import { ProductService } from './services/product.service';
-import { BlogPreviewComponent } from './blogs/blog-preview/blog-preview.component';
-import { BlogService } from './services/blog.service';
-import { BlogIndexComponent } from './blogs/blog-index/blog-index.component';
-import { BlogAllComponent } from './blogs/blog-all/blog-all.component';
-import { ProductAllComponent } from './products/product-all/product-all.component';
-import { ProductIndexComponent } from './products/product-index/product-index.component';
-import { HomeComponent } from '../app/home/home.component';
+// import { ProductPreviewComponent } from './products/product-preview/product-preview.component';
+// import { ProductAllComponent } from './products/product-all/product-all.component';
+// import { ProductIndexComponent } from './products/product-index/product-index.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -31,21 +33,22 @@ import { HomeComponent } from '../app/home/home.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    ProductPreviewComponent,
-    BlogPreviewComponent,
-    BlogIndexComponent,
-    BlogAllComponent,
-    ProductAllComponent,
-    ProductIndexComponent,
+    // ProductPreviewComponent,
+    // ProductAllComponent,
+    // ProductIndexComponent,
     HomeComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
     HttpModule,
     RouterModule,
+    BlogsModule,
+    ProductsModule,
+    
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [BlogService, ProductService],
