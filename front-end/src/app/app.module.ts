@@ -26,13 +26,14 @@ import { BlogsModule } from './blogs/blogs.module';
 import { ProductsModule } from './products/products.module';
 
 
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './authentications/login/login.component';
 
 
 // import { ProductPreviewComponent } from './products/product-preview/product-preview.component';
 // import { ProductAllComponent } from './products/product-all/product-all.component';
 // import { ProductIndexComponent } from './products/product-index/product-index.component';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './authentications/register/register.component';
 
 
 
@@ -43,7 +44,8 @@ import { HomeComponent } from './home/home.component';
     // ProductPreviewComponent,
     // ProductAllComponent,
     // ProductIndexComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     AppRoutingModule,

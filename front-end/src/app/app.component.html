@@ -8,10 +8,10 @@
     <div class="login-cart-container">
         <ul>
             <li *ngIf="!isLoggedIn" class ="login-items">
-                <a routerLink ="#" class="log-link">Register</a>
+                <a routerLink ="/register" class="log-link">Register</a>
             </li>
             <li *ngIf="!isLoggedIn" class ="login-items">
-                <a routerLink="#" class="log-link">Login</a>
+                <a routerLink="/login" class="log-link">Login</a>
             </li>
             <li *ngIf="!isLoggedIn" class ="login-items">
                 <a routerLink="#" class="log-link">{{loggedInUser}}</a>
