@@ -14,7 +14,10 @@ export class BlogService {
 		return this.http.get(`${this.baseUrl}/api/blogs`);
 	}
 
-
+  getSingleBlog(blogId){
+    console.log('hit the getSingleBlog service route');
+    return this.http.get(`${this.baseUrl}/api/blog/${blogId}`);
+  }
 
 }
 

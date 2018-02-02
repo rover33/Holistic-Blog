@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ProductIndexComponent } from './product-index/product-index.component';
-import { ProductPreviewComponent } from './product-preview/product-preview.component';
+// import { ProductPreviewComponent } from './product-preview/product-preview.component';
 import { ProductAllComponent } from './product-all/product-all.component';
 
 

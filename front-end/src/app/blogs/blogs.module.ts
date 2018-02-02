@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogAllComponent } from './blog-all/blog-all.component';
-import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+// import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { BlogIndexComponent } from './blog-index/blog-index.component';
 import { RouterModule } from '@angular/router';
 import { BlogRoutingModule } from './blog-routing.module';
@@ -17,13 +17,13 @@ import { MaterialModule } from '../material.module';
   ],
   declarations: [
     BlogAllComponent,
-    BlogIndexComponent,
-    BlogPreviewComponent
+    BlogIndexComponent
+    // BlogPreviewComponent
   ],
   exports: [
     BlogAllComponent,
-    BlogIndexComponent,
-    BlogPreviewComponent
+    BlogIndexComponent
+    // BlogPreviewComponent
   ]
 })
 export class BlogsModule { }

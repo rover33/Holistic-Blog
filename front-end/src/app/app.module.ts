@@ -41,11 +41,15 @@ import { RegisterComponent } from './authentications/register/register.component
   declarations: [
     AppComponent,
     LoginComponent,
+<<<<<<< HEAD
     // ProductPreviewComponent,
     // ProductAllComponent,
     // ProductIndexComponent,
     HomeComponent,
     RegisterComponent
+=======
+    HomeComponent
+>>>>>>> master
   ],
   imports: [
     AppRoutingModule,
