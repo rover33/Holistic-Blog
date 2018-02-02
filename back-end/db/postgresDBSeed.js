@@ -1,4 +1,5 @@
 let dbConnection = require('../models/index');
+//console.log(dbConnection);
 let products = [
 	{
 		product_id: 1,
@@ -30,4 +31,3 @@ let products = [
 	}
 ];
 dbConnection.models.Product.bulkCreate(products);
-process.exit(0);
