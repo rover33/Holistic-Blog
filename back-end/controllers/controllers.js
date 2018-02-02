@@ -30,12 +30,12 @@ Product.create({
 	});
   
 	Product.findAll().then(results => response.json(results));
-
+}
 
 let getProduct = (request, response) => {
 	Product.findOne({where: {product_id: request.params.id}}).then((result) => response.json(result));
 }
 module.exports.getBlogs = getBlogs;
 module.exports.getBlog = getBlog;
-// module.exports.getProducts = getProducts;
+module.exports.getProducts = getProducts;
 module.exports.getProduct = getProduct;
