@@ -33,4 +33,14 @@ export class HomeComponent implements OnInit {
         this.threeProducts = response.json().splice(0, 3);
       })
   }
+
+
+  getOneBlog(blogId){
+    console.log(blogId);
+    this.blogService.getSingleBlog(blogId)
+      .subscribe( response => {
+        console.log(response);
+        
+      })
+  }
 }

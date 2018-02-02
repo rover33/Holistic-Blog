@@ -18,10 +18,11 @@
             margin: 0 auto;
             text-align: center;
             cursor: pointer;
-            transition: 1s ease-in;
+            transition: .4s ease-in;
 
             &:hover {
-                background: rgba(0,255,0,0.6);
+                // background: rgba(0,255,0,0.6);
+                transform: scale(1.2);
             }
 
             &:focus {
