@@ -1,6 +1,6 @@
 <div class = 'blog-parent-container'>
-  <mat-card id ='custom-shadow' class= 'blog-card' *ngFor='let product of productsArray'>
-    <mat-card-title>{{product.title}}</mat-card-title>
+  <mat-card id ='custom-shadow' class= 'blog-card' *ngFor='let product of allProducts'>
+    <mat-card-title>{{product.description}}</mat-card-title>
     <img mat-card-lg-image src ={{product.image}}>
     <mat-card-content>
       <p>{{product.body}}</p>

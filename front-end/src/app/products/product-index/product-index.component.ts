@@ -24,4 +24,8 @@ export class ProductIndexComponent implements OnInit {
         this.oneProduct = response.json();
       })
 
-    }
+    })
+  }
+}
+// hey jinnnnnn
+//your git hub sucks balls

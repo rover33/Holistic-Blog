@@ -15,6 +15,7 @@ let getBlogs = (response) => {
 };
 
 let getProducts = (response) => {
+
 /*	Product.create({
 		product_id: Math.ceil((Math.random() * 10000)),
 		name: 'product',
