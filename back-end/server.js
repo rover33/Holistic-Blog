@@ -1,10 +1,6 @@
-//Comment for testing 
 const express = require('express');
 const app = express();
 const routes = require('./config/routes');
-const path = require('path');
-
-require('dotenv').config();
 
 let PORT = process.env.PORT || 3000;
 
@@ -29,7 +25,5 @@ app.use('/', routes);
 app.listen(PORT, function(){
 	console.log('Listening');
 });
-
- //CORS setup to allow other ports from this host
 
 
