@@ -31,15 +31,17 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.authService.login(this.email, this.password)
       .then(res => {
-        this.flashMessage.show('You are now logged in', {
-
-        })
+        onShowSuccess(){
+          this.flashMessage.success('Success')
+        }
+      })
         this.router.navigate(['/'])
       })
       .catch(err => {
-        this.flashMessage.show(err.message, {
-
-      })
+        onShowSuccess(){
+          this.flashMessage.danger('Danger message')
+        }
+        
     })
   }
 
