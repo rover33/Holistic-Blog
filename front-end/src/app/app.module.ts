@@ -10,6 +10,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { FlashMessagesModule } from 'angular2-flash-messages'
 import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AppComponent } from './app.component';
@@ -41,15 +42,11 @@ import { RegisterComponent } from './authentications/register/register.component
   declarations: [
     AppComponent,
     LoginComponent,
-<<<<<<< HEAD
     // ProductPreviewComponent,
     // ProductAllComponent,
     // ProductIndexComponent,
     HomeComponent,
     RegisterComponent
-=======
-    HomeComponent
->>>>>>> master
   ],
   imports: [
     AppRoutingModule,
@@ -64,6 +61,7 @@ import { RegisterComponent } from './authentications/register/register.component
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    FlashMessagesModule.forRoot(),
     
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
