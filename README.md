@@ -37,9 +37,9 @@ Sketch App | Google Doc | Invision
 
 ## Credits / Git Hub Link
 * [ Jin Tak ]( https://github.com/JinTak )
-* [ Milad ] ( https://github.com/milad-abujarada)
-* [ Remy Pearlstone ] ( https://github.com/rover33 )
-* [ Stevano Lie ] ( https://github.com/slie07 )
+* [ Milad ]( https://github.com/milad-abujarada )
+* [ Remy Pearlstone ]( https://github.com/rover33 )
+* [ Stevano Lie ]( https://github.com/slie07 )
 
 
 
