@@ -26,11 +26,10 @@ Sketch App | Google Doc | Invision
 <img width="1040" alt="screen shot 2018-02-01 at 3 18 25 pm" src="https://user-images.githubusercontent.com/26607760/35706801-6a34302c-0764-11e8-89d6-2c0305bc72fa.png">
 
 
+## Research
+Persona
+<img width="661" alt="screen shot 2018-02-02 at 2 13 25 pm" src="https://user-images.githubusercontent.com/26607760/35755157-6e54dd36-0823-11e8-9d1f-ba780d07164d.png">
 
-
-
-## History
-TODO: Write history
 ## Credits
 TODO: Write credits
 ## License
