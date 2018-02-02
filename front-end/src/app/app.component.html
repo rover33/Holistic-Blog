@@ -7,13 +7,14 @@
     <!-- 2 -->
     <div class="login-cart-container">
         <ul>
-            <li *ngIf="!isLoggedIn" class ="login-items">
-                <a routerLink ="/register" class="log-link">Register</a>
-                
-            </li>
-            <li *ngIf="!isLoggedIn" class ="login-items">
-                <a routerLink="/login" class="log-link">Login</a>
-            </li>
+            <!-- <li *ngIf="!isLoggedIn" class ="login-items"> -->
+                <!-- <a routerLink ="/register" class="log-link">Register</a> -->
+                <button mat-button  *ngIf="!isLoggedIn" routerLink ="/register" class="log-link">Register</button>
+            <!-- </li> -->
+            <!-- <li *ngIf="!isLoggedIn" class ="login-items"> -->
+                <!-- <a routerLink="/login" class="log-link">Login</a> -->
+                <button mat-button  *ngIf="!isLoggedIn" routerLink="/login" class="log-link">Login</button>
+            <!-- </li> -->
             <li *ngIf="isLoggedIn" class ="login-items">
                 <a routerLink="#" class="log-link">{{loggedInUser}}</a>
             </li>
@@ -21,8 +22,9 @@
                 <a (click)="onLogoutClick()" class="log-link">Logout</a>
             </li>
         </ul>
+        <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
     </div>
-    <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
+    
 
     <flash-messages></flash-messages>
 
