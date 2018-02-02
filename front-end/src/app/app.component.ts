@@ -31,10 +31,10 @@ export class AppComponent {
     })
   }
 
-    onLogoutCLick(){
+    onLogoutClick(){
       this.authService.logout();
       this.flashMessage.show("You are now logged out", {
-
+        timeout: 4000
       })
       this.router.navigate(['#'])
     }
