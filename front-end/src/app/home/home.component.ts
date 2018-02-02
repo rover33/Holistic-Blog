@@ -22,15 +22,31 @@ export class HomeComponent implements OnInit {
     this.blogService.getAllBlogs()
       .subscribe( response => {
         // console.log(response);
-        // console.log("Successfully retreived BLOGS : ", response.json());
-        this.threeBlogs = response.json().splice(0, 3);
+        console.log("Successfully retreived BLOGS : ", response.json());
+
+        let blogs = response.json().splice(0, 3);
+        for(let i = 0; i < blogs.length; i++){
+          // console.log(blogs[i].blogBody);
+          blogs[i].blogBody = blogs[i].blogBody.slice(0,10).concat('...');
+        }
+        this.threeBlogs = blogs;
       });
 
       this.productService.getAllProducts()
       .subscribe( response => {
-        console.log(response);
+        // console.log(response);
         // console.log("Successfully retreived BLOGS : ", response.json());
         this.threeProducts = response.json().splice(0, 3);
+      })
+  }
+
+
+  getOneBlog(blogId){
+    console.log(blogId);
+    this.blogService.getSingleBlog(blogId)
+      .subscribe( response => {
+        console.log(response);
+        
       })
   }
 }

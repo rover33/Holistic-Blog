@@ -6,9 +6,22 @@
     
     <!-- 2 -->
     <div class="login-cart-container">
-        <button mat-button>Login</button> 
-        <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
+        <ul>
+            <li *ngIf="!isLoggedIn" class ="login-items">
+                <a routerLink ="/register" class="log-link">Register</a>
+            </li>
+            <li *ngIf="!isLoggedIn" class ="login-items">
+                <a routerLink="/login" class="log-link">Login</a>
+            </li>
+            <li *ngIf="!isLoggedIn" class ="login-items">
+                <a routerLink="#" class="log-link">{{loggedInUser}}</a>
+            </li>
+            <li *ngIf="isLoggedIn" class ="login-items">
+                <a href="#" (click)="onLogoutclick()" class="log-link">Logout</a>
+            </li>
+        </ul>
     </div>
+    <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
 
     <!-- 3 -->
     <div class="main-links-container">

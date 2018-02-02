@@ -11,10 +11,13 @@ export class BlogService {
 
   getAllBlogs() {
     // console.log('hit getallblog function');
-		return this.http.get(`${this.baseUrl}/blogs`);
+		return this.http.get(`${this.baseUrl}/api/blogs`);
 	}
 
-
+  getSingleBlog(blogId){
+    console.log('hit the getSingleBlog service route');
+    return this.http.get(`${this.baseUrl}/api/blog/${blogId}`);
+  }
 
 }
 
