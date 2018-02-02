@@ -48,5 +48,51 @@
 }
 
 
+.card-container {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    font-family: 'Dancing Script';
+    color: #417505;
+    
+
+    hr {
+        width: 20%;
+        margin: 0 20px;
+        display: inline-block;
+    }
+
+
+    h1 {
+        padding-top: 50px;
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .blog-card-container {
+        width: 95vw;
+        margin: 0 auto;
+        justify-content: space-between;
+        // border: 3px solid purple;
+        padding: 15px;
+        
+    }
+
+    .product-card-container {
+        width: 95vw;
+        margin: 0 auto;
+        justify-content: space-between;
+        // border: 3px solid purple;
+        padding: 15px;
+       
+    }
+
+}
+
+
+
+
+
 
 

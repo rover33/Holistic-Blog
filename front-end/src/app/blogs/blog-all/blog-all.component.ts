@@ -1,3 +1,4 @@
+import { BlogService } from './../../services/blog.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogAllComponent implements OnInit {
 
-  constructor() { }
+  allBlogs = []
+
+  constructor(
+    private blogService: BlogService
+  ) { }
 
   ngOnInit() {
+    console.log('initiliazing blog component...');
+    this.blogService.getAllBlogs()
+      .subscribe( response => {
+        // console.log(response);
+        console.log("Successfully retreived BLOGS : ", response.json());
+        this.allBlogs = response.json();
+      })
   }
 
 }

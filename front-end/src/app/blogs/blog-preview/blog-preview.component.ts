@@ -8,7 +8,7 @@ import { BlogService } from '../../services/blog.service';
 })
 export class BlogPreviewComponent implements OnInit {
 
-  allBlogs = [];
+  threeBlogs = [];
 
   // blogsArray = [
   //   {
@@ -41,15 +41,12 @@ export class BlogPreviewComponent implements OnInit {
       .subscribe( response => {
         // console.log(response);
         // console.log("Successfully retreived BLOGS : ", response.json());
-        this.allBlogs = response.json();
+        let threeBlogs = response.json().splice(0, 3);
+
+        this.threeBlogs = threeBlogs;
       })
   }
 
-  // Get More info on single blog
-  getOneBlog(blogId){
-    console.log('Getting ONE Blog. Blog Id: ', blogId);
-
-    
-  }
+  
 
 }
