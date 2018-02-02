@@ -14,13 +14,14 @@ let getBlogs = (response) => {
 };
 
 let getProducts = (response) => {
-/*	Product.create({
-		product_id: Math.ceil((Math.random() * 10000)),
-		name: 'product',
-		description: 'description of a product of products',
-		price: 25.99,
-		image_url: 'www.image.com'
-	});*/
+// Product.create({
+// 		product_id: Math.ceil((Math.random() * 10000)),
+// 		name: 'product',
+// 		description: 'description of a product of products',
+// 		price: 25.99,
+// 		image_url: 'www.image.com'
+// 	})
+	
 	Product.findAll().then(results => {
 		response.json(results);
 	});
