@@ -13,19 +13,16 @@
             <mat-card id="custom-shadow" class="blog-card"  *ngFor="let blog of threeBlogs">
               
                 <mat-card-title>{{blog.blogTitle}}</mat-card-title>
-                <!-- <img mat-card-lg-image src="{{blog.image}}"> -->
                 <hr>
                 <mat-card-content>
                     <p>
                         {{blog.blogBody}}
                     </p>
                 </mat-card-content>
-                <!-- <mat-card-content class="blog-author">{{blog.author}}</mat-card-content> -->
                 <mat-card-content class="blog-author">{{blog.date}}</mat-card-content>
                 <mat-card-actions>
                     <button mat-button>LIKE</button>
                     <button mat-button [routerLink]="['/blog', blog._id]">Read More</button>
-                    <!-- <a routerLink="/blog/{{blog._id}}"></a> -->
                 </mat-card-actions>
             </mat-card>
         
