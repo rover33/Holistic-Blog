@@ -6,7 +6,11 @@ mongoose.connect(process.env.MONGODB_URI||
                  process.env.MONGOHQ_URL ||
                  'mongodb://localhost/holisticBlog', () => console.log('connected to mongodb'));
 
+<<<<<<< HEAD
+let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://Remy@localhost:5432/holistic');
+=======
 let sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://jintak@localhost:5432/holistic');
+>>>>>>> master
 console.log('connected to postgres');
 
 module.exports.Sequelize = Sequelize;
