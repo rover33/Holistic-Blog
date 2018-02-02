@@ -7,18 +7,23 @@ mongoose.connect(process.env.MONGODB_URI||
                  process.env.MONGOHQ_URL ||
                  'mongodb://localhost/holisticBlog', () => console.log('connected to mongodb'));
 
+
+
 let user = os.userInfo().username, sequelize;;
 if(user === 'miladabujarada') {
 	sequelize = new Sequelize('postgres://miladabujarada@localhost:5432/holistic');
 } else if (user === 'jintak') {
 	sequelize = new Sequelize('postgres://jintak@localhost:5432/holistic');
 } else if (user === 'stevanolie') {
-	sequelize = new Sequelize('postgres://jintak@localhost:5432/holistic');
-} else {
+	sequelize = new Sequelize('postgres://stevanolie@localhost:5432/holistic');
+ } else if (user === 'Remy') {
+   sequelize = new Sequelize('postgres://Remy@localhost:5432/holistic');
+ } else {
 	sequelize = new Sequelize(process.env.DATABASE_URL);
 };
 
 //console.log(sequelize);
+
 
 console.log('connected to postgres');
 

@@ -18,7 +18,6 @@ let getBlog = (request, response) => {
 	Blog.findOne({_id: request.params.id}).then((result) => response.json(result));
 };
 
-<<<<<<< HEAD
 // Product.create({
 // 		product_id: Math.ceil((Math.random() * 10000)),
 // 		name: 'product',
@@ -26,16 +25,6 @@ let getBlog = (request, response) => {
 // 		price: 18.29,
 // 		image_url: 'www.image.com'
 // 	});
-=======
-let getProducts = (response) => {
-/*	Product.create({
-		product_id: Math.ceil((Math.random() * 10000)),
-		name: 'product',
-		description: 'description of a product of products',
-		price: 18.29,
-		image_url: 'www.image.com'
-	});*/
->>>>>>> master
 	Product.findAll().then(results => response.json(results));
 };
 
