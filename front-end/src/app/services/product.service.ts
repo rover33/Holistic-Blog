@@ -8,7 +8,7 @@ export class ProductService {
 
   getAllProducts(){
     console.log("getting all products");
-    return this.http.get(`${this.baseUrl}/products`)
+    return this.http.get(`${this.baseUrl}/api/products`)
   }
 
   getOneProduct(productId){

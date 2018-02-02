@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BlogAllComponent } from './blog-all/blog-all.component';
-import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+// import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { BlogIndexComponent } from './blog-index/blog-index.component';
 
 
