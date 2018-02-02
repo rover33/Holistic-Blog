@@ -35,8 +35,15 @@ Sketch App | Google Doc | Invision
 * The potential user will be a busy Mother that need to have a quick reference to healthy living.
 * Easy, quick to use and navigate website.
 
-## Credits
-TODO: Write credits
+## Credits / Git Hub Link
+* [ Jin Tak ]( https://github.com/JinTak )
+* [ Milad ] ( https://github.com/milad-abujarada)
+* [ Remy Pearlstone ] ( https://github.com/rover33 )
+* [ Stevano Lie ] ( https://github.com/slie07 )
+
+
+
+
 ## License
 TODO: Write license
 
