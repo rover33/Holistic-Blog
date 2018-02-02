@@ -9,19 +9,22 @@
         <ul>
             <li *ngIf="!isLoggedIn" class ="login-items">
                 <a routerLink ="/register" class="log-link">Register</a>
+                
             </li>
             <li *ngIf="!isLoggedIn" class ="login-items">
                 <a routerLink="/login" class="log-link">Login</a>
             </li>
-            <li *ngIf="!isLoggedIn" class ="login-items">
+            <li *ngIf="isLoggedIn" class ="login-items">
                 <a routerLink="#" class="log-link">{{loggedInUser}}</a>
             </li>
             <li *ngIf="isLoggedIn" class ="login-items">
-                <a href="#" (click)="onLogoutclick()" class="log-link">Logout</a>
+                <a (click)="onLogoutClick()" class="log-link">Logout</a>
             </li>
         </ul>
     </div>
     <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
+
+    <flash-messages></flash-messages>
 
     <!-- 3 -->
     <div class="main-links-container">
