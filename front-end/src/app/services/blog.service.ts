@@ -11,7 +11,7 @@ export class BlogService {
 
   getAllBlogs() {
     // console.log('hit getallblog function');
-		return this.http.get(`${this.baseUrl}/blogs`);
+		return this.http.get(`${this.baseUrl}/api/blogs`);
 	}
 
 
