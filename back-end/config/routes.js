@@ -20,11 +20,15 @@ router.route('/api/products')
 router.route('/api/product/:id')
 	.get((request, response) => {
 		controllers.getProduct(request, response);
+	})
+	.put((request, response) => {
+		controllers.putProduct(request, response);
 	});
 
 router.route('/api/product/addNew')
 	.post((request, response) => {
 		controllers.addProduct(request, response);
 	});
+
 
 module.exports = router;
