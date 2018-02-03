@@ -38,7 +38,6 @@ let addProduct = (request, response) => {
 };
 
 let putProduct = (request, response) => {
-	console.log(request.params);
 	Product.update({
 		name: request.body.name,
 		description: request.body.description,
@@ -52,9 +51,15 @@ let putProduct = (request, response) => {
 	}).then((updatedProduct) => response.json(updatedProduct));
 };
 
+let deleteProduct = (request, response) => {
+	Product.destroy({where: {product_id: request.params.id}})
+	.then((numberOfDeletedProducts) => response.json(numberOfDeletedProducts));
+};
+
 module.exports.getBlogs = getBlogs;
 module.exports.getBlog = getBlog;
 module.exports.getProducts = getProducts;
 module.exports.getProduct = getProduct;
 module.exports.addProduct = addProduct;
 module.exports.putProduct = putProduct;
+module.exports.deleteProduct = deleteProduct;
