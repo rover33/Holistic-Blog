@@ -4,14 +4,15 @@ import { Observable } from 'rxjs/observable'
 import * as firebase from 'firebase/app'
 import { auth } from 'firebase/app';
 import { tokenKey } from '@angular/core/src/view/util';
+import { AsyncLocalStorage } from 'angular-async-local-storage/src/service/lib.service';
 
 @Injectable()
 export class AuthService {
 
-private idToken: any;
 
   constructor(
-    private afAuth: AngularFireAuth
+    private afAuth: AngularFireAuth,
+    protected localStorage: AsyncLocalStorage
 
   ) { }
 
@@ -40,10 +41,5 @@ private idToken: any;
     this.afAuth.auth.signOut();
   }
 
-  getCurrentUserToken(){
-    firebase.auth().currentUser.getToken()
-    console.log("heyyyyy")
-  }
-  
 
 }

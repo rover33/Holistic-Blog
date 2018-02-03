@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       }
     });
+      
   }
 
   onSubmit(){
@@ -45,20 +46,6 @@ export class LoginComponent implements OnInit {
     })
   }
 
-
-  // getToken(){
-  //   return Observable.fromPromise(firebase.auth().currentUser.getIdToken(true)
-  // .then((idToken) => {
-  //   console.log("whats up")
-  //   return idToken;
-    
-  // }))
-  // }
   
-
-  // getUserId(){
-  //   this.authService.getUid();
-  //   console.log("fuck shit cock balls")
-  // }
 
 }

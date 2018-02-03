@@ -12,6 +12,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages'
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { AsyncLocalStorageModule } from 'angular-async-local-storage';
 
 import { AppComponent } from './app.component';
 
@@ -62,6 +63,7 @@ import { RegisterComponent } from './authentications/register/register.component
     AngularFirestoreModule,
     AngularFireAuthModule,
     FlashMessagesModule.forRoot(),
+    AsyncLocalStorageModule,
     
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
