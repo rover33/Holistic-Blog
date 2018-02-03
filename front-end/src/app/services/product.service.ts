@@ -28,6 +28,10 @@ export class ProductService {
     return this.http.post(`${this.baseUrl}/api/product/new`, newProduct);
     
   }
+
+  deleteProduct(deleteProduct){
+    console.log("Deleting product...");
+  }
   
 
 
