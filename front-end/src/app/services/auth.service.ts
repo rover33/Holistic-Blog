@@ -3,6 +3,7 @@ import { AngularFireAuth } from 'angularfire2/auth'
 import { Observable } from 'rxjs/observable'
 import * as firebase from 'firebase/app'
 import { auth } from 'firebase/app';
+import { tokenKey } from '@angular/core/src/view/util';
 
 @Injectable()
 export class AuthService {
@@ -14,13 +15,6 @@ private idToken: any;
 
   ) { }
 
-  // setUid(uid: string): void {
-  //   this.uid = uid;
-  // }
-
-  // getUid(): string {
-  //   return this.uid;
-  // }
 
   login(email: string, password: string) {
     return new Promise((resolve, reject) =>{
@@ -46,6 +40,10 @@ private idToken: any;
     this.afAuth.auth.signOut();
   }
 
+  getCurrentUserToken(){
+    firebase.auth().currentUser.getToken()
+    console.log("heyyyyy")
+  }
   
 
 }

@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.authService.login(this.email, this.password)
       .then(res => {
-        this.flashMessage.show(`Welcome, ${this.email}`, {
+        this.flashMessage.show('You are now logged in', {
           timeout: 4000
         })
         this.router.navigate(['/'])
@@ -46,14 +46,14 @@ export class LoginComponent implements OnInit {
   }
 
 
-  getToken(){
-    return Observable.fromPromise(firebase.auth().currentUser.getIdToken(true)
-  .then((idToken) => {
-    console.log("whats up")
-    return idToken;
+  // getToken(){
+  //   return Observable.fromPromise(firebase.auth().currentUser.getIdToken(true)
+  // .then((idToken) => {
+  //   console.log("whats up")
+  //   return idToken;
     
-  }))
-  }
+  // }))
+  // }
   
 
   // getUserId(){
