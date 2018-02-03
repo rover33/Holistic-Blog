@@ -18,24 +18,29 @@ let getBlog = (request, response) => {
 	Blog.findOne({_id: request.params.id}).then((result) => response.json(result));
 };
 
-let getProducts = (response) => {
+let getProducts = (response) => {  
 
-// Product.create({
-// 		product_id: Math.ceil((Math.random() * 10000)),
-// 		name: 'product',
-// 		description: 'description of a product of products',
-// 		price: 18.29,
-// 		image_url: 'www.image.com'
-
-// 	});
-  
 	Product.findAll().then(results => response.json(results));
-}
+};
 
 let getProduct = (request, response) => {
 	Product.findOne({where: {product_id: request.params.id}}).then((result) => response.json(result));
-}
+};
+
+let addProduct = (request, response) => {
+	console.log(request);
+	Product.create({
+		name: request.body.name,
+		description: request.body.description,
+		price: request.body.price,
+		image_url: request.body.image_url,
+		quantity: request.body.quantity
+	}).then((newProduct) => response.json(newProduct.dataValues));
+	
+};
+
 module.exports.getBlogs = getBlogs;
 module.exports.getBlog = getBlog;
 module.exports.getProducts = getProducts;
 module.exports.getProduct = getProduct;
+module.exports.addProduct = addProduct;

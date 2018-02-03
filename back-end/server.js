@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 const routes = require('./config/routes');
+const bodyParser = require('body-parser');
 
 let PORT = process.env.PORT || 3000;
 
 // app.use(express.static(__dirname + '/dist'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(function(request, response, next){
   console.log('Hit: ', Date());
 	next();
