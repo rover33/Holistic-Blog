@@ -36,7 +36,7 @@ export class AppComponent {
       this.flashMessage.show("You are now logged out", {
         timeout: 4000
       })
-      this.router.navigate(['#'])
+      this.router.navigate(['/'])
     }
 
     showBanner(){
@@ -46,6 +46,9 @@ export class AppComponent {
         showBanner = false;
       }
       if(this.router.url == '/register'){
+        showBanner = false;
+      }
+      if(this.router.url == '/product/new'){
         showBanner = false;
       }
 
