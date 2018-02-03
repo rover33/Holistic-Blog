@@ -35,7 +35,7 @@
         
 
         .login-cart-container {
-            width: 15%;
+            width: 25%;
             font-size: 20px;
             position: absolute;
             right: 0;
@@ -43,7 +43,7 @@
             // border: 3px solid red;
             button {
                 display: inline-block;
-                margin-right: 30px;
+                margin-right: 15px;
             }
 
             a {
@@ -118,6 +118,26 @@
 
 
 
-// .mat-button, .mat-raised-button{
-//     background-color:red;
-// } 
+
+.user-login-register-container {
+    width: 100%;
+    height: 200px;
+
+    router-outlet {
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+}
+
+
+flash-messages {
+    font-size: 1.3rem;
+    color: green;
+    font-family: 'Roboto';
+}
+
+
+
+    
+

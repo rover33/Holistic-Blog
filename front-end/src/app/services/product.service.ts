@@ -6,6 +6,11 @@ export class ProductService {
 
   baseUrl = "http://localhost:3000";
 
+
+  constructor( private http: Http ) { }
+
+
+  // USER FUNCTIONS
   getAllProducts(){
     console.log("getting all products");
     return this.http.get(`${this.baseUrl}/api/products`)
@@ -17,6 +22,13 @@ export class ProductService {
   }
 
 
-  constructor( private http: Http ) { }
+  // ADMIN FUNCTIONS
+  saveNewProduct(newProduct){
+    console.log('Saving new product:', newProduct);
+    return this.http.post(`${this.baseUrl}/api/product/new`, newProduct);
+    
+  }
+  
+
 
 }

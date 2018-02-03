@@ -3,6 +3,8 @@ import { AuthService } from '../../services/auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 import { FlashMessagesModule } from 'angular2-flash-messages/module/module';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase/app'
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private flashMessage: FlashMessagesService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.authService.getAuth().subscribe(auth =>{
@@ -31,7 +33,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.authService.login(this.email, this.password)
       .then(res => {
-        this.flashMessage.show('You are now logged in', {
+        this.flashMessage.show(`Welcome, ${this.email}`, {
           timeout: 4000
         })
         this.router.navigate(['/'])
@@ -42,5 +44,21 @@ export class LoginComponent implements OnInit {
       })
     })
   }
+
+
+  getToken(){
+    return Observable.fromPromise(firebase.auth().currentUser.getIdToken(true)
+  .then((idToken) => {
+    console.log("whats up")
+    return idToken;
+    
+  }))
+  }
+  
+
+  // getUserId(){
+  //   this.authService.getUid();
+  //   console.log("fuck shit cock balls")
+  // }
 
 }
