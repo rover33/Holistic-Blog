@@ -1,8 +1,9 @@
 const dbConnection = require('./index');
 
 var Product = dbConnection.sequelize.define('product', {
-	product_id: {
-		type: dbConnection.Sequelize.INTEGER, 
+	product_id: {      
+		type: dbConnection.Sequelize.UUID, 
+		defaultValue: dbConnection.Sequelize.UUIDV4,
 		primaryKey: true 
 	},
 	name: {
@@ -16,6 +17,9 @@ var Product = dbConnection.sequelize.define('product', {
 	},
 	image_url: {
 		type: dbConnection.Sequelize.STRING
+	},
+	quantity: {
+		type: dbConnection.Sequelize.INTEGER
 	}
 	} , {
 	    timestamps: false
