@@ -1,7 +1,11 @@
 <h1>Edit Product</h1>
 
-<div>
-    <li *ngFor="let product of products">
+<button routerLink="/product/new" class="addProd">
+    +
+</button>
+
+<div class="all-products">
+    <li class="blah" *ngFor="let product of products">
         <div *ngIf="productToEdit !== product">
             <li>
               {{product.name}} 
@@ -25,18 +29,19 @@
             <button (click)="makeProductEditable(product)" class="editBtn">
                 Edit
             </button>
+           
         </div>
 
         <div *ngIf="productToEdit == product">
       
             <section>
                 <input [(ngModel)]="product.name" type="text" placeholder="Name">
-                <textarea [(ngModel)]="product.description" type="text" placeholder="Description" rows="4" cols="50"></textarea>
+                <input [(ngModel)]="product.description" type="text" placeholder="Description" id="desc">
                 <input [(ngModel)]="product.price" type="text" placeholder="Price">
                 <input [(ngModel)]="product.image_url" type="text" placeholder="Image URL">
                 <input [(ngModel)]="product.quantity" type="text" placeholder="Quantity">
 
-                <button (click)="doneEditing()">
+                <button (click)="doneEditing(productToEdit)">
                 Done Editing
                 </button>
             </section>

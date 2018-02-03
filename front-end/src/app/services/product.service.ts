@@ -34,8 +34,9 @@ export class ProductService {
   }
   
   saveEditedProduct(productId, editedProduct){
+    console.log('THE PROD ID', productId);
     console.log('Saving newly edited product', editedProduct);
-    return this.http.put(`${this.baseUrl}/api/product/edit/${productId}`, editedProduct)
+    return this.http.put(`${this.baseUrl}/api/product/${productId}`, editedProduct)
   }
 
 

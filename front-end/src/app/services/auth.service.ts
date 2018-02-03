@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/observable'
 import * as firebase from 'firebase/app'
 import { auth } from 'firebase/app';
 import { tokenKey } from '@angular/core/src/view/util';
-import { AsyncLocalStorage } from 'angular-async-local-storage/src/service/lib.service';
+import { AsyncLocalStorage } from 'angular-async-local-storage';
 
 @Injectable()
 export class AuthService {

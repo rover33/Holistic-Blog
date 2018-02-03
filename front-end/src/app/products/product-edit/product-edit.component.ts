@@ -1,3 +1,4 @@
+import { Response } from '@angular/http';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -20,10 +21,9 @@ export class ProductEditComponent implements OnInit {
   ngOnInit() {
     this.productService.getAllProducts()
       .subscribe (response => {
-        console.log(response);
-        console.log("retrieved all products")
-          this.products = response.json();
-
+        
+        this.products = response.json();
+        console.log("RETREIVED all products", this.products);
       })
 
   }
@@ -32,7 +32,12 @@ export class ProductEditComponent implements OnInit {
     this.productToEdit = product;
   }
 
-  doneEditing(){
+  doneEditing(productToEdit){
+
+    this.productService.saveEditedProduct(productToEdit.product_id, productToEdit)
+      .subscribe(response => {
+        console.log('Successfully updated product: ', response);
+      })
     this.productToEdit = {};
   }
 }
