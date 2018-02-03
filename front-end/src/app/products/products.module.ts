@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { ProductRoutingModule } from './product-routing.module';
 import { MaterialModule } from '../material.module';
 import { ProductNewComponent } from './product-new/product-new.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProductNewComponent } from './product-new/product-new.component';
   declarations: [
     ProductAllComponent,
     ProductIndexComponent,
-    ProductNewComponent
+    ProductNewComponent,
+    ProductDeleteComponent
     // ProductPreviewComponent
   ],
   exports: [
