@@ -1,0 +1,45 @@
+.register-container {
+    height: 60vh;
+    width: 30vw;
+    margin: 0 auto;
+    transform: translateY(-20%);
+    box-shadow: 0 5px 10px rgba(0,0,0,.6);
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: rgba(0,0,0, 0.1);
+
+    font-family: 'Roboto';
+
+    h1 {
+        width: 40%;
+        margin: 0 auto;
+        font-size: 2rem;
+        font-family: 'Dancing Script';
+        color: #417505;
+        text-align: center;
+    }
+
+    form {
+        height: 75%;
+        margin-top: 1rem;
+        border: 1px solid lime;
+        
+        label {
+            text-align: center;
+        }
+
+        #email {
+            height: 50%;
+            width: 85%;
+            
+            input {
+                outline: 0;
+                border-bottom: 3px solid transparent;
+                margin-top: 20px;
+            }
+            
+            
+        }
+
+    }
+}

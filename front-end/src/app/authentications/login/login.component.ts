@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.authService.login(this.email, this.password)
       .then(res => {
-        this.flashMessage.show('You are now logged in', {
+        this.flashMessage.show(`Welcome, ${this.email}`, {
           timeout: 4000
         })
         this.router.navigate(['/'])
