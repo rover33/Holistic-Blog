@@ -8,6 +8,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { MaterialModule } from '../material.module';
 import { ProductNewComponent } from './product-new/product-new.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProductDeleteComponent } from './product-delete/product-delete.componen
     ProductAllComponent,
     ProductIndexComponent,
     ProductNewComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+    ProductEditComponent
     // ProductPreviewComponent
   ],
   exports: [
