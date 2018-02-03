@@ -23,6 +23,9 @@ router.route('/api/product/:id')
 	})
 	.put((request, response) => {
 		controllers.putProduct(request, response);
+	})
+	.delete((request, response) => {
+		controllers.deleteProduct(request, response);
 	});
 
 router.route('/api/product/addNew')
