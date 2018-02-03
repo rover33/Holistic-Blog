@@ -45,6 +45,8 @@ export class ProductNewComponent implements OnInit {
           this.newProduct.quantity = "";
 
           alert('save Successssss');
+
+          
       })
     }
     

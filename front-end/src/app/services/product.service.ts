@@ -29,12 +29,12 @@ export class ProductService {
     
   }
 
-  deleteProduct(deleteProduct){
-    console.log("Deleting product...");
+  deleteProduct(productId){
+    console.log("DELETING product...", productId);
+    return this.http.delete(`${this.baseUrl}/delete/${productId}`)
   }
   
   saveEditedProduct(productId, editedProduct){
-    console.log('THE PROD ID', productId);
     console.log('Saving newly edited product', editedProduct);
     return this.http.put(`${this.baseUrl}/api/product/${productId}`, editedProduct)
   }

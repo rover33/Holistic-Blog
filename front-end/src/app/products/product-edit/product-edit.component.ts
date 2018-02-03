@@ -14,6 +14,8 @@ export class ProductEditComponent implements OnInit {
 
   productToEdit : object
 
+
+
   constructor(
     private productService : ProductService
   ) { }
@@ -37,7 +39,23 @@ export class ProductEditComponent implements OnInit {
     this.productService.saveEditedProduct(productToEdit.product_id, productToEdit)
       .subscribe(response => {
         console.log('Successfully updated product: ', response);
-      })
+    })
+
     this.productToEdit = {};
   }
+
+  deleteproduct(productId){
+    console.log(productId);
+
+    this.productService.deleteProduct(productId)
+      .subscribe(response => {
+        console.log('Successfully deleted product', response);
+        if(!response){
+          alert('Oops! did not delete');
+        }
+        
+    })
+  }
+
+
 }
