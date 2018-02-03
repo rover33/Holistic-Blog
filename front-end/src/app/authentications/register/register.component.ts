@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(this.email, this.password)
       .then(res => {
         console.log(this.flashMessage.show)
-        this.flashMessage.show('You are now registered and logged in', {
+        this.flashMessage.show(`Hello, ${this.email}. You are now registered and logged in.`, {
           timeout: 4000
         })
         this.router.navigate(['/'])

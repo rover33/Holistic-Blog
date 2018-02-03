@@ -20,7 +20,12 @@ export class BlogAllComponent implements OnInit {
       .subscribe( response => {
         // console.log(response);
         console.log("Successfully retreived BLOGS : ", response.json());
-        this.allBlogs = response.json();
+        let blogs = response.json().splice(0, 3);
+        for(let i = 0; i < blogs.length; i++){
+          // console.log(blogs[i].blogBody);
+          blogs[i].blogBody = blogs[i].blogBody.slice(0,20).concat('...');
+        }
+        this.allBlogs = blogs;
       })
   }
 

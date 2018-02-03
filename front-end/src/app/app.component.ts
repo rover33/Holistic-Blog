@@ -38,6 +38,20 @@ export class AppComponent {
       })
       this.router.navigate(['#'])
     }
+
+    showBanner(){
+      let showBanner : boolean = true;
+
+      if(this.router.url == '/login'){
+        showBanner = false;
+      }
+      if(this.router.url == '/register'){
+        showBanner = false;
+      }
+
+      return showBanner;
+
+    }
 }
 
 
