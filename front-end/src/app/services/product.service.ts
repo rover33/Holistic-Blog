@@ -25,7 +25,7 @@ export class ProductService {
   // ADMIN FUNCTIONS
   saveNewProduct(newProduct){
     console.log('Saving new product:', newProduct);
-    return this.http.post(`${this.baseUrl}/api/product/new`, newProduct);
+    return this.http.post(`${this.baseUrl}/api/product/addNew`, newProduct);
     
   }
 
@@ -33,6 +33,10 @@ export class ProductService {
     console.log("Deleting product...");
   }
   
+  saveEditedProduct(productId, editedProduct){
+    console.log('Saving newly edited product', editedProduct);
+    return this.http.put(`${this.baseUrl}/api/product/edit/${productId}`, editedProduct)
+  }
 
 
 }

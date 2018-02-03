@@ -11,16 +11,16 @@ export class ProductAllComponent implements OnInit {
   allProducts = []
 
   constructor(
-    private productsService : ProductService
+    private productService : ProductService
   ) { }
 
   ngOnInit() {
 
-    this.productsService.getAllProducts()
+    this.productService.getAllProducts()
       .subscribe (response => {
         console.log(response);
         console.log("retrieved all products")
-        this.allProducts = response.json();
+          this.allProducts = response.json();
 
       })
 

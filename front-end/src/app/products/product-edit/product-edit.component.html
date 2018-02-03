@@ -1,0 +1,46 @@
+<h1>Edit Product</h1>
+
+<div>
+    <li *ngFor="let product of products">
+        <div *ngIf="productToEdit !== product">
+            <li>
+              {{product.name}} 
+            </li>
+            <li>
+              {{product.description}}
+            </li>
+            <li>
+              {{product.price}}
+            </li>
+            <li>
+              {{product.image_url}}
+            </li>
+            <li>
+              {{product.quantity}}
+            </li>
+        
+            <button (click)="deleteproduct(product)" class="deleteBtn">
+                Delete
+            </button>
+            <button (click)="makeProductEditable(product)" class="editBtn">
+                Edit
+            </button>
+        </div>
+
+        <div *ngIf="productToEdit == product">
+      
+            <section>
+                <input [(ngModel)]="product.name" type="text" placeholder="Name">
+                <textarea [(ngModel)]="product.description" type="text" placeholder="Description" rows="4" cols="50"></textarea>
+                <input [(ngModel)]="product.price" type="text" placeholder="Price">
+                <input [(ngModel)]="product.image_url" type="text" placeholder="Image URL">
+                <input [(ngModel)]="product.quantity" type="text" placeholder="Quantity">
+
+                <button (click)="doneEditing()">
+                Done Editing
+                </button>
+            </section>
+        </div>
+    </li>
+  
+</div>

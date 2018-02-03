@@ -50,8 +50,11 @@ export class AppComponent {
       }
       if(this.router.url == '/product/new'){
         showBanner = false;
-      },
+      }
       if(this.router.url == '/product/delete'){
+        showBanner = false;
+      }
+      if(this.router.url == '/product/edit'){
         showBanner = false;
       }
 
