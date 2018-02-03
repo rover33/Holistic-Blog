@@ -1,10 +1,19 @@
 
+.all-products {
+    height: 100%;
+}
+
 li {
     list-style: none;
     display: inline-block;
     border: 1px solid #417505;
     margin: 0 5px;
     padding: 10px;
+  
+}
+
+.blah {
+    width: 80vw;
 }
 
 input {
@@ -12,4 +21,23 @@ input {
     border: 1px solid #417505;
     margin: 0 5px;
     padding: 10px;
+   
 }
+
+.addProd {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin: 20px;
+    border-radius: 50%;
+    background: #417505;
+    color: white;
+    cursor: pointer;
+}
+
+// #desc {
+//     display: inline-block;
+//     color: pink;
+//     padding: 20px 10px; 
+//     line-height: 28px;
+// }
