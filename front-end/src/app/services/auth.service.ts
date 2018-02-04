@@ -9,12 +9,27 @@ import { AsyncLocalStorage } from 'angular-async-local-storage';
 @Injectable()
 export class AuthService {
 
+  private user: Observable<firebase.User>
+  private userDetails: firebase.User = null;
 
   constructor(
     private afAuth: AngularFireAuth,
     protected localStorage: AsyncLocalStorage
 
-  ) { }
+  ) {
+    this.user = afAuth.authState;
+
+    this.user.subscribe(
+      (user) => {
+        if (user) {
+          this.userDetails = user;
+            console.log(this.userDetails)
+        } else {
+          this.userDetails = null;
+        }
+      }
+    )
+   }
 
 
   login(email: string, password: string) {
@@ -32,6 +47,7 @@ export class AuthService {
       err => reject(err))
     });
   }
+
 
   getAuth() {
     return this.afAuth.authState.map(auth => auth);
