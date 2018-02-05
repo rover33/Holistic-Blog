@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   threeBlogs = [];
   threeProducts = [];
 
-  itemQty : number
 
   constructor(
     private blogService : BlogService,
@@ -56,20 +55,44 @@ export class HomeComponent implements OnInit {
 
 
   // This function will check availability of the Product before adding to the cart
-  addToCart(productID, i){
-    console.log('card',i);
+  addToCart(productID, i, productName){
 
-    let qty = (<HTMLInputElement>document.getElementById(`card-${i}`)).value;
+    let qty = Number((<HTMLInputElement>document.getElementById(`card-${i}`)).value);
     
     // console.log(`You are trying to buy ${qty} items`)
     // console.log('product ID: ', productID);
 
-    this.productService.addToCart(productID, qty)
-      .subscribe( response => {
-        console.log('Successfully added to cart');
-        localStorage.setItem('productID', productID);
-        localStorage.setItem('quantity', qty);
-      })
+    if(!qty){
+      qty = 1;
+    }
+
+    let newCartItem = {,
+      'productName' : productName,
+      'productID': productID,
+      'quantity': qty  
+    }
+
+    
+
+    let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
+
+    console.log(currentItems);
+
+    if(currentItems == null){
+      currentItems = [];
+    } 
+
+    currentItems.push(newCartItem);
+
+    localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
+
+
+    // this.productService.addToCart(productID, qty)
+    //   .subscribe( response => {
+    //     localStorage.setItem('productID', productID);
+    //     localStorage.setItem('quantity', qty);
+    //     console.log('Successfully added to cart');
+    //   })
   }
 
 

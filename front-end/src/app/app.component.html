@@ -1,11 +1,7 @@
 
 
 <div class="main-content-container fadeIn">
-    <!-- 0 -->
-    <div class="admin-container">
-        <button mat-button *ngIf="admin" routerLink="/product/edit">Admin Functions</button>
-    </div>
-    
+   
     <!-- 1   -->
     <h1 routerLink="/">Holistic</h1>
     
@@ -19,7 +15,7 @@
 
         <button mat-button *ngIf="isLoggedIn" (click)="onLogoutClick()">Logout</button>
 
-        <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
+        <a routerLink="/checkout"><img src="assets/images/cart.svg" alt="cart"></a>
     </div>
     
 
@@ -46,34 +42,12 @@
 
 
 
+<div class="footer">
 
-<!-- 
-<div class="card-container">
-    <hr>
-    <h1>The Latest Blogs</h1>
-    <hr>
-    <br>
-
-    
-    <div class="blog-card-container">
-
-        <app-blog-preview></app-blog-preview>
-
+     <!-- 0 -->
+     <div class="admin-container">
+        <button mat-button *ngIf="admin" routerLink="/product/edit">Admin Functions</button>
     </div>
-
-    <hr>  
-    <h1>Products</h1>
-    <hr>
-    <br>
-    <br>
-
-    <div class="product-card-container">
-
-        <app-product-preview></app-product-preview>
         
-    </div>
-    
 
-</div> -->
-
-
+</div>

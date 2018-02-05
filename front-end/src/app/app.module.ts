@@ -36,6 +36,7 @@ import { LoginComponent } from './authentications/login/login.component';
 // import { ProductIndexComponent } from './products/product-index/product-index.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './authentications/register/register.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -47,7 +48,8 @@ import { RegisterComponent } from './authentications/register/register.component
     // ProductAllComponent,
     // ProductIndexComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ShoppingCartComponent
   ],
   imports: [
     AppRoutingModule,
