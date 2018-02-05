@@ -7,6 +7,9 @@ import { RegisterComponent } from './authentications/register/register.component
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
+import { GuardService } from './services/guard.service'
+import { ProductEditComponent } from './products/product-edit/product-edit.component';
+
 const routes: Routes = [
     {
         path: '',
@@ -21,8 +24,13 @@ const routes: Routes = [
         component: RegisterComponent
     },
     {
+
         path: 'checkout',
         component: ShoppingCartComponent
+
+        path: 'product/edit',
+        component: ProductEditComponent, canActivate:[GuardService]
+
     }
     
    
@@ -30,6 +38,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [ RouterModule.forRoot(routes) ],
-    exports: [ RouterModule ]
+    exports: [ RouterModule ],
+    providers: [GuardService]
 })
 export class AppRoutingModule {}

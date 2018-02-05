@@ -3,8 +3,10 @@ import { AngularFireAuth } from 'angularfire2/auth'
 import { Observable } from 'rxjs/observable'
 import * as firebase from 'firebase/app'
 import { auth } from 'firebase/app';
-import { tokenKey } from '@angular/core/src/view/util';
-import { AsyncLocalStorage } from 'angular-async-local-storage';
+import { Router } from '@angular/router';
+
+
+
 
 @Injectable()
 export class AuthService {
@@ -12,9 +14,10 @@ export class AuthService {
   private user: Observable<firebase.User>
   private userDetails: firebase.User = null;
 
+
   constructor(
     private afAuth: AngularFireAuth,
-    protected localStorage: AsyncLocalStorage
+    private router: Router
 
   ) {
     this.user = afAuth.authState;
@@ -29,7 +32,7 @@ export class AuthService {
         }
       }
     )
-   }
+  } 
 
 
   login(email: string, password: string) {
@@ -49,6 +52,7 @@ export class AuthService {
   }
 
 
+
   getAuth() {
     return this.afAuth.authState.map(auth => auth);
   }
@@ -58,4 +62,23 @@ export class AuthService {
   }
 
 
+
+  // canRead(user: User): boolean {
+  //   const allowed = ['admin']
+  //   return this.checkAuthorization(user, allowed)
+
+  // }
+
+  // private checkAuthorization(user: User, allowedRoles: string[]): boolean {
+  //   if (!user) return false
+  //   for (const role of allowedRoles) {
+  //     if ( user.roles[role] ) {
+  //       return true
+  //     }
+  //   }
+  //   return false
+  // }
+
 }
+
+
