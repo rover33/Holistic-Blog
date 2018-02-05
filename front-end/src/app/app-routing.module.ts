@@ -29,10 +29,8 @@ const routes: Routes = [
         component: ShoppingCartComponent
     },
     {
-
         path: 'product/edit',
         component: ProductEditComponent, canActivate:[GuardService]
-
     }
     
    

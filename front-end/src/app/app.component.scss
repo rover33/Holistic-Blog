@@ -106,16 +106,23 @@
 .footer {
     width: 100%;
     height: 15%;
-    border: 5px solid lime;
     position: absolute;
+    background: lightgrey;
+
+    p {
+        width: 15%;
+        margin: 0 auto;
+        padding-top: 1rem;
+        font-family: 'Roboto';
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
     .admin-container {
-        width: 15%;
-        position: absolute;
-        left: 50%;
-        top: 25%;
-
-        transform: translateX(-50%);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin: 0 auto;
     }
     
 }
