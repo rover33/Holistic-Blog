@@ -39,6 +39,7 @@ import { RegisterComponent } from './authentications/register/register.component
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,7 @@ import { RegisterComponent } from './authentications/register/register.component
     // ProductAllComponent,
     // ProductIndexComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     AppRoutingModule,
