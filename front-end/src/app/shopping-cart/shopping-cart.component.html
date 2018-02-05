@@ -1,0 +1,18 @@
+<div *ngIf="!currentCart">
+  NO ITEMS IN CART
+</div>
+
+
+<div>
+  <h1>CART</h1>
+  <div *ngFor="let item of currentCart">
+  
+    <li><h3>{{item.productName}}</h3></li>
+    <li>ID: {{item.productID}}</li>
+    <li>QTY: {{item.quantity}}</li>
+  </div>
+
+  <button (click)="emptyCart()">Empty Cart</button>
+</div>
+ 
+

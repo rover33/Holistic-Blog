@@ -40,4 +40,10 @@ export class ProductService {
   }
 
 
+  addToCart(id, qty){
+    console.log('Hit the product addToCart Service...');
+
+    return this.http.get(`${this.baseUrl}/api/checkQty?id=${id}&qty=${qty}`)
+  }
+
 }

@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './authentications/login/login.component';
 import { RegisterComponent } from './authentications/register/register.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+
 
 import { GuardService } from './services/guard.service'
 import { ProductEditComponent } from './products/product-edit/product-edit.component';
@@ -22,8 +24,13 @@ const routes: Routes = [
         component: RegisterComponent
     },
     {
+
+        path: 'checkout',
+        component: ShoppingCartComponent
+
         path: 'product/edit',
         component: ProductEditComponent, canActivate:[GuardService]
+
     }
     
    
