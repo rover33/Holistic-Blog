@@ -21,8 +21,8 @@
                   </mat-card-content>
                   <mat-card-content class="product-author">{{product.price}}</mat-card-content>
                   <mat-card-actions>
-                      <button mat-button>Details</button>
-                      <button mat-button>Add To Cart</button>
+                      <button mat-button [routerLink]="['/product', product.product_id]">More Info</button>
+                      <button mat-button>Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
                   </mat-card-actions>
               </mat-card>
           

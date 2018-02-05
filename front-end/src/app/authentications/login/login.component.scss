@@ -13,7 +13,7 @@
     h1 {
         width: 40%;
         margin: 0 auto;
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-family: 'Dancing Script';
         color: #417505;
         text-align: center;
@@ -22,25 +22,58 @@
     form {
         height: 75%;
         margin-top: 1rem;
-        border: 1px solid lime;
+        // border: 1px solid lime;
+        position: relative;
         
         label {
-            text-align: center;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
         }
+
+        input {
+            display: block;
+            width: 100%;
+            height: 2rem;
+            border: 5px; 
+            font-size: 1.2rem;
+            border-radius: 5px;
+
+            &::-webkit-input-placeholder {
+                padding-left: 1rem;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+       
 
         #email {
-            height: 50%;
-            width: 85%;
-            
-            input {
-                outline: 0;
-                border-bottom: 3px solid transparent;
-                margin-top: 20px;
-            }
-            
-            
+            margin-bottom: 2.2rem;
         }
 
+        #submit-button {
+            width: 7rem;
+            height: 3rem;
+            padding: 10px;
+            font-family: 'Roboto';
+            font-size: 1.2rem;
+            border-radius: 3px;
+            border: 3px solid black;
+            cursor: pointer;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); 
+            
+            &:hover {
+                border: 3px solid #417505;
+            }
+        
+       }
     }
 }
 

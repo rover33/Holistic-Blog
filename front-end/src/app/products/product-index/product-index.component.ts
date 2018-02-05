@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service'
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-product-index',
   templateUrl: './product-index.component.html',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductIndexComponent implements OnInit {
 
-  oneProduct;
+  product;
 
   constructor(
     private productsService : ProductService,
@@ -21,11 +22,9 @@ export class ProductIndexComponent implements OnInit {
       this.productsService.getOneProduct(param.id)
       .subscribe(response => {
         console.log(response.json());
-        this.oneProduct = response.json();
+          this.product = response.json();
       })
 
     })
   }
 }
-// hey jinnnnnn
-//your git hub sucks balls

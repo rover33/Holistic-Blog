@@ -11,7 +11,7 @@
     // border: 2px solid red;
 
     #custom-shadow {
-        box-shadow: 0 0 15px #417505;
+        box-shadow: 0 0 20px #417505;
         border-radius: 10px;
 
     }
@@ -21,7 +21,7 @@
         height: 25em;
         margin: 1em;
         margin-bottom: 3rem;
-        position: realtive;
+        // position: realtive;
 
         mat-card-title {
             font-family: 'Dancing Script';
@@ -73,6 +73,11 @@
     padding: 0;
     font-family: 'Dancing Script';
     color: #417505;
+
+
+    // background-color: rgba(0,255,0,0.1);
+    background-image: linear-gradient(to top right, rgb(228, 228, 131), rgba(0,255,0,0.1));
+
     
 
     hr {
@@ -111,6 +116,11 @@
 
 
 
+.heart {
+    height: 15px;
+    width: 15px;
+    margin-left: .5rem;
+}
 
 
 @media only screen and (max-width: 700px)  {

@@ -46,7 +46,7 @@ export class ProductNewComponent implements OnInit {
 
           alert('save Successssss');
 
-          
+          this.router.navigateByUrl('/product/edit'); 
       })
     }
     
