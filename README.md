@@ -40,6 +40,8 @@ Sketch App | Google Doc | Invision
 * [ Milad ]( https://github.com/milad-abujarada )
 * [ Remy Pearlstone ]( https://github.com/rover33 )
 * [ Stevano Lie ]( https://github.com/slie07 )
+* [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
+
 
 
 
