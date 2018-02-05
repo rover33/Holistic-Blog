@@ -44,19 +44,8 @@ export class HomeComponent implements OnInit {
   }
 
 
-  // getOneBlog(blogId){
-  //   console.log(blogId);
-  //   this.blogService.getSingleBlog(blogId)
-  //     .subscribe( response => {
-  //       console.log(response);
-        
-  //     })
-  // }
-
-
   // This function will check availability of the Product before adding to the cart
   addToCart(productID, i, productName){
-
     let qty = Number((<HTMLInputElement>document.getElementById(`card-${i}`)).value);
     
     // console.log(`You are trying to buy ${qty} items`)
@@ -65,34 +54,39 @@ export class HomeComponent implements OnInit {
     if(!qty){
       qty = 1;
     }
-
-    let newCartItem = {,
-      'productName' : productName,
-      'productID': productID,
-      'quantity': qty  
-    }
-
     
+    this.productService.addToCart(productID, qty)
+    .subscribe( response => {
+      console.log(response.json());
+      let availableQty = response.json().quantity;
+      console.log(availableQty);
 
-    let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
+      if(qty > availableQty){
+        alert(`Sorry, there are only ${availableQty} items left in our inventory.`);
+      } else {
+        let newCartItem = {
+          'productName': productName,
+          'productID': productID,
+          'quantity': qty  
+        }
+    
+        let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
+    
+        console.log(currentItems);
+    
+        if(currentItems == null){
+          currentItems = [];
+        } 
+    
+        currentItems.push(newCartItem);
+    
+        localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
 
-    console.log(currentItems);
+        console.log('Successfully added to cart');
+      }
 
-    if(currentItems == null){
-      currentItems = [];
-    } 
-
-    currentItems.push(newCartItem);
-
-    localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
-
-
-    // this.productService.addToCart(productID, qty)
-    //   .subscribe( response => {
-    //     localStorage.setItem('productID', productID);
-    //     localStorage.setItem('quantity', qty);
-    //     console.log('Successfully added to cart');
-    //   })
+      
+    })
   }
 
 
