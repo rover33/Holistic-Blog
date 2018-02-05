@@ -40,7 +40,7 @@
 
         <div class= "product-parent-container">
    
-            <mat-card id="custom-shadow" class= "product-card"  *ngFor="let product of threeProducts">
+            <mat-card id="custom-shadow" class="product-card"  *ngFor="let product of threeProducts; let i = index;">
          
                 <mat-card-title>{{product.name}}</mat-card-title>
                
@@ -51,9 +51,14 @@
                     </p>
                 </mat-card-content>
                 <mat-card-content>{{product.price}}</mat-card-content>
+
+
+                <input type="number" placeholder="1" id="card-{{i}}">
+                <label for="quantity">Qty</label>
+
                 <mat-card-actions>
                     <button mat-button [routerLink]="['/product', product.product_id]">More Info</button>
-                    <button mat-button>Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
+                    <button (click)="addToCart(product.product_id, i)" mat-button> Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
                 </mat-card-actions>
             </mat-card>
         
