@@ -6,6 +6,8 @@
         position: relative;
         padding-bottom: 20px;
 
+        // background-image: linear-gradient(to top right, rgb(228, 228, 131), rgba(0,255,0,0.1));
+
 
         // border: 3px solid blue;
 
@@ -101,6 +103,8 @@
         background-size: cover;
         background-position-y: 45%; 
         background-repeat: no-repeat;
+
+        box-shadow: 0 0 40px rgba(0,0,0,.5);
         // background-size: 100% 100%;
     }
 
