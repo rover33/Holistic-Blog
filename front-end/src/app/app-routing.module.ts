@@ -31,7 +31,6 @@ const routes: Routes = [
     {
         path: 'product/edit',
         component: ProductEditComponent, canActivate:[GuardService]
-
     }
     
    
