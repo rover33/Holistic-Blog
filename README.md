@@ -43,7 +43,12 @@ Sketch App | Google Doc | Invision
 * [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
 
 
-
+## Flow
+### We will have the following:
+* Blogs
+* Product Page
+* Admin Page
+* Checkout Page 
 
 
 ## License
