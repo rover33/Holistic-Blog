@@ -6,14 +6,17 @@
 li {
     list-style: none;
     display: inline-block;
-    border: 1px solid #417505;
+    border-bottom: 1px solid #417505;
     margin: 0 5px;
     padding: 10px;
   
 }
 
+
+
 .blah {
     width: 80vw;
+    margin-bottom: 2rem;
 }
 
 input {
@@ -25,14 +28,20 @@ input {
 }
 
 .addProd {
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
+    width: 200px;
+    height: 60px;
+    font-size: 1.3rem;
     margin: 20px;
-    border-radius: 50%;
-    background: #417505;
-    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border:2px solid #417505;
+    color: #417505;
     cursor: pointer;
+
+    &:hover {
+        color: white;
+        background: #417505;
+    }
 }
 
 // #desc {

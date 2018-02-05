@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Response } from '@angular/http';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
@@ -17,7 +18,8 @@ export class ProductEditComponent implements OnInit {
 
 
   constructor(
-    private productService : ProductService
+    private productService : ProductService,
+    private router : Router
   ) { }
 
   ngOnInit() {
@@ -30,10 +32,12 @@ export class ProductEditComponent implements OnInit {
 
   }
 
+  ////////////////////////////////////
   makeProductEditable(product){
     this.productToEdit = product;
   }
 
+  ////////////////////////////////////
   doneEditing(productToEdit){
 
     this.productService.saveEditedProduct(productToEdit.product_id, productToEdit)
@@ -44,16 +48,26 @@ export class ProductEditComponent implements OnInit {
     this.productToEdit = {};
   }
 
+  ////////////////////////////////////
   deleteproduct(productId){
     console.log(productId);
 
     this.productService.deleteProduct(productId)
       .subscribe(response => {
-        console.log('Successfully deleted product', response);
-        if(!response){
+        console.log('Successfully deleted product', response.json());
+        if(!response.json()){
           alert('Oops! did not delete');
-        }
+        } else if(response.json()){
+          console.log(response.json(), 'hit!');
+
+          this.productService.getAllProducts()
+            .subscribe (response => {
         
+            this.products = response.json();
+            console.log("RETREIVED all products", this.products);
+          })
+
+        }
     })
   }
 

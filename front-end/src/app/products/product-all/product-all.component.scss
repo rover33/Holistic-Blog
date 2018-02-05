@@ -8,10 +8,11 @@
     justify-content: space-between;
 
     font-family: 'Roboto';
+
     // border: 2px solid red;
 
     #custom-shadow {
-        box-shadow: 0 0 15px #417505;
+        box-shadow: 0 0 20px #417505;
         border-radius: 10px;
 
     }
@@ -20,8 +21,23 @@
         width: 25%;
         height: 20em;
         margin: 1em;
+        
         mat-card-title {
             font-family: 'Dancing Script';
+        }
+        mat-card-actions {
+            position: absolute;
+            width: 80%;
+            left: 56%;
+            bottom: 10%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-around;
+
+            button {
+                border: 2px solid rgba(65, 117, 5, .5);
+
+            }
         }
 
         p {
@@ -56,6 +72,10 @@
     padding: 0;
     font-family: 'Dancing Script';
     color: #417505;
+
+    // background-color: rgba(0,255,0,0.1);
+    background-image: linear-gradient(to top right, rgb(228, 228, 131), rgba(0,255,0,0.1));
+
     
 
     hr {
@@ -94,4 +114,9 @@
 
 
 
+.cart {
+    height: 20px;
+    width: 20px;
+    margin-left: .5rem;
+}
 

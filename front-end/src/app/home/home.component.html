@@ -21,7 +21,7 @@
                 </mat-card-content>
                 <mat-card-content class="blog-author">{{blog.date}}</mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>LIKE</button>
+                    <button (click)="likeClick()" mat-button>LIKE <img src="../assets/images/heart-icon.png" alt="like" class="heart"></button>
                     <button mat-button [routerLink]="['/blog', blog._id]">Read More</button>
                 </mat-card-actions>
             </mat-card>
@@ -52,8 +52,8 @@
                 </mat-card-content>
                 <mat-card-content>{{product.price}}</mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
+                    <button mat-button [routerLink]="['/product', product.product_id]">More Info</button>
+                    <button mat-button>Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
                 </mat-card-actions>
             </mat-card>
         

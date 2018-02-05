@@ -13,6 +13,7 @@ export class AppComponent {
   isLoggedIn: boolean;
   loggedInUser: string;
   showRegister: boolean;
+  admin: boolean = true;
 
   constructor(
     private authService : AuthService,

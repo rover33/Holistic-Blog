@@ -18,7 +18,7 @@ export class ProductService {
 
   getOneProduct(productId){
     console.log(productId);
-    return this.http.get(`${this.baseUrl}`)
+    return this.http.get(`${this.baseUrl}/api/product/${productId}`)
   }
 
 
@@ -31,7 +31,7 @@ export class ProductService {
 
   deleteProduct(productId){
     console.log("DELETING product...", productId);
-    return this.http.delete(`${this.baseUrl}/delete/${productId}`)
+    return this.http.delete(`${this.baseUrl}/api/product/${productId}`)
   }
   
   saveEditedProduct(productId, editedProduct){
