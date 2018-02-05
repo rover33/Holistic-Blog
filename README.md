@@ -47,7 +47,7 @@ Sketch App | Google Doc | Invision
 
 
 ## License
-TODO: Write license
+Open Source 
 
 
 
