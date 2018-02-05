@@ -2,8 +2,8 @@ const dbConnection = require('./index');
 
 var Product = dbConnection.sequelize.define('product', {
 	product_id: {      
-		type: dbConnection.Sequelize.UUID, 
-		defaultValue: dbConnection.Sequelize.UUIDV4,
+		type: dbConnection.Sequelize.INTEGER,
+		autoIncrement: true, 
 		primaryKey: true 
 	},
 	name: {
