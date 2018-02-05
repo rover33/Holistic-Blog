@@ -58,7 +58,7 @@ export class ProductEditComponent implements OnInit {
         if(!response.json()){
           alert('Oops! did not delete');
         } else if(response.json()){
-          console.log(response.json(), 'hit!');\
+          console.log(response.json(), 'hit!');
 
           this.productService.getAllProducts()
             .subscribe (response => {

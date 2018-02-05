@@ -1,7 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './../../services/product.service';
-import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-product-new',

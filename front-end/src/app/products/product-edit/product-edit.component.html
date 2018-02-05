@@ -1,11 +1,11 @@
 <h1>Edit Product</h1>
 
 <button routerLink="/product/new" class="addProd">
-    +
+    Add New Product
 </button>
 
 <div class="all-products">
-    <li class="blah" *ngFor="let product of products">
+    <div class="blah" *ngFor="let product of products">
         <div *ngIf="productToEdit !== product">
             <li>
               {{product.name}} 
@@ -46,6 +46,6 @@
                 </button>
             </section>
         </div>
-    </li>
+    </div>
   
 </div>
