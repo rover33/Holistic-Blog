@@ -33,5 +33,13 @@ router.route('/api/product/addNew')
 		controllers.addProduct(request, response);
 	});
 
+router.route('/api/checkQty')
+	.get((request, response) => {
+		controllers.checkQuantity(request, response);
+});
+
+router.route('/*')
+	.get((request, response) => response.status(404).send(`OOPS (404) ! the page ${request.url} NOT FOUND`));
+
 
 module.exports = router;
