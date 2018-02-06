@@ -35,7 +35,6 @@ export class AppComponent {
       }
     })
    let uid = JSON.parse(localStorage.getItem('firebase:authUser:AIzaSyAAaja_uGzzXyrPGku3VBTLVGnNWbxlqbY:[DEFAULT]')) 
-                                              // firebase:authUser:AIzaSyAAaja_uGzzXyrPGku3VBTLVGnNWbxlqbY:[DEFAULT]
     console.log(uid.uid)
 
    this.userService.checkAdmin(uid.uid).subscribe(response => {
