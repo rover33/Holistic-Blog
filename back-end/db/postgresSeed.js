@@ -25,7 +25,7 @@ let products = [
 	{
 		name: 'Aloe Vera Extract',
 		description: 'Because of its anti-inflammatory and laxative components, another aloe vera benefit is its ability to help with digestion',
-		price: 80.29,
+		price: 8.29,
 		image_url: 'https://www.terrylabs.com/images/layout/aloe-vera-concentrate.jpg',
 		quantity: 13
 	}

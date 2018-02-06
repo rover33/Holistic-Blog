@@ -65,7 +65,7 @@ export class ShoppingCartService {
     console.log('Final Shopping List data to send to Back End, ', shoppingList);
 
 
-    return this.http.post(`${this.baseUrl}/api/purchase`, shoppingList)
+    return this.http.post(`${this.baseUrl}/api/placeOrder`, shoppingList)
 
   }
 }
