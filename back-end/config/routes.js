@@ -38,7 +38,7 @@ router.route('/api/checkQty')
 		controllers.checkQuantity(request, response);
 });
 
-router.route('/api/purchas')
+router.route('/api/placeOrder')
 	.post((request, response) => {
 		controllers.placeOrder(request, response);
 });
