@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { GuardService } from './services/guard.service';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +20,9 @@ export class AppComponent {
 
   constructor(
     private authService : AuthService,
+    private userService: UserService,
     private router: Router,
-    private flashMessage: FlashMessagesService
+    private flashMessage: FlashMessagesService,
   ){}
 
   ngOnInit(){
@@ -30,6 +33,12 @@ export class AppComponent {
       } else {
         this.isLoggedIn = false;
       }
+    })
+   this.userService.checkAdmin(uid).subscribe(response => {
+     if (response.json().admin == true) {
+       this.admin = true
+     }
+
     })
   }
 

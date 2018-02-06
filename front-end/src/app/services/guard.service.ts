@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class GuardService implements CanActivate{
 
-  admin: boolean = true;
+
 
   constructor(
     private router: Router,

@@ -39,6 +39,7 @@ import { LoginComponent } from './authentications/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './authentications/register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { UserService } from './services/user.service';
 
 
 
@@ -73,7 +74,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [BlogService, ProductService, AuthService, FlashMessagesService, ShoppingCartService],
+  providers: [BlogService, ProductService, AuthService, FlashMessagesService, ShoppingCartService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
