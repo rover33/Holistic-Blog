@@ -51,7 +51,7 @@ Sketch App | Google Doc | Invision
 
 ## User Flow
 
-<img width="600" alt="screen shot 2018-02-06 at 12 14 29 pm" src="https://user-images.githubusercontent.com/26607760/35879017-5f0c8e8e-0b37-11e8-88b0-d2ca52c2e949.png">
+<img width="624" alt="screen shot 2018-02-06 at 12 14 29 pm" src="https://user-images.githubusercontent.com/26607760/35882981-09a5ef2e-0b43-11e8-8e65-66ff6be7f64f.png">
 
 
 ## Flow
