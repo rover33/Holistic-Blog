@@ -46,6 +46,7 @@ export class ShoppingCartComponent implements OnInit {
 
     this.shoppingCartService.purchase()
       .subscribe( response => {
+
         console.log('checkout response', response);
         alert('Order was placed!');
 
@@ -56,5 +57,6 @@ export class ShoppingCartComponent implements OnInit {
       })
 
         
+
   }
 }
