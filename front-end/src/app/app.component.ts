@@ -26,6 +26,7 @@ export class AppComponent {
   ){}
 
   ngOnInit(){
+
     this.authService.getAuth().subscribe(auth =>{
       if(auth) {
         this.isLoggedIn = true;

@@ -1,12 +1,40 @@
 .about-container {
     height: 2000px;
     width: 100%;
-    border: 5px solid black;
+    // border: 5px solid black;
 
     .top-container {
-        border: 5px solid lime;
+        // border: 5px solid lime;
 
-        height: 25%;
+        height: 27%;
+        width: 100vw;
+        position: relative;
+
+        h1 {
+            width: 25%;
+            margin: 2rem auto;
+            text-align: center;
+            font-family: 'Dancing Script', sans-serif;
+            font-size: 3rem;
+            color: #417505;
+        }
+
+        #group-photo {
+            height: 70%;
+            width:100%;
+            background: url('/assets/images/group-photo.jpg');
+            background-size: cover;
+            background-position-y: 25%; 
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;  
+        }      
+    }
+
+    .mission-container {
+        // border: 5px solid purple;
+
+        height: 20%;
         width: 100vw;
 
         h1 {
@@ -15,22 +43,21 @@
             text-align: center;
             font-family: 'Dancing Script', sans-serif;
             font-size: 3rem;
+            color: #417505;
         }
 
-        #group-photo {
-            height: 70%;
-            width: 100%;
-            background: url('/assets/images/group-photo.jpg');
-            background-size: cover;
-            background-position-y: 45%; 
-            background-repeat: no-repeat;        }
-    }
-
-    .mission-container {
-        border: 5px solid purple;
-
-        height: 25%;
-        width: 100vw;
+        .mission-statment {
+            height: 55%;
+            width: 60%;
+            border: 5px solid black;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            padding: 1.5rem;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
     }
 
     .team-container {
@@ -38,6 +65,79 @@
 
         height: 50%;
         width: 100vw;
+        position: relative;
 
+        .single-member {
+            height: 250px;
+            width: 250px;
+            border: 1px solid purple;
+            position: absolute;
+
+            #jin {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/jin.jpeg');
+                background-size: cover;
+                
+            }
+            #milad {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/milad.jpeg');
+                background-size: cover;
+                
+            }
+            #remy {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/remy.jpeg');
+                background-size: cover;
+                
+            }
+            #stevano {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/stevano.jpeg');
+                background-size: cover;
+                
+            }
+            #zeb {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/zeb.jpg');
+                background-size: cover;
+                
+            }
+            
+        }
+        .one {
+            top: 10%;
+            left: 10%;
+        }
+        .two {
+            top: 10%;
+            right: 10%;
+        }
+        .three {
+            top: 50%;
+            left: 10%;
+        }
+        .four {
+            top: 50%;
+            right: 10%;
+        }
+        .five {
+            top: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        
     }
 }
+
