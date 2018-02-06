@@ -72,15 +72,13 @@ let checkQuantity = (request, response) => {
 let checkAdmin = (request, response) => {
 	index.sequelize.query(`SELECT admin from users where user_id = '${request.params.id}'`)
 		.then((result) => {
-			console.log(result);
 			if (result[0][0]) {
 				response.json(result[0][0]);
 			} else {
 				response.json({admin:false});
-			}
-			
+			};	
 		});
-}
+};
 
 module.exports.getBlogs = getBlogs;
 module.exports.getBlog = getBlog;

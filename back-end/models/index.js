@@ -33,9 +33,9 @@ const User = require('./user');
 const Order = require('./order');
 const Order_detail = require('./order_detail');
 
-User.hasMany(Order);
-Product.hasMany(Order_detail);
-Order.hasMany(Order_detail);
+User.hasMany(Order, {foreignKey: 'user_id'});
+Product.hasMany(Order_detail, {foreignKey: 'product_id'});
+Order.hasMany(Order_detail, {foreignKey: 'order_num'});
 
 module.exports.models = {
 Blog : Blog,
