@@ -27,7 +27,8 @@ export class UserService {
 
 
 //Check admin user.
-checkAdmin?(uid){
+checkAdmin(uid){
+  // console.log('sup brah', uid);
   return this.http.get(`${this.baseUrl}/api/checkAdmin/${uid}`)
  }
 }

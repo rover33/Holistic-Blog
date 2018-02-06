@@ -19,7 +19,7 @@ export class BlogAllComponent implements OnInit {
     this.blogService.getAllBlogs()
       .subscribe( response => {
         // console.log(response);
-        console.log("Successfully retreived BLOGS : ", response.json());
+        // console.log("Successfully retreived BLOGS : ", response.json());
         let blogs = response.json();
         for(let i = 0; i < blogs.length; i++){
           // console.log(blogs[i].blogBody);
@@ -27,7 +27,7 @@ export class BlogAllComponent implements OnInit {
         }
         this.allBlogs = blogs;
 
-        console.log('ALL BLOGS:::', this.allBlogs);
+        // console.log('ALL BLOGS:::', this.allBlogs);
       })
   }
 

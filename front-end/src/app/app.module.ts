@@ -40,6 +40,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './authentications/register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { UserService } from './services/user.service';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -53,7 +54,8 @@ import { UserService } from './services/user.service';
     // ProductIndexComponent,
     HomeComponent,
     RegisterComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    AboutComponent
 
   ],
   imports: [

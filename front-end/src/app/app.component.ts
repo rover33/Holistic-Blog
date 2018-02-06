@@ -30,18 +30,25 @@ export class AppComponent {
       if(auth) {
         this.isLoggedIn = true;
         this.loggedInUser = auth.email;
+        
+        /////////////////////////////////////////
+        // CHECKING IF USER IS ADMIN 
+        /////////////////////////////////////////
+        let uid = JSON.parse(localStorage.getItem('firebase:authUser:AIzaSyAAaja_uGzzXyrPGku3VBTLVGnNWbxlqbY:[DEFAULT]')) 
+        console.log(uid.uid)
+    
+        this.userService.checkAdmin(uid.uid)
+          .subscribe(response => {
+          if (response.json().admin == true) {
+            this.admin = true
+          }
+      
+          })
+        /////////////////////////////////////////
+
       } else {
         this.isLoggedIn = false;
-      }
-    })
-   let uid = JSON.parse(localStorage.getItem('firebase:authUser:AIzaSyAAaja_uGzzXyrPGku3VBTLVGnNWbxlqbY:[DEFAULT]')) 
-    console.log(uid.uid)
-
-   this.userService.checkAdmin(uid.uid).subscribe(response => {
-     if (response.json().admin == true) {
-       this.admin = true
-     }
-
+      } 
     })
   }
 
@@ -50,6 +57,8 @@ export class AppComponent {
       this.flashMessage.show("You are now logged out", {
         timeout: 4000
       })
+
+      this.admin = false;
       this.router.navigate(['/'])
     }
 

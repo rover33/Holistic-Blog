@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     this.blogService.getAllBlogs()
       .subscribe( response => {
         // console.log(response);
-        console.log("Successfully retreived BLOGS : ", response.json());
+        // console.log("Successfully retreived BLOGS : ", response.json());
 
         let blogs = response.json().splice(0, 3);
         for(let i = 0; i < blogs.length; i++){
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
 
       this.productService.getAllProducts()
       .subscribe( response => {
-        console.log("Successfully retreived Products : ", response.json());
+        // console.log("Successfully retreived Products : ", response.json());
         let products = response.json().splice(0, 3);
         for(let i = 0; i < products.length; i++){
           // console.log(products[i].blogBody);
@@ -61,9 +61,9 @@ export class HomeComponent implements OnInit {
     
     this.productService.addToCart(productID, qty)
     .subscribe( response => {
-      console.log(response.json());
+      // console.log(response.json());
       let availableQty = response.json().quantity;
-      console.log(availableQty);
+      // console.log(availableQty);
 
       if(qty > availableQty){
         alert(`Sorry, there are only ${availableQty} items left in our inventory.`);
