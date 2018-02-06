@@ -13,7 +13,9 @@
               <mat-card id="custom-shadow" class="product-card"  *ngFor="let product of allProducts; let i = index;">
                 
                   <mat-card-title>{{product.name}}</mat-card-title>
-                  <hr>
+
+                  <img mat-card-lg-image src ={{product.image_url}}>
+
                   <mat-card-content>
                       <p>
                           {{product.description}}
@@ -24,9 +26,13 @@
                     <input type="number" placeholder="1" id="card-{{i}}">
                     <label for="quantity">Qty</label>
 
+                    <div class="available-qty">
+                        <h4>Available: {{product.quantity}}</h4>
+                    </div>
+
                   <mat-card-actions>
                       <button mat-button [routerLink]="['/product', product.product_id]">More Info</button>
-                      <button (click)="addToCart(product.product_id, i, product.name)" mat-button>Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
+                      <button (click)="addToCart(product.product_id, i, product.name, product.price)" mat-button>Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
                   </mat-card-actions>
               </mat-card>
           

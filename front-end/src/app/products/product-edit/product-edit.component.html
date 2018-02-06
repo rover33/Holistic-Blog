@@ -1,11 +1,11 @@
-<h1>Edit Product</h1>
+<h1>Product Inventory</h1>
 
 <button routerLink="/product/new" class="addProd">
     Add New Product
 </button>
 
 <div class="all-products">
-    <div class="blah" *ngFor="let product of products">
+    <div class="product" *ngFor="let product of products">
         <div *ngIf="productToEdit !== product">
             <li>
               {{product.name}} 
@@ -41,7 +41,7 @@
                 <input [(ngModel)]="product.image_url" type="text" placeholder="Image URL">
                 <input [(ngModel)]="product.quantity" type="text" placeholder="Quantity">
 
-                <button (click)="doneEditing(productToEdit)">
+                <button class='doneEditBtn' (click)="doneEditing(productToEdit)">
                 Done Editing
                 </button>
             </section>

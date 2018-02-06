@@ -22,6 +22,8 @@ import { environment } from '../environments/environment';
 import { BlogService } from './services/blog.service';
 import { ProductService } from './services/product.service';
 import { AuthService } from './services/auth.service';
+import { ShoppingCartService } from './services/shopping-cart.service';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { BlogsModule } from './blogs/blogs.module';
@@ -50,7 +52,6 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     // ProductIndexComponent,
     HomeComponent,
     RegisterComponent,
-
     ShoppingCartComponent
 
   ],
@@ -72,7 +73,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [BlogService, ProductService, AuthService, FlashMessagesService],
+  providers: [BlogService, ProductService, AuthService, FlashMessagesService, ShoppingCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
