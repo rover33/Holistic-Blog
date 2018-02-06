@@ -2,6 +2,7 @@ const index = require('../models/index');
 
 let Blog = index.models.Blog;
 let Product = index.models.Product;
+let User = index.models.User;
 
 let getBlogs = (response) => {
 	// blog = new Blog();
@@ -59,17 +60,27 @@ let deleteProduct = (request, response) => {
 let checkQuantity = (request, response) => {
 	index.sequelize.query(`SELECT * FROM products WHERE product_id ='${request.query.id}'`)
 		.then((result) => {
+			console.log(result[0][0]);
 			if (result[0][0]) {
 				response.json({quantity: result[0][0].quantity});
 			} else {
 				response.json({quantity: 0});
 			};
 		});
-			
-/*	response.send(`the query object has the values ${request.query.id} for id and ${request.query.qty} for quantity`);
-*//*	index.sequelize.query(`SELECT quantity from products where product_id = ${request.id}`, {type: sequelize.QueryTypes.SELECT})
-		.then(quantity => response.send(quantity));*/
 };
+
+let checkAdmin = (request, response) => {
+	index.sequelize.query(`SELECT admin from users where user_id = '${request.params.id}'`)
+		.then((result) => {
+			console.log(result);
+			if (result[0][0]) {
+				response.json(result[0][0]);
+			} else {
+				response.json({admin:false});
+			}
+			
+		});
+}
 
 module.exports.getBlogs = getBlogs;
 module.exports.getBlog = getBlog;
@@ -79,3 +90,4 @@ module.exports.addProduct = addProduct;
 module.exports.putProduct = putProduct;
 module.exports.deleteProduct = deleteProduct;
 module.exports. checkQuantity = checkQuantity;
+module.exports.checkAdmin = checkAdmin;

@@ -38,6 +38,16 @@ router.route('/api/checkQty')
 		controllers.checkQuantity(request, response);
 });
 
+router.route('/api/purchas')
+	.post((request, response) => {
+		
+});
+
+router.route('/api/checkAdmin/:id')
+	.get((request, response) => {
+		controllers.checkAdmin(request, response);
+	})
+
 router.route('/*')
 	.get((request, response) => response.status(404).send(`OOPS (404) ! the page ${request.url} NOT FOUND`));
 

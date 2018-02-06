@@ -29,8 +29,18 @@ module.exports.sequelize = sequelize;
 
 const Product = require('./product');
 const Blog = require('./blog');
+const User = require('./user');
+const Order = require('./order');
+const Order_detail = require('./order_detail');
+
+User.hasMany(Order);
+Product.hasMany(Order_detail);
+Order.hasMany(Order_detail);
 
 module.exports.models = {
 Blog : Blog,
-Product: Product
+Product: Product,
+User: User,
+Order: Order,
+Order_detail: Order_detail
 };

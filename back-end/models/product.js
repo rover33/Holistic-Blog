@@ -7,22 +7,28 @@ var Product = dbConnection.sequelize.define('product', {
 		primaryKey: true 
 	},
 	name: {
-		type: dbConnection.Sequelize.STRING
+		type: dbConnection.Sequelize.STRING,
+		allowNull: false
 	},
 	description: {
-		type: dbConnection.Sequelize.STRING
+		type: dbConnection.Sequelize.STRING,
+		allowNull: false
 	},
 	price: {
-		type: dbConnection.Sequelize.REAL
+		type: dbConnection.Sequelize.REAL,
+		allowNull: false
 	},
 	image_url: {
-		type: dbConnection.Sequelize.STRING
+		type: dbConnection.Sequelize.STRING,
+		allowNull: false
 	},
 	quantity: {
-		type: dbConnection.Sequelize.INTEGER
+		type: dbConnection.Sequelize.INTEGER,
+		allowNull: false
 	}
-	} , {
+	}, {
 	    timestamps: false
-});
+	}
+);
 
 module.exports = Product;
