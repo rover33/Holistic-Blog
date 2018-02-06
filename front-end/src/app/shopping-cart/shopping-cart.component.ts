@@ -43,11 +43,12 @@ export class ShoppingCartComponent implements OnInit {
 
   purchase(){
 
-    this.shoppingCartService.purchase();
-      // .subscribe( response => {
-      //   console.log(response);
-      // })
-    alert('Order was placed!');
+    this.shoppingCartService.purchase()
+      .subscribe( response => {
+        console.log(response);
+        alert('Order was placed!');
+      })
+   
     
     localStorage.clear();
     
