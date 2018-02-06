@@ -20,8 +20,6 @@ if(user === 'miladabujarada') {
 	sequelize = new Sequelize(process.env.DATABASE_URL);
 };
 
-//console.log(sequelize);
-
 console.log('connected to postgres');
 
 module.exports.Sequelize = Sequelize;

@@ -40,7 +40,7 @@ router.route('/api/checkQty')
 
 router.route('/api/purchas')
 	.post((request, response) => {
-		
+		controllers.placeOrder(request, response);
 });
 
 router.route('/api/checkAdmin/:id')
