@@ -1,5 +1,43 @@
 .about-container {
-    height: 100vh;
+    height: 2000px;
     width: 100%;
     border: 5px solid black;
+
+    .top-container {
+        border: 5px solid lime;
+
+        height: 25%;
+        width: 100vw;
+
+        h1 {
+            width: 25%;
+            margin: 2rem auto;
+            text-align: center;
+            font-family: 'Dancing Script', sans-serif;
+            font-size: 3rem;
+        }
+
+        #group-photo {
+            height: 70%;
+            width: 100%;
+            background: url('/assets/images/group-photo.jpg');
+            background-size: cover;
+            background-position-y: 45%; 
+            background-repeat: no-repeat;        }
+    }
+
+    .mission-container {
+        border: 5px solid purple;
+
+        height: 25%;
+        width: 100vw;
+    }
+
+    .team-container {
+        border: 5px solid blue;
+
+        height: 50%;
+        width: 100vw;
+
+    }
 }
