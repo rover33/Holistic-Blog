@@ -10,7 +10,7 @@
         <hr>
             <h2 class="product-qty">QTY: {{product.quantity}}</h2>
             <h2 class="product-price">$ {{product.price}}</h2>
-            <button id="add" mat-button>Add</button>
+            <button id="add" (click)="addToCart(product.product_id, i, product.name, product.price, product.image_url)" mat-button>Add To Cart</button>
         </div>
         <div class="product-image">
             <img mat-card-md-image src ={{product.image_url}}>
