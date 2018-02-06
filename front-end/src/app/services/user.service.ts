@@ -11,10 +11,10 @@ export class UserService {
 
   baseUrl = "http://localhost:3000";
 
-  uAdmin: {
-    email: string,
-    uid: string
-  }
+  // uAdmin: {
+  //   email: string,
+  //   uid: string
+  // }
 
   constructor(
     private http: Http
