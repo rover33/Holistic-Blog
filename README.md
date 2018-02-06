@@ -54,6 +54,11 @@ Sketch App | Google Doc | Invision
 <img width="624" alt="screen shot 2018-02-06 at 12 14 29 pm" src="https://user-images.githubusercontent.com/26607760/35882981-09a5ef2e-0b43-11e8-8e65-66ff6be7f64f.png">
 
 
+## Site Map
+
+<img width="624" alt="screen shot 2018-02-06 at 1 57 23 pm" src="https://user-images.githubusercontent.com/26607760/35883784-bb124422-0b45-11e8-99af-706742577cb4.png">
+
+
 ## Flow
 ### We will have the following:
 * Blogs
