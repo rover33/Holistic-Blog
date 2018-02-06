@@ -49,12 +49,19 @@ Sketch App | Google Doc | Invision
 * [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
 
 
+## User Flow
+
+<img width="600" alt="screen shot 2018-02-06 at 12 14 29 pm" src="https://user-images.githubusercontent.com/26607760/35879017-5f0c8e8e-0b37-11e8-88b0-d2ca52c2e949.png">
+
+
 ## Flow
 ### We will have the following:
 * Blogs
 * Product Page
 * Admin Page
 * Checkout Page 
+* About Us Page 
+
 
 
 ## License
