@@ -69,6 +69,10 @@ let checkQuantity = (request, response) => {
 		});
 };
 
+let placeOrder = (request, response) => {
+	
+}
+
 let checkAdmin = (request, response) => {
 	index.sequelize.query(`SELECT admin from users where user_id = '${request.params.id}'`)
 		.then((result) => {
@@ -88,4 +92,5 @@ module.exports.addProduct = addProduct;
 module.exports.putProduct = putProduct;
 module.exports.deleteProduct = deleteProduct;
 module.exports. checkQuantity = checkQuantity;
+module.exports.placeOrder = placeOrder;
 module.exports.checkAdmin = checkAdmin;
