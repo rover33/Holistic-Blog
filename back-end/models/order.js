@@ -9,11 +9,11 @@ var Order = dbConnection.sequelize.define('order',{
 	total: {
 		type: dbConnection.Sequelize.REAL,
 		allowNull: false
-	}/*,
+	},
 	order_date: {
 		type: dbConnection.Sequelize.DATE,
 		allowNull: false
-	}*/
+	}
 	},{
 		timestamps: false
 	}
