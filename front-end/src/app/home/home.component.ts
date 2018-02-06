@@ -30,16 +30,20 @@ export class HomeComponent implements OnInit {
         let blogs = response.json().splice(0, 3);
         for(let i = 0; i < blogs.length; i++){
           // console.log(blogs[i].blogBody);
-          blogs[i].blogBody = blogs[i].blogBody.slice(0,20).concat('...');
+          blogs[i].blogBody = blogs[i].blogBody.slice(0,100).concat('...');
         }
         this.threeBlogs = blogs;
       });
 
       this.productService.getAllProducts()
       .subscribe( response => {
-        console.log(response);
-        // console.log("Successfully retreived BLOGS : ", response.json());
-        this.threeProducts = response.json().splice(0, 3);
+        console.log("Successfully retreived Products : ", response.json());
+        let products = response.json().splice(0, 3);
+        for(let i = 0; i < products.length; i++){
+          // console.log(products[i].blogBody);
+          products[i].description = products[i].description.slice(0,100).concat('...');
+        }
+        this.threeProducts = products;
       })
   }
 

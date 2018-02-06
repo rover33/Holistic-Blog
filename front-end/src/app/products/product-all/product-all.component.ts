@@ -18,9 +18,14 @@ export class ProductAllComponent implements OnInit {
 
     this.productService.getAllProducts()
       .subscribe (response => {
-        console.log(response);
-        console.log("retrieved all products")
-          this.allProducts = response.json();
+        console.log("Successfully retreived Products WOO! : ", response.json());
+
+        let products = response.json();
+        for(let i = 0; i < products.length; i++){
+          // console.log(products[i].blogBody);
+          products[i].description = products[i].description.slice(0,100).concat('...');
+        }
+        this.allProducts = products;
 
       })
 
