@@ -44,7 +44,7 @@ let users = [
 	},
 	{
 		user_email: 'remy@ga.com',
-		user_id: 12345,
+		user_id: 'DWBt02pRWrYAoIORzYMY9CjSVFH2',
 		admin: true
 	},
 	{
