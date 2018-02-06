@@ -9,15 +9,30 @@ import { ShoppingCartService } from '../services/shopping-cart.service';
 export class ShoppingCartComponent implements OnInit {
 
   currentCart : object
+  grandTotal : number = 0
 
   constructor(
     private shoppingCartService : ShoppingCartService
   ) { }
 
   ngOnInit() {
-    this.currentCart = JSON.parse(localStorage.getItem('shoppingCart'));
+    
+    let cart = JSON.parse(localStorage.getItem('shoppingCart'));
+    // Adding total amount per item to cart
+    if(cart){
+      for(let p = 0; p < cart.length; p++){
+        cart[p].total = Number((cart[p].quantity * cart[p].price).toFixed(2));
+        this.grandTotal += cart[p].total;
+        this.grandTotal = Number(this.grandTotal.toFixed(2));
+        
+      }
+    }
 
-    // console.log('Checkout Cart', this.currentCart);
+    this.currentCart = cart;
+
+    
+
+    console.log('Checkout Cart', this.currentCart);
 
   }
 
@@ -29,6 +44,8 @@ export class ShoppingCartComponent implements OnInit {
   purchase(){
 
     this.shoppingCartService.purchase();
+
+    alert('Order was placed!');
       // .subscribe( response => {
       //   console.log(response);
       // })

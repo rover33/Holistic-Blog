@@ -27,27 +27,45 @@ export class ShoppingCartService {
     }
 
 
+    // Adding total amount per item to cart
+    if(cart){
+      for(let p = 0; p < cart.length; p++){
+        cart[p].total = (cart[p].quantity * cart[p].price).toFixed(2);
+        delete cart[p].productName;
+        delete cart[p].price;
+        delete cart[p].image;
+      }
+    }
+
+
+    // Formatting data to send to back end
     if(!cart){
-      console.log('cart is empty!'); 
+
+      alert('Cart is empty!'); 
+
     } else if(cart && userID){
+
       console.log('sending both list and user ID!');
+
       shoppingList.push(cart);
       shoppingList.push( [ { 'userID': userID.uid } ] );
       
-      console.log(shoppingList);
+      // console.log(shoppingList);
 
-    } else if(cart){
+    } else if(cart && !userID){
       console.log('sending list, no user ID');
       shoppingList.push(cart);
       userID = [];
       shoppingList.push(userID);
       
-      console.log(shoppingList);
+      // console.log(shoppingList);
 
     } 
 
-    // console.log(typeof(shoppingList));
-    // console.log(shoppingList);
-    
+    console.log('Final Shopping List data to send to Back End, ', shoppingList);
+
+
+    return this.http.post(`${this.baseUrl}/api/purchase`, shoppingList)
+
   }
 }

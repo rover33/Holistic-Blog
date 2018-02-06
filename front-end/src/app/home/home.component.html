@@ -63,7 +63,7 @@
 
                 <mat-card-actions>
                     <button mat-button [routerLink]="['/product', product.product_id]">More Info</button>
-                    <button (click)="addToCart(product.product_id, i, product.name, product.price)" mat-button> Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
+                    <button (click)="addToCart(product.product_id, i, product.name, product.price, product.image_url)" mat-button> Add To Cart <img src="../assets/images/cart.svg" alt="like" class="cart"></button>
                 </mat-card-actions>
             </mat-card>
         
