@@ -20,13 +20,15 @@ export class UserService {
     private http: Http
   ) { }
 
-//Save new user
-saveUser(uAdmin){
-  return this.http.post(`${this.baseUrl}/api/user/saveUser/`, uAdmin);
-}
+// //Save new user
+// saveUser(uAdmin){
+//   return this.http.post(`${this.baseUrl}/api/user/saveUser/`, uAdmin);
+// }
 
 
 //Check admin user.
-checkAdmin?(){ }
+checkAdmin?(uid){
+  return this.http.get(`${this.baseUrl}/api/checkAdmin/${uid}`)
+ }
 }
 

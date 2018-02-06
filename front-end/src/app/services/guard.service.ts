@@ -6,14 +6,16 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class GuardService implements CanActivate{
 
+  admin: boolean = true;
+
   constructor(
     private router: Router,
     private afAuth: AngularFireAuth
   ) { }
 
   canActivate(): Observable <boolean> {
-    return this.afAuth.authState.map(auth => {
-      if (!auth) {
+    return this.afAuth.authState.map(admin => {
+      if (!admin) {
         this.router.navigate(['/login']);
         return false;
       } else {
@@ -21,5 +23,16 @@ export class GuardService implements CanActivate{
       }
     });
   }
+
+  // canActivate(): Observable <boolean> {
+  //   return this.afAuth.authState.map(auth => {
+  //     if (!auth) {
+  //       this.router.navigate(['/login']);
+  //       return false;
+  //     } else {
+  //       return true;
+  //     }
+  //   });
+  // }
 
 }
