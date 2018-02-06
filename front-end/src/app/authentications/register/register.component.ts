@@ -35,6 +35,7 @@ export class RegisterComponent implements OnInit {
         this.flashMessage.show(`Hello, ${this.email}. You are now registered and logged in.`, {
           timeout: 4000
         })
+
         this.router.navigate(['/'])
       })
       .catch(err => {

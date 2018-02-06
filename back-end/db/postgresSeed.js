@@ -38,8 +38,8 @@ let users = [
 		admin: true
 	},
 	{
-		user_email: 'jin.tak@ga.com',
-		user_id: 1234,
+		user_email: 'jin@jin.com',
+		user_id: 'L5sLemQAqHP6qOsbwerfdrFgJAe2',
 		admin: true
 	},
 	{
