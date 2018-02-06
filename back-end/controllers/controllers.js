@@ -70,7 +70,17 @@ let checkQuantity = (request, response) => {
 };
 
 let placeOrder = (request, response) => {
-	console.log(request.body);
+	let userId;
+	if (request.body[1].length) {
+		/*console.log("there is user id", request.body[1]);
+		console.log("there is user id", request.body[0]);*/
+		userId = request.body[1][0].userID;
+	} /*else {
+		console.log("no user id", request.body[1]);
+		console.log("no user id", request.body[0]);
+	}*/;
+	/*console.log("userId is ",userId);*/
+	response.json({orderStatus: 'success'});
 /*	if (request.body.)
 	index.sequelize.query(`INSERT INTO `)*/
 }
