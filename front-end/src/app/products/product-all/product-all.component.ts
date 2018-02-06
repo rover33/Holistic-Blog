@@ -40,9 +40,9 @@ export class ProductAllComponent implements OnInit {
 
     this.productService.addToCart(productID, qty)
       .subscribe( response => {
-        console.log(response.json());
+        // console.log(response.json());
         let availableQty = response.json().quantity;
-        console.log(availableQty);
+        // console.log(availableQty);
 
         if(qty > availableQty){
           alert(`Sorry, there are only ${availableQty} items left in our inventory.`);
@@ -55,14 +55,39 @@ export class ProductAllComponent implements OnInit {
       
           let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
       
-          console.log(currentItems);
+          // console.log(currentItems);
       
           if(currentItems == null){
             currentItems = [];
           } 
-      
-          currentItems.push(newCartItem);
-      
+
+          if(currentItems.length == 0){
+            currentItems.push(newCartItem);
+          } else {
+            console.log('CurrentITEMS LENGTH: ', currentItems.length);
+            console.log('NEW ITEM ID: ',newCartItem.productID);
+
+            var exists = false;
+            
+            for(let i = 0; i < currentItems.length; i++){
+              
+
+              if(newCartItem.productID == currentItems[i].productID){
+                currentItems[i].quantity += newCartItem.quantity;
+                exists = true;
+              }
+              
+            } 
+
+            if(!exists){
+              currentItems.push(newCartItem);
+            }
+
+
+          }
+
+         
+
           localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
 
           console.log('Successfully added to cart');
