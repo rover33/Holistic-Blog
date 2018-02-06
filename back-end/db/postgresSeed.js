@@ -1,5 +1,5 @@
 let dbConnection = require('../models/index');
-//console.log(dbConnection);
+
 let products = [
 	{
 		name: 'Lemongrass Extract',
@@ -86,7 +86,7 @@ let orders = [
 	{
 		order_num: 4,
 		total: 120,
-		user_id: 321,
+		user_id: 123,
 		order_date: Date()
 	}
 ];
@@ -94,52 +94,52 @@ let orders = [
 let order_details = [
 	{
 		quantity: 2,
-		orderOrderNum: 1,
-		productProductId: 1
+		order_num: 1,
+		product_id: 1
 	},
 	{
 		quantity: 1,
-		orderOrderNum: 1,
-		productProductId: 3
+		order_num: 1,
+		product_id: 3
 	},
 	{
 		quantity: 2,
-		orderOrderNum: 2,
-		productProductId: 4
+		order_num: 2,
+		product_id: 4
 	},
 	{
 		quantity: 10,
-		orderOrderNum: 2,
-		productProductId: 1
+		order_num: 2,
+		product_id: 1
 	},
 	{
 		quantity: 2,
-		orderOrderNum: 2,
-		productProductId: 4
+		order_num: 2,
+		product_id: 4
 	},
 	{
 		quantity: 2,
-		orderOrderNum: 3,
-		productProductId: 3
+		order_num: 3,
+		product_id: 3
 	},
 	{
 		quantity: 1,
-		orderOrderNum: 3,
-		productProductId: 4
+		order_num: 3,
+		product_id: 4
 	},
 	{
 		quantity: 1,
-		orderOrderNum: 4,
-		productProductId: 1
+		order_num: 4,
+		product_id: 1
 	},
 	{
 		quantity: 5,
-		orderOrderNum: 4,
-		productProductId: 4
+		order_num: 4,
+		product_id: 4
 	}
 ];
 
-dbConnection.models.Product.bulkCreate(products);
-dbConnection.models.User.bulkCreate(users);
-dbConnection.models.Order.bulkCreate(orders);
-dbConnection.models.Order_detail.bulkCreate(order_details).then(() => process.exit(0));
+dbConnection.models.Product.bulkCreate(products)
+	.then(() => dbConnection.models.User.bulkCreate(users))
+	.then(() => dbConnection.models.Order.bulkCreate(orders))
+	.then(() => dbConnection.models.Order_detail.bulkCreate(order_details)).then(() => process.exit(0));
