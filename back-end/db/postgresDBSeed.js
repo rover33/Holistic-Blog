@@ -2,31 +2,31 @@ let dbConnection = require('../models/index');
 //console.log(dbConnection);
 let products = [
 	{
-		name: 'product1',
-		description: 'product 1 is a great product buy it bitch or I\'ll fuck you up' ,
-		price: 18.29,
-		image_url: 'www.image.com',
+		name: 'Lemongrass Extract',
+		description: 'The essential oil of lemongrass is used as aromatherapy for muscle pain' ,
+		price: 6.99,
+		image_url: 'https://images-na.ssl-images-amazon.com/images/I/710bw7i0W7L._SY355_.jpg',
 		quantity: 10
 	},
 	{
-		name: 'product2',
-		description: 'product2 is effective for things that has to do with things inside of other things',
-		price: 8.29,
-		image_url: 'www.image.com',
+		name: 'Organic Rainbow Hair Dye',
+		description: 'Organic rainbow hair dye made from unicorn droppings. Good for hair, skin, and can also be used as toothpaste.',
+		price: 599.99,
+		image_url: 'http://www.mens-hairstyle.com/wp-content/uploads/2014/12/Just-for-Men-Hair-Color.jpg',
 		quantity: 11
 	},
 	{
-		name: 'product3',
-		description: 'product3 is effective for things that has to do with things inside of other things',
+		name: 'Vitamin C',
+		description: 'Vitamin C, also known as ascorbic acid and L-ascorbic acid, is a vitamin found in food and used as a dietary supplement. The disease scurvy is prevented and treated with vitamin C-containing foods or dietary supplements',
 		price: 5.29,
-		image_url: 'www.image.com',
+		image_url: 'http://www.epharmacy.com.au/images/productimages/65054/original.jpg?28%2F08%2F2017+10%3A29%3A48+AM',
 		quantity: 12
 	},
 	{
-		name: 'product4',
-		description: 'Understanding thinking. View healthcare. Treating lifestyle framework integration therapy',
+		name: 'Aloe Vera Extract',
+		description: 'Because of its anti-inflammatory and laxative components, another aloe vera benefit is its ability to help with digestion',
 		price: 80.29,
-		image_url: 'www.image.com',
+		image_url: 'https://www.terrylabs.com/images/layout/aloe-vera-concentrate.jpg',
 		quantity: 13
 	}
 ];

@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
 
 
   // This function will check availability of the Product before adding to the cart
-  addToCart(productID, i, productName, productPrice){
+  addToCart(productID, i, productName, productPrice, productImage){
     let qty = Number((<HTMLInputElement>document.getElementById(`card-${i}`)).value);
     
     // console.log(`You are trying to buy ${qty} items`)
@@ -68,7 +68,8 @@ export class HomeComponent implements OnInit {
           'productName': productName,
           'productID': productID,
           'quantity': qty  ,
-          'price': productPrice
+          'price': productPrice,
+          'image': productImage
         }
     
         let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
