@@ -9,7 +9,7 @@ export class ShoppingCartService {
   constructor( private http: Http ) { }
 
   purchase(){
-    console.log('hit cart service');
+    console.log('hit purchase service');
     let shoppingList = [];
     let cart = JSON.parse(localStorage.getItem('shoppingCart'));
     let userID;

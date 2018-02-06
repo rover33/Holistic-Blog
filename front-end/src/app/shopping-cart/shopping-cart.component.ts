@@ -42,18 +42,21 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   purchase(){
+    console.log('Purchasing...');
 
     this.shoppingCartService.purchase()
       .subscribe( response => {
-        console.log(response);
-        alert('Order was placed!');
-      })
-   
-    
-    localStorage.clear();
-    
-    this.currentCart = null;
 
-    // console.log(this.currentCart);
+        console.log('checkout response', response);
+        alert('Order was placed!');
+
+        localStorage.removeItem('shoppingCart');
+        
+        this.currentCart = null;
+
+      })
+
+        
+
   }
 }
