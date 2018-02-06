@@ -1,14 +1,20 @@
+.parent-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    background-color: lightgrey;
 
+}
 
 #single-blog-container {
     height: 100rem;
-    width: 75%;
-    margin: 1.5rem auto;
-    margin-top: 4rem;
+    width: 55%;
+    margin: 0 auto;
     padding: 2.5rem 5rem;
-    box-shadow: 0 5px 15px #417505;
-    border-radius: 10px;
+    box-shadow: 0 5px 20px #417505;
+    border-radius: 5px;
     position: relative;
+    background-image: linear-gradient(to top right, rgb(238, 238, 104), rgb(148, 250, 148));
 
 
     #back-btn {
@@ -64,7 +70,7 @@
             p {
                 position: absolute;
                 top: 50%;
-                left: 20%;
+                left: 23%;
                 transform: translateY(-50%);
 
                 // border: 2px solid tomato;
@@ -81,7 +87,7 @@
         // border: 3px solid blue;
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-indent: 2rem;
             line-height: 2.2rem;
 
@@ -91,20 +97,36 @@
 
     .blog-comments{
         width: 100%;
-
         padding: 2rem 0;
+        margin-top: 2rem;
 
         .enter-comment {
             height: 10rem;
-            width: 65%;
+            width: 90%;
             padding: 20px;
-
+            position: relative;
             // border: 5px solid blue;
 
-            .comment-box-width {
-                width: 100%;
-                
-                
+            #user-comment {
+                font-size: 1.3rem;
+            }
+
+            #submit-button {
+                position: absolute;
+                width: 100px;
+                padding: .7rem;
+                text-align: center;
+                right: 0;
+                border: 2px solid green;
+                border-radius: 5px;
+                transition: .2s ease-in;
+                margin-top: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background: green;
+                    color: white;
+                }
             }
         }
 

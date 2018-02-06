@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, keyframes } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { GuardService } from './services/guard.service';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +16,13 @@ export class AppComponent {
   loggedInUser: string;
   showRegister: boolean;
   
-  admin: boolean = true;
+  admin: boolean = false; 
 
   constructor(
     private authService : AuthService,
+    private userService: UserService,
     private router: Router,
-    private flashMessage: FlashMessagesService
+    private flashMessage: FlashMessagesService,
   ){}
 
   ngOnInit(){
@@ -30,6 +33,15 @@ export class AppComponent {
       } else {
         this.isLoggedIn = false;
       }
+    })
+   let uid = JSON.parse(localStorage.getItem('firebase:authUser:AIzaSyAAaja_uGzzXyrPGku3VBTLVGnNWbxlqbY:[DEFAULT]')) 
+    console.log(uid.uid)
+
+   this.userService.checkAdmin(uid.uid).subscribe(response => {
+     if (response.json().admin == true) {
+       this.admin = true
+     }
+
     })
   }
 

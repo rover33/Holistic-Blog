@@ -125,7 +125,7 @@
         
             .product-card{
                 width: 25%;
-                height: 25em;
+                height: 30em;
                 margin: 1em;
 
                 mat-card-title {
@@ -145,11 +145,17 @@
         
                     }
                 }
+                
+                .available-qty {
+                    padding-top: 1rem;
+                }
         
                 p {
                     margin: 15px 0;
                     text-indent: 2.5rem;
                     text-align: left;
+                    line-height: 20px;
+                    font-family: 'Roboto', sans-serif;
                 }
         
                 .product-author {

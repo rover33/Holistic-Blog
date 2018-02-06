@@ -1,18 +1,34 @@
-<div *ngIf="!currentCart">
-  NO ITEMS IN CART
+<div *ngIf="!currentCart" id="empty">
+  <h4>Empty Cart :(</h4>
+  <img src="../assets/images/empty-cart.png" alt="empty cart">
 </div>
 
 
-<div>
-  <h1>CART</h1>
-  <div *ngFor="let item of currentCart">
-  
-    <li><h3>{{item.productName}}</h3></li>
-    <li>ID: {{item.productID}}</li>
-    <li>QTY: {{item.quantity}}</li>
+<div *ngIf="currentCart" id="cart">
+  <h1>Items in Your Cart</h1>
+
+  <div *ngFor="let item of currentCart" class="item">
+    
+    <li class="name">{{item.productName}}</li>
+    <img class="image" src="{{item.image}}" alt="product image">
+    <!-- <li class="id">ID: {{item.productID}}</li> -->
+    <li class="price">PRICE: ${{item.price}}</li>
+    <li class="quantity">QTY: {{item.quantity}}</li>
+    <li class="total">TOTAL: ${{item.total}}</li>
+
+    
   </div>
 
-  <button (click)="emptyCart()">Empty Cart</button>
+
+  <div class="total-container">
+    <p>Total: ${{grandTotal}}</p>
+  </div>
+
+  <div class="checkout-buttons">
+    <button (click)="emptyCart()">Empty Cart</button>
+    <button (click)="purchase()">Place Order</button>
+  </div>
+  
 </div>
  
 

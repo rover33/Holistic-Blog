@@ -22,6 +22,7 @@ export class AuthService {
   ) {
     this.user = afAuth.authState;
 
+    //checks to see see if there is user and their details.
     this.user.subscribe(
       (user) => {
         if (user) {
@@ -69,15 +70,7 @@ export class AuthService {
 
   // }
 
-  // private checkAuthorization(user: User, allowedRoles: string[]): boolean {
-  //   if (!user) return false
-  //   for (const role of allowedRoles) {
-  //     if ( user.roles[role] ) {
-  //       return true
-  //     }
-  //   }
-  //   return false
-  // }
+
 
 }
 

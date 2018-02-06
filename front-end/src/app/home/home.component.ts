@@ -30,33 +30,26 @@ export class HomeComponent implements OnInit {
         let blogs = response.json().splice(0, 3);
         for(let i = 0; i < blogs.length; i++){
           // console.log(blogs[i].blogBody);
-          blogs[i].blogBody = blogs[i].blogBody.slice(0,20).concat('...');
+          blogs[i].blogBody = blogs[i].blogBody.slice(0,100).concat('...');
         }
         this.threeBlogs = blogs;
       });
 
       this.productService.getAllProducts()
       .subscribe( response => {
-        console.log(response);
-        // console.log("Successfully retreived BLOGS : ", response.json());
-        this.threeProducts = response.json().splice(0, 3);
+        console.log("Successfully retreived Products : ", response.json());
+        let products = response.json().splice(0, 3);
+        for(let i = 0; i < products.length; i++){
+          // console.log(products[i].blogBody);
+          products[i].description = products[i].description.slice(0,100).concat('...');
+        }
+        this.threeProducts = products;
       })
   }
 
 
-  // getOneBlog(blogId){
-  //   console.log(blogId);
-  //   this.blogService.getSingleBlog(blogId)
-  //     .subscribe( response => {
-  //       console.log(response);
-        
-  //     })
-  // }
-
-
   // This function will check availability of the Product before adding to the cart
-  addToCart(productID, i, productName){
-
+  addToCart(productID, i, productName, productPrice, productImage){
     let qty = Number((<HTMLInputElement>document.getElementById(`card-${i}`)).value);
     
     // console.log(`You are trying to buy ${qty} items`)
@@ -65,34 +58,62 @@ export class HomeComponent implements OnInit {
     if(!qty){
       qty = 1;
     }
-
-    let newCartItem = {,
-      'productName' : productName,
-      'productID': productID,
-      'quantity': qty  
-    }
-
     
+    this.productService.addToCart(productID, qty)
+    .subscribe( response => {
+      console.log(response.json());
+      let availableQty = response.json().quantity;
+      console.log(availableQty);
 
-    let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
+      if(qty > availableQty){
+        alert(`Sorry, there are only ${availableQty} items left in our inventory.`);
+      } else {
+        let newCartItem = {
+          'productName': productName,
+          'productID': productID,
+          'quantity': qty  ,
+          'price': productPrice,
+          'image': productImage
+        }
+    
+        let currentItems = JSON.parse(localStorage.getItem('shoppingCart'));
+      
+        // console.log(currentItems);
+    
+        if(currentItems == null){
+          currentItems = [];
+        } 
 
-    console.log(currentItems);
+        if(currentItems.length == 0){
+          currentItems.push(newCartItem);
+        } else {
+          console.log('CurrentITEMS LENGTH: ', currentItems.length);
+          console.log('NEW ITEM ID: ',newCartItem.productID);
 
-    if(currentItems == null){
-      currentItems = [];
-    } 
+          var exists = false;
+          
+          for(let i = 0; i < currentItems.length; i++){
+            
 
-    currentItems.push(newCartItem);
+            if(newCartItem.productID == currentItems[i].productID){
+              currentItems[i].quantity += newCartItem.quantity;
+              exists = true;
+            }
+            
+          } 
 
-    localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
+          if(!exists){
+            currentItems.push(newCartItem);
+          }
 
+        }
+        localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
 
-    // this.productService.addToCart(productID, qty)
-    //   .subscribe( response => {
-    //     localStorage.setItem('productID', productID);
-    //     localStorage.setItem('quantity', qty);
-    //     console.log('Successfully added to cart');
-    //   })
+        alert(`Successfully added Product: ${newCartItem.productName} Qty: ${newCartItem.quantity} to cart`);
+      }
+
+      
+    })
   }
 
 
