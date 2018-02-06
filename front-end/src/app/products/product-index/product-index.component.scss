@@ -10,6 +10,11 @@
 }
 
 
+.flex-product{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 hr {
     width: 20%;
     margin: 0 20px;
@@ -34,6 +39,8 @@ hr {
 h2{
     font-weight: normal;
 }
+
+
 .product-name{
     font-size: 3rem;
     padding: 15px;
@@ -45,8 +52,9 @@ h2{
 
 
 
-.product-image{
-    display: flex
+img{
+    display: flex;
+    align-content: left;
     
 }
 

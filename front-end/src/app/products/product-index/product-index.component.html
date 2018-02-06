@@ -1,15 +1,18 @@
 <div id="single-product-container">
-    <hr>  
-        <h1 class="product-page-title">Product</h1>
-    <hr>
-        <h2 class="product-name">{{product.name}}</h2>
-    <hr class="line-name">
-        <p class="product-info">{{product.description}}</p>
-    <hr>
-        <h2 class="product-qty">QTY: {{product.quantity}}</h2>
-        <h2 class="product-price">$ {{product.price}}</h2>
-        <button id="add" mat-button>Add</button>
-        <h2 class="product-image">{{product.image_url}}</h2>
+    <div id="flex-product">
+        <hr>  
+            <h1 class="product-page-title">Product</h1>
+        <hr>
+            <h2 class="product-name">{{product.name}}</h2>
+        <hr class="line-name">
+            <p class="product-info">{{product.description}}</p>
+        <hr>
+            <img mat-card-md-image src ={{product.image_url}}>
+            <h2 class="product-qty">QTY: {{product.quantity}}</h2>
+            <h2 class="product-price">$ {{product.price}}</h2>
+            <button id="add" mat-button>Add</button>
+
+    </div>
 </div>
 
 
