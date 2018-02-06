@@ -1,19 +1,16 @@
-<h1>{{product.name}}</h1>
-<div class="single-product-container">
-    <div class= "product-name">
-        <h2>PRODUCT NAME: {{product.description}}</h2>
-    </div>
-    <div class="product-price">
-        <h2>PRODUCT PRICE: {{product.price}}</h2>
-    </div>
-    <div class="product-image">
-        <h2>PRODUCT IMAGE: {{product.image_url}}</h2>
-    </div>
-    <div class="product-qty">
-        <h2>PRODUCT QTY: {{product.quantity}}</h2>
-    </div>
+<div id="single-product-container">
+    <hr>  
+        <h1 class="product-page-title">Product</h1>
+    <hr>
+        <h2 class="product-name">{{product.name}}</h2>
+    <hr>
+        <p class="product-info">{{product.description}}</p>
+    <hr>
+        <h2 class="product-qty">QTY: {{product.quantity}}</h2>
+        <h2 class="product-price">$ {{product.price}}</h2>
+        <button id="add" mat-button>Add</button>
+        <h2 class="product-image">{{product.image_url}}</h2>
 </div>
 
 
 
-<button mat-button>hi</button>
