@@ -1,6 +1,7 @@
 .about-container {
     height: 2000px;
     width: 100%;
+
     // border: 5px solid black;
 
     .top-container {
@@ -10,17 +11,21 @@
         width: 100vw;
         position: relative;
 
+
         h1 {
             width: 25%;
             margin: 2rem auto;
             text-align: center;
             font-family: 'Dancing Script', sans-serif;
             font-size: 3rem;
+
             color: #417505;
+
         }
 
         #group-photo {
             height: 70%;
+
             width:100%;
             background: url('/assets/images/group-photo.jpg');
             background-size: cover;
@@ -58,6 +63,7 @@
             font-family: 'Roboto', sans-serif;
             text-align: center;
         }
+
     }
 
     .team-container {
@@ -65,6 +71,7 @@
 
         height: 50%;
         width: 100vw;
+
         position: relative;
 
         .single-member {
@@ -140,4 +147,5 @@
         
     }
 }
+
 
