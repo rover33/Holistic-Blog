@@ -1,0 +1,42 @@
+<div *ngIf="singleBlog" class="parent-container">
+
+
+<mat-card id="single-blog-container">
+  <button id="back-btn" mat-button (click)="backClicked()">Back</button>
+  
+  <div class="blog-header">
+    <h1 class="blog-title">{{singleBlog.blogTitle}}</h1>
+    <div class="blog-user-info">
+      <img src="../assets/images/user-profile.svg" alt="user">
+      <p class="blog-date">{{singleBlog.date}} By Bobby Boucher</p>
+    </div>
+  </div>
+
+  <div class="blog-body">
+    <p>
+      {{singleBlog.blogBody}}
+
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, deserunt. Nostrum at quia voluptates. Quasi saepe velit animi, sunt rerum laborum voluptatibus laudantium expedita blanditiis. Facilis magnam repellendus maiores quo.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi corrupti soluta architecto ipsam, excepturi libero a sapiente magni doloribus eius laborum? Officiis, sint deserunt minus omnis aliquid expedita delectus impedit?
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus provident placeat earum autem perferendis accusamus mollitia minus odio cupiditate commodi libero, hic, fugit molestias numquam delectus rem et dolorem ipsam.
+      <br>
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus illo vel minus sequi? Minus, dolorum quidem. Aspernatur esse debitis inventore ipsum voluptate illo ex et facilis sint minima. Eos, vero.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur provident laudantium eveniet, fugit error architecto vero facilis! Ut, itaque laborum aut facere eveniet placeat libero minima labore fugit dignissimos. Commodi.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aliquam ex eos quas! Ducimus fugit autem libero facilis cupiditate ab maiores laborum incidunt aliquam deleniti, omnis architecto? Unde, perspiciatis dolor!
+    </p>
+  </div>
+
+  <div class="blog-comments">
+    <h1>COMMENTS</h1>
+    <div class="enter-comment">
+      <textarea name="user-comment" id="user-comment" cols="56" rows="10"></textarea>
+      <div id="submit-button">Submit</div>
+    </div>
+    
+  </div>
+
+</mat-card>
+
+  
+</div>

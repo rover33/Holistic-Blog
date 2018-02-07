@@ -1,0 +1,16 @@
+<div class="register-container">
+
+    <h1>Register</h1>
+    <form (submit)="onSubmit()">
+        <div id="email">
+            <label for ="email">Email</label>
+            <input type="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div id="password">
+            <label for ="password">Password</label>
+            <input type="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <input type="submit" value="Register" id="submit-button">
+    </form>
+
+</div>

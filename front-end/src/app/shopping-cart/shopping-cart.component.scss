@@ -1,0 +1,126 @@
+// MY LIFE IS EMPTY. JUST LIKE THIS CART
+#empty {
+    width: 100%;
+    height: 35vh;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+    h4 {
+        height: 15%;
+        width: 30rem;
+        margin: 3rem auto;
+    }
+
+    img {
+        height: 100px;
+    }
+}
+
+// FULL CART
+#cart {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+
+    h1 {
+        width: 20rem;
+        margin: 1rem auto;
+        text-align: center;
+        color: #417505;
+    }
+}
+
+.item {
+    // border: 2px solid blue;
+
+    list-style: none;
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    border-bottom: 2px solid grey;
+
+    li {
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .name {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        font-size: 1.5rem;
+        
+    }
+    .image {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+    }
+    // .id {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 25%;
+    // }
+    .price {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .quantity {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+    }
+    .total {
+        position: absolute;
+        top: 50%;
+        left: 90%;
+    }
+
+
+
+    img {
+        height: 150px;
+        width: 150px;
+        display: inline-block;
+    }
+
+   
+}
+
+.total-container {
+    width: 95%;
+    text-align: right;
+    font-size: 2rem;
+    margin: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkout-buttons {
+    width: 95%;
+    height: 4rem;
+    text-align: right;
+    font-size: 2rem;
+    margin: 1rem;
+    font-family: 'Roboto', sans-serif;
+    // border: 3px solid orangered;
+
+    button {
+        outline: none;
+        height: 4rem;
+        width: 12rem;
+        border-radius: 30px;
+        background: lightgrey;
+        padding: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover {
+            border: 3px solid #417505;
+            box-shadow: 0 0 15px #417505;
+        }
+    }
+}

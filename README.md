@@ -3,6 +3,9 @@
 
 We are building a responsive full stack website in 1-week sprint timeline. The idea behind this is to accommodate potential user to read, post and comment on the blog along with having the ability to purchase the healthy product. At the same token, we are trying to encourage the user to live the holistic lifestyle. 
 
+
+[Heroku Link](https://holistic-blog.herokuapp.com/)
+
 ## Team Roles 
 
 * Jin Tak: Lead Front-End Developer
@@ -13,8 +16,9 @@ We are building a responsive full stack website in 1-week sprint timeline. The i
 
 ## Technologies and tools used
 ```
+
 Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Heroku | Firebase 
-```
+
 
 ```
 Sketch App | Google Doc | Invision | Keynote 

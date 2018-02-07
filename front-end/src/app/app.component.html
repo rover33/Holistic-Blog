@@ -1,57 +1,54 @@
 
 
 <div class="main-content-container fadeIn">
+   
     <!-- 1   -->
-    <h1>Holistic</h1>
+    <h1 routerLink="/">Holistic</h1>
     
     <!-- 2 -->
     <div class="login-cart-container">
-        <button mat-button>Login</button> 
-        <a href="#"><img src="assets/images/cart.svg" alt="cart"></a>
+        <button mat-button *ngIf="!isLoggedIn" routerLink="/register">Register</button>
+                                        
+        <button mat-button *ngIf="!isLoggedIn" routerLink="/login">Login</button> 
+
+        <button mat-button *ngIf="isLoggedIn" routerLink="#" >{{loggedInUser}}</button>
+
+        <button mat-button *ngIf="isLoggedIn" (click)="onLogoutClick()">Logout</button>
+
+        <a routerLink="/checkout"><img src="assets/images/cart.svg" alt="cart"></a>
     </div>
+    
 
+   
+    <flash-messages></flash-messages>
+    
+    
+    
     <!-- 3 -->
-    <div class="main-links-container">
-        <button mat-button>Blog</button>
-        <button mat-button>Shop</button>
-        <button mat-button>About Us</button>
-
-        <!-- <a href="#">Blog</a>
-        <a href="#">Shop</a>
-        <a href="#">About Us</a> -->
+    <div *ngIf="showBanner()" class="main-links-container">
+        <button mat-button routerLink="/blogs">Blog</button>
+        <button mat-button routerLink="/products">Shop</button>
+        <button mat-button routerLink="/about">About Us</button>
     </div>
 </div>
 
-<div class="jumbotron fadeIn">
+<div *ngIf="showBanner()" class="jumbotron fadeIn">
     <div class="jumbo-image"></div>
 </div>
 
-<div class="card-container">
 
-    <h1>The Latest Blogs</h1>
-    <br>
-    <hr>
-    <br>
 
-    
-    <div class="blog-card-container">
+<router-outlet></router-outlet>
 
-        <app-blog-preview></app-blog-preview>
 
+
+<div class="footer">
+
+    <p>&copy; 2018 Holistic</p>
+     
+     <div class="admin-container">
+        <button mat-button *ngIf="admin" routerLink="/product/edit">Admin Functions</button>
     </div>
-
-    <h1>Products</h1>
-    <br>
-    <hr>
-    <br>
-
-    <div class="product-card-container">
-
-        <app-product-preview></app-product-preview>
         
-    </div>
-    
 
 </div>
-
-

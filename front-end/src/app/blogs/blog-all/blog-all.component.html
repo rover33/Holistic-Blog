@@ -1,0 +1,36 @@
+
+<div class="card-container">
+  <hr>
+  <h1>Blogs</h1>
+  <hr>
+  <br>
+
+  
+    <div class="blog-card-container">
+
+        <div class= "blog-parent-container">
+  
+            <mat-card id="custom-shadow" class="blog-card"  *ngFor="let blog of allBlogs">
+              
+                <mat-card-title>{{blog.blogTitle}}</mat-card-title>
+                <!-- <img mat-card-lg-image src="{{blog.image}}"> -->
+                <hr>
+                <mat-card-content>
+                    <p>
+                        {{blog.blogBody}}
+                    </p>
+                </mat-card-content>
+                <!-- <mat-card-content class="blog-author">{{blog.author}}</mat-card-content> -->
+                <mat-card-content class="blog-author">{{blog.date}}</mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE <img src="../assets/images/heart-icon.png" alt="like" class="heart"></button>
+                    <button mat-button [routerLink]="['/blog', blog._id]">READ MORE</button>
+                    <!-- <a routerLink="/blog/{{blog._id}}"></a> -->
+                </mat-card-actions>
+            </mat-card>
+        
+        </div>
+
+    </div>
+
+  </div>

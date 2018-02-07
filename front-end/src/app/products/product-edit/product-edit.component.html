@@ -1,0 +1,61 @@
+<h1>Product Inventory</h1>
+
+<button routerLink="/product/new" class="addProd">
+    Add New Product
+</button>
+
+<div class="all-products">
+    <div class="product" *ngFor="let product of products">
+        <div *ngIf="productToEdit !== product">
+            <h3>Product Name: </h3>
+            <li>
+              {{product.name}} 
+            </li>
+            <h3>Product Description: </h3>
+            <li>
+              {{product.description}}
+            </li>
+            <h3>Product Price: </h3>
+            <li>
+              {{product.price}}
+            </li>
+            <h3>Product Image URL: </h3>
+            <li>
+              {{product.image_url}}
+            </li>
+            <h3>Product Quantity: </h3>
+            <li>
+              {{product.quantity}}
+            </li>
+        
+            <button (click)="deleteproduct(product.product_id)" class="deleteBtn">
+                Delete
+            </button>
+            <button (click)="makeProductEditable(product)" class="editBtn">
+                Edit
+            </button>
+           
+        </div>
+
+        <div *ngIf="productToEdit == product" class="edit-prod-container">
+      
+            <section>
+                <h3>Product Name: </h3>
+                <input [(ngModel)]="product.name" type="text" placeholder="Name">
+                <h3>Product Description: </h3>
+                <input [(ngModel)]="product.description" type="text" placeholder="Description" id="desc">
+                <h3>Product Price: </h3>
+                <input [(ngModel)]="product.price" type="text" placeholder="Price">
+                <h3>Product Image URL: </h3>
+                <input [(ngModel)]="product.image_url" type="text" placeholder="Image URL">
+                <h3>Product Quantity: </h3>
+                <input [(ngModel)]="product.quantity" type="text" placeholder="Quantity">
+
+                <button class='doneEditBtn' (click)="doneEditing(productToEdit)">
+                Done Editing
+                </button>
+            </section>
+        </div>
+    </div>
+  
+</div>
