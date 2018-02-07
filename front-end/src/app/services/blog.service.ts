@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { isDevMode } from '@angular/core'
 
 
 @Injectable()
 export class BlogService {
 
-  baseUrl = 'http://localhost:3000';
+  baseUrl: string; 
 
-  constructor( private http: Http ) { }
+  constructor(private http: Http) { 
+  	if(isDevMode()) {
+  		this.baseUrl = 'http://localhost:3000';
+  	} else {
+  		this.baseUrl = '';
+  	}
+  }
 
   getAllBlogs() {
     // console.log('hit getallblog function');
@@ -18,6 +25,8 @@ export class BlogService {
     console.log('hit the getSingleBlog service route');
     return this.http.get(`${this.baseUrl}/api/blog/${blogId}`);
   }
+  
 
 }
+
 
