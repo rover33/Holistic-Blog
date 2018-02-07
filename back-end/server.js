@@ -24,9 +24,11 @@ if(!process.env.DYNO) {
   });
 }
 
-app.use('/', routes);
+
 
 app.use(express.static(__dirname + 'dist'));
+
+app.use('/', routes);
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + 'dist'));
