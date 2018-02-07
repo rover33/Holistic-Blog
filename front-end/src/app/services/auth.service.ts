@@ -63,11 +63,7 @@ export class AuthService {
 
 
 
-  // canRead(user: User): boolean {
-  //   const allowed = ['admin']
-  //   return this.checkAuthorization(user, allowed)
-
-  // }
+  
 
 
 
