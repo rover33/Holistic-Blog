@@ -22,7 +22,7 @@ export class ShoppingCartService {
         console.log('user is logged in!');
         let key = localStorageKeys[i];
         userID = JSON.parse(localStorage.getItem(key));
-        console.log(userID.uid);
+        // console.log(userID.uid);
       } 
     }
 

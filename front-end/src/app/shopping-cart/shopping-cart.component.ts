@@ -32,7 +32,7 @@ export class ShoppingCartComponent implements OnInit {
 
     
 
-    console.log('Checkout Cart', this.currentCart);
+    // console.log('Checkout Cart', this.currentCart);
 
   }
 
@@ -42,12 +42,12 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   purchase(){
-    console.log('Purchasing...');
+    // console.log('Purchasing...');
 
     this.shoppingCartService.purchase()
       .subscribe( response => {
 
-        console.log('checkout response', response);
+        // console.log('checkout response', response);
         alert('Order was placed!');
 
         localStorage.removeItem('shoppingCart');

@@ -27,7 +27,7 @@ export class ProductEditComponent implements OnInit {
       .subscribe (response => {
         
         this.products = response.json();
-        console.log("RETREIVED all products", this.products);
+        // console.log("RETREIVED all products", this.products);
       })
 
   }
@@ -42,7 +42,7 @@ export class ProductEditComponent implements OnInit {
 
     this.productService.saveEditedProduct(productToEdit.product_id, productToEdit)
       .subscribe(response => {
-        console.log('Successfully updated product: ', response);
+        // console.log('Successfully updated product: ', response);
     })
 
     this.productToEdit = {};
@@ -50,21 +50,21 @@ export class ProductEditComponent implements OnInit {
 
   ////////////////////////////////////
   deleteproduct(productId){
-    console.log(productId);
+    // console.log(productId);
 
     this.productService.deleteProduct(productId)
       .subscribe(response => {
-        console.log('Successfully deleted product', response.json());
+        // console.log('Successfully deleted product', response.json());
         if(!response.json()){
           alert('Oops! did not delete');
         } else if(response.json()){
-          console.log(response.json(), 'hit!');
+          // console.log(response.json(), 'hit!');
 
           this.productService.getAllProducts()
             .subscribe (response => {
         
             this.products = response.json();
-            console.log("RETREIVED all products", this.products);
+            // console.log("RETREIVED all products", this.products);
           })
 
         }

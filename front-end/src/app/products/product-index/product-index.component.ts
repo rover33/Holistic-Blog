@@ -68,8 +68,8 @@ export class ProductIndexComponent implements OnInit {
           if(currentItems.length == 0){
             currentItems.push(newCartItem);
           } else {
-            console.log('CurrentITEMS LENGTH: ', currentItems.length);
-            console.log('NEW ITEM ID: ',newCartItem.productID);
+            // console.log('CurrentITEMS LENGTH: ', currentItems.length);
+            // console.log('NEW ITEM ID: ',newCartItem.productID);
 
             var exists = false;
             
