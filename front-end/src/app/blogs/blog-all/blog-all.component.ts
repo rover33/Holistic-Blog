@@ -23,7 +23,7 @@ export class BlogAllComponent implements OnInit {
         let blogs = response.json();
         for(let i = 0; i < blogs.length; i++){
           // console.log(blogs[i].blogBody);
-          blogs[i].blogBody = blogs[i].blogBody.slice(0,20).concat('...');
+          blogs[i].blogBody = blogs[i].blogBody.slice(0,150).concat('...');
         }
         this.allBlogs = blogs;
 

@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
         let blogs = response.json().splice(0, 3);
         for(let i = 0; i < blogs.length; i++){
           // console.log(blogs[i].blogBody);
-          blogs[i].blogBody = blogs[i].blogBody.slice(0,100).concat('...');
+          blogs[i].blogBody = blogs[i].blogBody.slice(0,150).concat('...');
         }
         this.threeBlogs = blogs;
       });
