@@ -33,28 +33,12 @@ let products = [
 
 let users = [
 	{
-		user_id: 123,
-		admin: true
-	},
-	{
 		user_id: 'L5sLemQAqHP6qOsbwerfdrFgJAe2',
 		admin: true
 	},
 	{
 		user_id: 'aNzwFUA2pLVyCsqC39Vya74xxXG3',
 		admin: true
-	},
-	{
-		user_id: 123456,
-		admin: true
-	},
-	{
-		user_id: 321,
-		admin: false
-	},
-	{
-		user_id: 09000,
-		admin: false
 	}
 ];
 
@@ -85,7 +69,7 @@ let users = [
 	}
 ];*/
 
-let order_details = [
+/*let order_details = [
 	{
 		quantity: 2,
 		order_num: 1,
@@ -131,9 +115,10 @@ let order_details = [
 		order_num: 4,
 		product_id: 4
 	}
-];
+];*/
 
 dbConnection.models.Product.bulkCreate(products)
 	.then(() => dbConnection.models.User.bulkCreate(users))
+	.then(() => process.exit(0));
 	/*.then(() => dbConnection.models.Order.bulkCreate(orders))*/
-	.then(() => dbConnection.models.Order_detail.bulkCreate(order_details)).then(() => process.exit(0));
+	/*.then(() => dbConnection.models.Order_detail.bulkCreate(order_details))*/
