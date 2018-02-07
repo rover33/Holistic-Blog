@@ -29,7 +29,7 @@ app.use('/', routes);
 app.use(express.static(__dirname + '/dist'));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
+  res.sendFile(path.join(__dirname + '/front-end/dist/index.html'));
 });
 
 let PORT = process.env.PORT || 3000;
