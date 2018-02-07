@@ -5,11 +5,11 @@ let Product = index.models.Product;
 let User = index.models.User;
 
 let getBlogs = (response) => {
-/*	blog = new Blog();
+	blog = new Blog();
 	blog.blogTitle = `random ${Math.random()}`;
 	blog.blogBody = `lorem Epsom ${Math.random()}`;
 	blog.date = Date();
-	blog.save();*/
+	blog.save();
 
 	Blog.find({}, null, {sort:{date: -1}}, (err, results) => {
 		response.json(results)});
