@@ -2,7 +2,8 @@ const index = require('../models/index');
 
 let Blog = index.models.Blog;
 let Product = index.models.Product;
-let User = index.models.User;
+let Order = index.models.Order;
+let Order_detail = index.models.Order_detail;
 
 let getBlogs = (response) => {
 	blog = new Blog();
@@ -70,10 +71,53 @@ let checkQuantity = (request, response) => {
 };
 
 let placeOrder = (request, response) => {
-	console.log(request.body);
-/*	if (request.body.)
-	index.sequelize.query(`INSERT INTO `)*/
-}
+	let userId;
+	if (request.body[1].length) {
+		/*console.log("there is user id", request.body[1]);
+		console.log("there is user id", request.body[0]);*/
+		userId = request.body[1][0].userID;
+	} /*else {
+		console.log("no user id", request.body[1]);
+		console.log("no user id", request.body[0]);
+	}*/;
+	let total = 0, products = [];
+	for (itemDetail of request.body[0]){
+		total += itemDetail.total * itemDetail.quantity;
+		products.push({
+			product_id: itemDetail.productID,
+			quantity: itemDetail.quantity
+		});
+		index.sequelize.query(`UPDATE products SET quantity = quantity - '${itemDetail.quantity}' WHERE products.product_id = '${itemDetail.productID}'`);
+	};
+	if (userId) {
+		Order.create({
+			total: total,
+			order_date: Date(),
+			user_id: userId
+		})
+		.then((result) => {
+			addingOrderNum (products, result.dataValues.order_num);
+			Order_detail.bulkCreate(products)
+				.then(response.json({orderStatus: 'success'}));
+		});
+	} else {
+		Order.create({
+			total: total,
+			order_date: Date()
+		})
+		.then((result) => {
+		addingOrderNum (products, result.dataValues.order_num);
+		Order_detail.bulkCreate(products)
+			.then(response.json({orderStatus: 'success'}));
+	});
+	};
+	
+	let addingOrderNum = (products, orderNum) => {
+		for (let i = 0; i < products.length; i++) {
+			products[i]['order_num'] = orderNum;
+		};
+	};
+};
 
 let checkAdmin = (request, response) => {
 	index.sequelize.query(`SELECT admin from users where user_id = '${request.params.id}'`)
