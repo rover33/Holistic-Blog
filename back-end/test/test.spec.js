@@ -1,6 +1,7 @@
 let Blog= require('../models/blog'),
     expect = require('chai').expect
     request = require('request')
+
     
 //new festival tests
 describe('checking if blog model works', function(){
@@ -57,4 +58,4 @@ describe("heroku", function() {
 });
 
 
-})
+});

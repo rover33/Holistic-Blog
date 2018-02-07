@@ -51,7 +51,9 @@ export class AuthService {
     });
   }
 
-
+getAuth() {
+    return this.afAuth.authState.map(auth => auth);
+  }
 
 
   logout() {
@@ -67,6 +69,4 @@ export class AuthService {
 }
 
 
- // getAuth() {
-  //   return this.afAuth.authState.map(auth => auth);
-  // }
+ 
