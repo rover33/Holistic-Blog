@@ -10,7 +10,7 @@ export class BlogService {
 
   constructor(private http: Http) { 
   	if(isDevMode()) {
-  		this.baseUrl = 'https://localhost:3000';
+  		this.baseUrl = 'http://localhost:3000';
   	} else {
   		this.baseUrl = '';
   	}
