@@ -28,6 +28,7 @@ describe('checking if blog model works', function(){
         });
     })
 
+// Front end test
     describe('Home Page', function() {
         it('Home page status', function(done) {
           request('http://localhost:4200' , function(error, response, body) {
