@@ -15,7 +15,7 @@ export class BlogAllComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('initiliazing blog component...');
+    // console.log('initiliazing blog component...');
     this.blogService.getAllBlogs()
       .subscribe( response => {
         // console.log(response);
