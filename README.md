@@ -13,11 +13,11 @@ We are building a responsive full stack website in 1-week sprint timeline. The i
 
 ## Technologies and tools used
 ```
-Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Heroku | Firebase 
+Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Firebase
 ```
 
 ```
-Sketch App | Google Doc | Invision | Keynote 
+Sketch App | Google Doc | Invision | Keynote | Heroku 
 ```
 
 
