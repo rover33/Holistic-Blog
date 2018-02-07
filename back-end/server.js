@@ -4,8 +4,7 @@ const routes = require('./config/routes');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-
-
+require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -26,12 +25,12 @@ if(!process.env.DYNO) {
 
 
 
-app.use(express.static(__dirname + 'dist'));
+app.use(express.static(__dirname + '/dist'));
 
 app.use('/', routes);
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + 'dist'));
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
 let PORT = process.env.PORT || 3000;
