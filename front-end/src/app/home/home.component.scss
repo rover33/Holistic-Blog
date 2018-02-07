@@ -147,8 +147,16 @@
                     }
                 }
                 
-                .available-qty {
-                    padding-top: 1rem;
+
+                .qty {
+                    margin: 1rem;
+                    font-size: 1.4rem;
+
+                    input {
+                        width: 4rem;
+                        height: 2rem;
+                        text-align: center;
+                    }
                 }
         
                 p {
