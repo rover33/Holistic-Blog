@@ -41,7 +41,9 @@ let users = [
 		admin: true
 	},
 	{
+
 		user_id: 'aNzwFUA2pLVyCsqC39Vya74xxXG3',
+
 		admin: true
 	},
 	{

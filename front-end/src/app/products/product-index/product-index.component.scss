@@ -37,7 +37,18 @@ hr {
  width: 100%;
  height: 50vh;
  display: flex;
- flex-direction: row-reverse
+ flex-direction: row-reverse;
+ font-family: 'Roboto', sans-serif;
+
+    .qty {
+        margin: 1rem;
+        font-size: 1.4rem;
+        input {
+            width: 4rem;
+            height: 2rem;
+        }
+    }
+
 }
 
 .product-content{
@@ -56,6 +67,9 @@ hr {
             padding: 15px;
     }
     
+    .product-price {
+        margin-top: 2rem;
+    }
     
     #add{
         background-color: green;
