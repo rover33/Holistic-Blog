@@ -12,14 +12,14 @@ let products = [
 		name: 'Organic Rainbow Hair Dye',
 		description: 'Organic rainbow hair dye made from unicorn droppings. Good for hair, skin, and can also be used as toothpaste.',
 		price: 599.99,
-		image_url: 'http://www.mens-hairstyle.com/wp-content/uploads/2014/12/Just-for-Men-Hair-Color.jpg',
+		image_url: 'https://www.mens-hairstyle.com/wp-content/uploads/2014/12/Just-for-Men-Hair-Color.jpg',
 		quantity: 11
 	},
 	{
 		name: 'Vitamin C',
 		description: 'Vitamin C, also known as ascorbic acid and L-ascorbic acid, is a vitamin found in food and used as a dietary supplement. The disease scurvy is prevented and treated with vitamin C-containing foods or dietary supplements',
 		price: 5.29,
-		image_url: 'http://www.epharmacy.com.au/images/productimages/65054/original.jpg?28%2F08%2F2017+10%3A29%3A48+AM',
+		image_url: 'https://www.epharmacy.com.au/images/productimages/65054/original.jpg?28%2F08%2F2017+10%3A29%3A48+AM',
 		quantity: 12
 	},
 	{
