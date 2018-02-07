@@ -33,38 +33,32 @@ let products = [
 
 let users = [
 	{
-		user_email: 'milad.abujarada@gmail.com',
 		user_id: 123,
 		admin: true
 	},
 	{
-		user_email: 'jin@jin.com',
 		user_id: 'L5sLemQAqHP6qOsbwerfdrFgJAe2',
 		admin: true
 	},
 	{
-		user_email: 'remy@ga.com',
-		user_id: 12345,
+		user_id: 'aNzwFUA2pLVyCsqC39Vya74xxXG3',
 		admin: true
 	},
 	{
-		user_email: 'stevano@ga.com',
 		user_id: 123456,
 		admin: true
 	},
 	{
-		user_email: 'micha@ga.com',
 		user_id: 321,
 		admin: false
 	},
 	{
-		user_email: 'jacy@ga.com',
 		user_id: 09000,
 		admin: false
 	}
 ];
 
-let orders = [
+/*let orders = [
 	{
 		order_num: 1,
 		total: 20,
@@ -89,7 +83,7 @@ let orders = [
 		user_id: 123,
 		order_date: Date()
 	}
-];
+];*/
 
 let order_details = [
 	{
@@ -141,5 +135,5 @@ let order_details = [
 
 dbConnection.models.Product.bulkCreate(products)
 	.then(() => dbConnection.models.User.bulkCreate(users))
-	.then(() => dbConnection.models.Order.bulkCreate(orders))
+	/*.then(() => dbConnection.models.Order.bulkCreate(orders))*/
 	.then(() => dbConnection.models.Order_detail.bulkCreate(order_details)).then(() => process.exit(0));
