@@ -1,4 +1,5 @@
 const index = require('../models/index');
+const Op = index.Sequelize.Op;
 
 let Blog = index.models.Blog;
 let Product = index.models.Product;
@@ -16,7 +17,7 @@ let getBlog = (request, response) => {
 
 let getProducts = (response) => {  
 
-	Product.findAll().then(results => response.json(results));
+	Product.findAll({where:{quantity: {[Op.gt]: 0} }}).then(results => response.json(results));
 };
 
 let getProduct = (request, response) => {
