@@ -8,9 +8,14 @@
         <hr class="line-name">
             <p class="product-info">{{product.description}}</p>
         <hr>
-            <h2 class="product-qty">QTY: {{product.quantity}}</h2>
+       
             <h2 class="product-price">$ {{product.price}}</h2>
-            <button id="add" (click)="addToCart(product.product_id, i, product.name, product.price, product.image_url)" mat-button>Add To Cart</button>
+
+            <div class="qty">
+                <input type="number" placeholder="1" id="productQty">
+                <label for="quantity">Qty</label>
+            </div>
+            <button id="add" (click)="addToCart(product.product_id, product.name, product.price, product.image_url)" mat-button>Add To Cart</button>
         </div>
         <div class="product-image">
             <img mat-card-md-image src ={{product.image_url}}>
