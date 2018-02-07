@@ -34,7 +34,7 @@ export class ProductNewComponent implements OnInit {
       
       this.productService.saveNewProduct(newProduct)
         .subscribe( response => {
-          console.log('Successfully saved new Product: ', response);
+          // console.log('Successfully saved new Product: ', response);
           this.saveSuccess = true;
 
           this.newProduct.name = "";
