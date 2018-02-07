@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
 const routes = require('./config/routes');
+const path = require('path');
 const bodyParser = require('body-parser');
 
-let PORT = process.env.PORT || 3000;
 
-// app.use(express.static(__dirname + '/dist'));
+
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(function(request, response, next){
@@ -24,6 +25,14 @@ if(!process.env.DYNO) {
 }
 
 app.use('/', routes);
+
+app.use(express.static(__dirname + '/dist'));
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+
+let PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function(){
 	console.log('Listening');

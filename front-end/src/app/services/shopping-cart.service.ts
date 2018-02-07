@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { isDevMode } from '@angular/core'
 
 @Injectable()
 export class ShoppingCartService {
 
-  baseUrl = 'http://localhost:3000';
+  baseUrl: string; 
 
-  constructor( private http: Http ) { }
+  constructor(private http: Http) { 
+  	if(isDevMode()) {
+  		this.baseUrl = 'http://localhost:3000';
+  	} else {
+  		this.baseUrl = '';
+  	}
+  }
 
   purchase(){
     console.log('hit purchase service');
