@@ -1,0 +1,63 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/index.html",
+        "/inline.5430a2318a9dc4802e78.bundle.js",
+        "/main.d7dbd771f7b0177b576e.bundle.js",
+        "/polyfills.f20484b2fa4642e0dca8.bundle.js",
+        "/styles.77e9d141bbbd24e7b23f.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/images/cart.svg",
+        "/assets/images/empty-cart.png",
+        "/assets/images/favicon-herb.ico",
+        "/assets/images/favicon.ico",
+        "/assets/images/group-photo.jpg",
+        "/assets/images/heart-icon.png",
+        "/assets/images/home-banner.png",
+        "/assets/images/jin.jpeg",
+        "/assets/images/milad.jpeg",
+        "/assets/images/remy.jpeg",
+        "/assets/images/stevano.jpeg",
+        "/assets/images/user-pic.jpg",
+        "/assets/images/user-profile.svg",
+        "/assets/images/zeb.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/inline.5430a2318a9dc4802e78.bundle.js": "24ccfcca0cfeb4360d70823714cd2abedd812cad",
+    "/assets/images/cart.svg": "d689b604827c951bc7f2d730b2ef567f81474596",
+    "/main.d7dbd771f7b0177b576e.bundle.js": "afdd19af4bf28fe6fbdf3070bc62b684533b306a",
+    "/assets/images/empty-cart.png": "004617f18124fe32acce98527d8b88348f4bc92b",
+    "/polyfills.f20484b2fa4642e0dca8.bundle.js": "0b0af365e031b7cbba789493d311e94192720c68",
+    "/assets/images/favicon-herb.ico": "3e6b4b1e4a3ea9ebdbc4ed5da993b035060e6fa1",
+    "/styles.77e9d141bbbd24e7b23f.bundle.css": "f0cc344d2bf312e7417fafcc177264d85608875e",
+    "/assets/images/favicon.ico": "9e38f9f379663aabace4ce84a601f3da935b9947",
+    "/index.html": "a962014a4a7850742ad80f7a23f1526b09f0b4bd",
+    "/assets/images/group-photo.jpg": "7bb99c6b2f25df597b30c537979ae6522f68ab9b",
+    "/assets/images/heart-icon.png": "ce385d217d9ca48d53049fb558adacf56f82ef6f",
+    "/assets/images/home-banner.png": "2e2a9eff1f3cfce9545fea41e086d419de672297",
+    "/assets/images/jin.jpeg": "afc7d463e83d15e1c36b492711bbf0be0d0b27de",
+    "/assets/images/milad.jpeg": "db6303609c494fcd26b72b48100464c964422cf1",
+    "/assets/images/remy.jpeg": "87884fd13f04f39ec5fa25eeb6f53238304ebb4d",
+    "/assets/images/stevano.jpeg": "82d0d8dc98f5cb72289abb1214668032190a771f",
+    "/assets/images/user-pic.jpg": "a6ab4000119172da910954e94d75380037a1ccec",
+    "/assets/images/user-profile.svg": "1dae5da96f6d4f311e97c02ba7889a7c3256c1a2",
+    "/assets/images/zeb.jpg": "926cdf7539602a1d947136a258399bd45513f46b"
+  }
+}

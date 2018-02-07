@@ -1,0 +1,180 @@
+.about-container {
+    height: 2000px;
+    width: 100%;
+
+    // border: 5px solid black;
+
+    .top-container {
+        // border: 5px solid lime;
+
+        height: 27%;
+        width: 100vw;
+        position: relative;
+
+
+        h1 {
+            width: 25%;
+            margin: 2rem auto;
+            text-align: center;
+            font-family: 'Dancing Script', sans-serif;
+            font-size: 3rem;
+
+            color: #417505;
+
+        }
+
+        #group-photo {
+            height: 70%;
+
+            width:100%;
+            background: url('/assets/images/group-photo.jpg');
+            background-size: cover;
+            background-position-y: 25%; 
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0;  
+        }      
+    }
+
+    .mission-container {
+        // border: 5px solid purple;
+
+        height: 20%;
+        width: 100vw;
+
+        h1 {
+            width: 25%;
+            margin: 2rem auto;
+            text-align: center;
+            font-family: 'Dancing Script', sans-serif;
+            font-size: 3rem;
+            color: #417505;
+        }
+
+        .mission-statment {
+            height: 55%;
+            width: 60%;
+            border: 5px solid black;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            padding: 1.5rem;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+
+    }
+
+    .team-container {
+        // border: 5px solid blue;
+
+        height: 50%;
+        width: 100vw;
+
+        position: relative;
+
+        .single-member {
+            height: 250px;
+            width: 250px;
+            // border: 1px solid purple;
+            position: absolute;
+            
+            ul {
+                list-style: none;
+                // border: 1px solid green;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                display: block;
+                height: 7.5rem;
+                margin-top: 1rem;
+                color: rgb(71, 71, 71);
+                line-height: 1.8rem;
+
+                .names {
+                    font-size: 1.3rem;
+                }
+                
+                li {
+                    text-align: center;
+
+                    
+                    a {
+                        text-decoration: none;
+                        color: rgb(71, 71, 71);
+                        &:visited {
+                            color: rgb(71, 71, 71);
+                        }
+                    }
+                }
+            }
+
+            #jin {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/jin.jpeg');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            #milad {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/milad.jpeg');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            #remy {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/remy.jpeg');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            #stevano {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/stevano.jpeg');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            #zeb {
+                height: 40%;
+                width: 40%;
+                border-radius: 50%;
+                background: url('/assets/images/zeb.jpg');
+                background-size: cover;
+                margin: 0 auto;
+            }
+            
+        }
+        .one {
+            top: 8%;
+            left: 20%;
+        }
+        .two {
+            top: 8%;
+            right: 20%;
+        }
+        .three {
+            top: 38%;
+            left: 20%;
+        }
+        .four {
+            top: 38%;
+            right: 20%;
+        }
+        .five {
+            top: 68%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        
+    }
+}
+
+

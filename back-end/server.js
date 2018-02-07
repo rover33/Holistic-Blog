@@ -1,14 +1,13 @@
-//Comment for testing 
 const express = require('express');
 const app = express();
 const routes = require('./config/routes');
 const path = require('path');
+const bodyParser = require('body-parser');
 
-require('dotenv').config();
+require('dotenv').config()
 
-let PORT = process.env.PORT || 3000;
-
-// app.use(express.static(__dirname + '/dist'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(function(request, response, next){
   console.log('Hit: ', Date());
 	next();
@@ -24,12 +23,20 @@ if(!process.env.DYNO) {
   });
 }
 
+
+
+app.use(express.static(__dirname + '/dist'));
+
 app.use('/', routes);
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
+});
+
+let PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function(){
 	console.log('Listening');
 });
 
- //CORS setup to allow other ports from this host
 
-  

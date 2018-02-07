@@ -3,6 +3,9 @@
 
 We are building a responsive full stack website in 1-week sprint timeline. The idea behind this is to accommodate potential user to read, post and comment on the blog along with having the ability to purchase the healthy product. At the same token, we are trying to encourage the user to live the holistic lifestyle. 
 
+
+[Heroku Link](https://holistic-blog.herokuapp.com/)
+
 ## Team Roles 
 
 * Jin Tak: Lead Front-End Developer
@@ -19,6 +22,11 @@ Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Firebase
 ```
 Sketch App | Google Doc | Invision | Keynote | Heroku 
 ```
+
+
+## Wireframe 
+
+<img width="978" alt="screen shot 2018-02-05 at 4 40 24 pm" src="https://user-images.githubusercontent.com/26607760/35834524-74448648-0a93-11e8-8498-2499d46f542b.png">
 
 
 ## Research
@@ -43,10 +51,6 @@ Sketch App | Google Doc | Invision | Keynote | Heroku
 * [ Stevano Lie ]( https://github.com/slie07 )
 * [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
 
-## Wireframe 
-
-<img width="978" alt="screen shot 2018-02-05 at 4 40 24 pm" src="https://user-images.githubusercontent.com/26607760/35834524-74448648-0a93-11e8-8498-2499d46f542b.png">
-
 
 ## User Flow
 
@@ -56,6 +60,17 @@ Sketch App | Google Doc | Invision | Keynote | Heroku
 ## Site Map
 
 <img width="624" alt="screen shot 2018-02-06 at 1 57 23 pm" src="https://user-images.githubusercontent.com/26607760/35883784-bb124422-0b45-11e8-99af-706742577cb4.png">
+
+
+## Flow
+### We will have the following:
+* Blogs
+* Product Page
+* Admin Page
+* Checkout Page 
+* About Us Page 
+
+
 
 ## Challenges
 
@@ -69,16 +84,6 @@ Sketch App | Google Doc | Invision | Keynote | Heroku
 * Posting more blogs 
 * Adding Comment(s) 
 * Adding Payment 
-
-
-
-## Flow
-### We will have the following:
-* Blogs
-* Product Page
-* Admin Page
-* Checkout Page 
-* About Us Page 
 
 
 

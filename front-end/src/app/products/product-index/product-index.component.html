@@ -1,0 +1,27 @@
+<div *ngIf="product" id="single-product-container">
+    <hr>  
+        <h1 class="product-page-title">Product</h1>
+    <hr>
+    <div id="flex-product">
+        <div class= "product-content">
+            <h2 class="product-name">{{product.name}}</h2>
+        <hr class="line-name">
+            <p class="product-info">{{product.description}}</p>
+        <hr>
+       
+            <h2 class="product-price">$ {{product.price}}</h2>
+
+            <div class="qty">
+                <input type="number" placeholder="1" id="productQty">
+                <label for="quantity">Qty</label>
+            </div>
+            <button id="add" (click)="addToCart(product.product_id, product.name, product.price, product.image_url)" mat-button>Add To Cart</button>
+        </div>
+        <div class="product-image">
+            <img mat-card-md-image src ={{product.image_url}}>
+        </div>
+    </div>
+</div>
+
+
+
