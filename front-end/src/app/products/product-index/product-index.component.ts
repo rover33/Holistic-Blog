@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductIndexComponent implements OnInit {
 
-  product;
+  product: {}
 
   constructor(
     private productsService : ProductService,
@@ -21,7 +21,7 @@ export class ProductIndexComponent implements OnInit {
     this.route.params.forEach( param => {
       this.productsService.getOneProduct(param.id)
       .subscribe(response => {
-        console.log(response.json());
+        // console.log(response.json());
           this.product = response.json();
       })
 
@@ -29,8 +29,8 @@ export class ProductIndexComponent implements OnInit {
   }
 
   //This function will check availability of the Product before adding to the cart
-  addToCart(productID, i, productName, productPrice, productImage){
-    let qty = Number((<HTMLInputElement>document.getElementById(`card-${i}`)).value);
+  addToCart(productID, productName, productPrice, productImage){
+    let qty = Number((<HTMLInputElement>document.getElementById(`productQty`)).value);
     
     // console.log(`You are trying to buy ${qty} items`)
     // console.log('product ID: ', productID);
