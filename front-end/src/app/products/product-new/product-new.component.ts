@@ -43,7 +43,7 @@ export class ProductNewComponent implements OnInit {
           this.newProduct.image_url = "";
           this.newProduct.quantity = "";
 
-          alert('save Successssss');
+          alert(`SUCCESS: Saved new product.`);
 
           this.router.navigateByUrl('/product/edit'); 
       })
