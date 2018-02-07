@@ -16,7 +16,7 @@ We are building a responsive full stack website in 1-week sprint timeline. The i
 
 ## Technologies and tools used
 ```
-Angular | MongoDB | Node JS | Express | PostgreSQL | SQL
+Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Firebase
 ```
 
 ```
