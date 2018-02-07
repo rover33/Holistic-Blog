@@ -9,7 +9,7 @@ export class ProductService {
 
   constructor(private http: Http) { 
   	if(isDevMode()) {
-  		this.baseUrl = 'http://localhost:3000';
+  		this.baseUrl = 'https://localhost:3000';
   	} else {
   		this.baseUrl = '';
   	}
