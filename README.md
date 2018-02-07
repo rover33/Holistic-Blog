@@ -43,15 +43,6 @@ Sketch App | Google Doc | Invision | Keynote | Heroku
 <img width="400" alt="screen shot 2018-02-06 at 11 23 02 am" src="https://user-images.githubusercontent.com/26607760/35876664-2d379f4a-0b30-11e8-971a-9d6f96e21896.png">
 
 
-
-## Credits / Git Hub Link
-* [ Jin Tak ]( https://github.com/JinTak )
-* [ Milad ]( https://github.com/milad-abujarada )
-* [ Remy Pearlstone ]( https://github.com/rover33 )
-* [ Stevano Lie ]( https://github.com/slie07 )
-* [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
-
-
 ## User Flow
 
 <img width="624" alt="screen shot 2018-02-06 at 12 14 29 pm" src="https://user-images.githubusercontent.com/26607760/35882981-09a5ef2e-0b43-11e8-8e65-66ff6be7f64f.png">
@@ -85,7 +76,12 @@ Sketch App | Google Doc | Invision | Keynote | Heroku
 * Adding Comment(s) 
 * Adding Payment 
 
-
+## Credits / Git Hub Link
+* [ Jin Tak ]( https://github.com/JinTak )
+* [ Milad ]( https://github.com/milad-abujarada )
+* [ Remy Pearlstone ]( https://github.com/rover33 )
+* [ Stevano Lie ]( https://github.com/slie07 )
+* [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
 
 ## License
 Open Source 
