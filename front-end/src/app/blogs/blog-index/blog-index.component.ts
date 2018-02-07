@@ -24,7 +24,7 @@ export class BlogIndexComponent implements OnInit {
       .subscribe( params => {
         this.blogService.getSingleBlog(params.get('id'))
           .subscribe(response => {
-            console.log(response.json());
+            // console.log(response.json());
             this.singleBlog = response.json();
           })
       });

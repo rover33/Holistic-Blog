@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('initiliazing blog/products ...');
+    // console.log('initiliazing blog/products ...');
     this.blogService.getAllBlogs()
       .subscribe( response => {
         // console.log(response);
@@ -87,8 +87,8 @@ export class HomeComponent implements OnInit {
         if(currentItems.length == 0){
           currentItems.push(newCartItem);
         } else {
-          console.log('CurrentITEMS LENGTH: ', currentItems.length);
-          console.log('NEW ITEM ID: ',newCartItem.productID);
+          // console.log('CurrentITEMS LENGTH: ', currentItems.length);
+          // console.log('NEW ITEM ID: ',newCartItem.productID);
 
           var exists = false;
           
