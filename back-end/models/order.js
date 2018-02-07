@@ -11,7 +11,7 @@ var Order = dbConnection.sequelize.define('order',{
 		allowNull: false
 	},
 	order_date: {
-		type: dbConnection.Sequelize.DATE,
+		type: dbConnection.Sequelize.STRING,
 		allowNull: false
 	}
 	},{
