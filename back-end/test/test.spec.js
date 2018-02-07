@@ -39,5 +39,22 @@ describe('checking if blog model works', function(){
        });
        
     });
+    var URL = 'https://holistic-blog.herokuapp.com';
+
+describe("heroku", function() {
+	var apiError,apiResponse,apiBody;
+	before(function(done) {
+		request(URL, function(error, response, body) {
+			apiError = error;
+			apiResponse = response;
+			apiBody = body;
+			done();
+		});
+	});
+	it("should return 200 - OK", function() {
+		expect(apiResponse.statusCode).to.eq(200);
+    });
+});
+
 
 })
