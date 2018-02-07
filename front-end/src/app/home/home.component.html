@@ -38,6 +38,10 @@
 
     <div class="product-card-container">
 
+        <div *ngIf="threeProducts.length == 0" class="empty-inventory">
+            <h1>We apoligize. All items are sold out. Check back soon!</h1>
+        </div>
+
         <div class= "product-parent-container">
    
             <mat-card id="custom-shadow" class="product-card"  *ngFor="let product of threeProducts; let i = index;">

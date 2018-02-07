@@ -106,6 +106,13 @@
         // border: 3px solid purple;
         padding: 15px;
 
+        .empty-inventory {
+            font-size: 1.5rem;
+            h1 {
+                padding: 1rem;
+            }
+        }
+
         .product-parent-container{
             width: 100%;
             height: 100%;
