@@ -8,7 +8,7 @@
       "updateMode": "prefetch",
       "urls": [
         "/index.html",
-<<<<<<< HEAD
+
         "/inline.9367da535e58a59b73e9.bundle.js",
         "/inline.bundle.js",
         "/main.bundle.js",
@@ -18,12 +18,7 @@
         "/styles.77e9d141bbbd24e7b23f.bundle.css",
         "/styles.bundle.js",
         "/vendor.bundle.js"
-=======
-        "/inline.5430a2318a9dc4802e78.bundle.js",
-        "/main.d7dbd771f7b0177b576e.bundle.js",
-        "/polyfills.f20484b2fa4642e0dca8.bundle.js",
-        "/styles.77e9d141bbbd24e7b23f.bundle.css"
->>>>>>> edf4574ff609823ad7d96369cc363a01ad8f255b
+
       ],
       "patterns": []
     },
@@ -52,7 +47,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-<<<<<<< HEAD
+
     "/inline.9367da535e58a59b73e9.bundle.js": "00a9aa6f1273e15e6d6fd03da7e87ab02bd78a8c",
     "/assets/images/cart.svg": "d689b604827c951bc7f2d730b2ef567f81474596",
     "/inline.bundle.js": "d9f5638a377514e905b6adb2a54a1dc0110f8e2f",
@@ -72,7 +67,7 @@
     "/vendor.bundle.js": "89962f937aef32105468cf1e2a13d0c20e45fc44",
     "/assets/images/milad.jpeg": "db6303609c494fcd26b72b48100464c964422cf1",
     "/index.html": "6b7ffb73454528e2af79b6036f9ab2f87e2f6530",
-=======
+
     "/inline.5430a2318a9dc4802e78.bundle.js": "24ccfcca0cfeb4360d70823714cd2abedd812cad",
     "/assets/images/cart.svg": "d689b604827c951bc7f2d730b2ef567f81474596",
     "/main.d7dbd771f7b0177b576e.bundle.js": "afdd19af4bf28fe6fbdf3070bc62b684533b306a",
@@ -87,7 +82,7 @@
     "/assets/images/home-banner.png": "2e2a9eff1f3cfce9545fea41e086d419de672297",
     "/assets/images/jin.jpeg": "afc7d463e83d15e1c36b492711bbf0be0d0b27de",
     "/assets/images/milad.jpeg": "db6303609c494fcd26b72b48100464c964422cf1",
->>>>>>> edf4574ff609823ad7d96369cc363a01ad8f255b
+
     "/assets/images/remy.jpeg": "87884fd13f04f39ec5fa25eeb6f53238304ebb4d",
     "/assets/images/stevano.jpeg": "82d0d8dc98f5cb72289abb1214668032190a771f",
     "/assets/images/user-pic.jpg": "a6ab4000119172da910954e94d75380037a1ccec",
