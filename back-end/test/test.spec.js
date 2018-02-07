@@ -27,4 +27,16 @@ describe('checking if blog model works', function(){
             expect(blog.blogBody).to.equal("has a body")
         });
     })
+
+    describe('Home Page', function() {
+        it('Home page status', function(done) {
+          request('http://localhost:4200' , function(error, response, body) {
+              expect(response.statusCode).to.equal(200);
+              console.log('You are home');
+              done();
+          });
+       });
+       
+    });
+
 })
