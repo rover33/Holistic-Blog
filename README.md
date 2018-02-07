@@ -16,17 +16,13 @@ We are building a responsive full stack website in 1-week sprint timeline. The i
 
 ## Technologies and tools used
 ```
-Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Firebase
+
+Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Heroku | Firebase 
+
+
 ```
-
+Sketch App | Google Doc | Invision | Keynote 
 ```
-Sketch App | Google Doc | Invision 
-```
-
-
-## Wireframe 
-
-<img width="978" alt="screen shot 2018-02-05 at 4 40 24 pm" src="https://user-images.githubusercontent.com/26607760/35834524-74448648-0a93-11e8-8498-2499d46f542b.png">
 
 
 ## Research
@@ -51,6 +47,10 @@ Sketch App | Google Doc | Invision
 * [ Stevano Lie ]( https://github.com/slie07 )
 * [ Trello Board ]( https://trello.com/b/EhRojwgo/project-3 )
 
+## Wireframe 
+
+<img width="978" alt="screen shot 2018-02-05 at 4 40 24 pm" src="https://user-images.githubusercontent.com/26607760/35834524-74448648-0a93-11e8-8498-2499d46f542b.png">
+
 
 ## User Flow
 
@@ -60,6 +60,20 @@ Sketch App | Google Doc | Invision
 ## Site Map
 
 <img width="624" alt="screen shot 2018-02-06 at 1 57 23 pm" src="https://user-images.githubusercontent.com/26607760/35883784-bb124422-0b45-11e8-99af-706742577cb4.png">
+
+## Challenges
+
+* Heroku 
+* Sequalize relationship
+* Firebase issue passing the user ID to SQL
+* Component oraganization and selection with Angular framework
+
+## Strech Goal
+* More media Query
+* Posting more blogs 
+* Adding Comment(s) 
+* Adding Payment 
+
 
 
 ## Flow
