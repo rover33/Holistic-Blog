@@ -20,7 +20,7 @@ Angular | MongoDB | Node JS | Express | PostgreSQL | SQL | Firebase
 ```
 
 ```
-Sketch App | Google Doc | Invision 
+Sketch App | Google Doc | Invision | Keynote | Heroku 
 ```
 
 
@@ -69,6 +69,21 @@ Sketch App | Google Doc | Invision
 * Admin Page
 * Checkout Page 
 * About Us Page 
+
+
+
+## Challenges
+
+* Heroku 
+* Sequalize relationship
+* Firebase issue passing the user ID to SQL
+* Component oraganization and selection with Angular framework
+
+## Strech Goal
+* More media Query
+* Posting more blogs 
+* Adding Comment(s) 
+* Adding Payment 
 
 
 
