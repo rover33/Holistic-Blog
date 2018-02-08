@@ -158,5 +158,55 @@ flash-messages {
 
 
 
-    
 
+
+@media only screen and (max-width: 700px)  {
+
+    .main-content-container {
+
+        h1 {
+            width: 275px;
+        }
+        .login-cart-container {
+            width: 100%;
+            top: 43%;
+     
+        }
+     
+        .main-links-container {
+            width: 85%;
+            button {
+                font-size: 25px;
+                margin: 0;
+                
+            }
+        }
+     
+        
+
+    }
+
+    .jumbotron {
+        height: 8.5rem;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    
+        p {
+            width: 100%;
+            font-size: 1rem;
+        }
+    
+        .admin-container {
+            width: 100%;
+            button {
+                height: 100%;
+            }
+        }
+        
+    }
+ 
+ 
+ }
