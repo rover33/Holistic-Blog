@@ -34,7 +34,7 @@ export class AuthService {
     )
   } 
 
-
+  //login function to sign up with email and password.
   login(email: string, password: string) {
     return new Promise((resolve, reject) =>{
       this.afAuth.auth.signInWithEmailAndPassword(email, password)
@@ -42,7 +42,7 @@ export class AuthService {
       err => reject(err))
     });
   }
-
+  //register function to create a new user..
   register(email: string, password: string) {
     return new Promise((resolve, reject) =>{
       this.afAuth.auth.createUserWithEmailAndPassword(email, password)
@@ -57,6 +57,7 @@ getAuth() {
 
 
   logout() {
+    //logout function
     this.afAuth.auth.signOut();
   }
 
