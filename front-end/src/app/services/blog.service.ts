@@ -16,11 +16,13 @@ export class BlogService {
   	}
   }
 
+  // Function that get all blogs from backend
   getAllBlogs() {
     // console.log('hit getallblog function');
 		return this.http.get(`${this.baseUrl}/api/blogs`);
 	}
 
+  // Function to get single blog from back end
   getSingleBlog(blogId){
     return this.http.get(`${this.baseUrl}/api/blog/${blogId}`);
   }

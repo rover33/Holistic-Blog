@@ -11,6 +11,7 @@ import { QueryValueType } from '@angular/compiler/src/core';
 })
 export class HomeComponent implements OnInit {
 
+  // VAriables to hold json data passed from backend api call
   threeBlogs = [];
   threeProducts = [];
 
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // console.log('initiliazing blog/products ...');
+    // Getting all blogs from backend api call
     this.blogService.getAllBlogs()
       .subscribe( response => {
         // console.log(response);
@@ -30,6 +32,7 @@ export class HomeComponent implements OnInit {
         let blogs = response.json().splice(0, 3);
         for(let i = 0; i < blogs.length; i++){
           // console.log(blogs[i].blogBody);
+          // We only wan the first 150 characters to populate the preview card
           blogs[i].blogBody = blogs[i].blogBody.slice(0,150).concat('...');
         }
         this.threeBlogs = blogs;
@@ -41,6 +44,7 @@ export class HomeComponent implements OnInit {
         let products = response.json().splice(0, 3);
         for(let i = 0; i < products.length; i++){
           // console.log(products[i].blogBody);
+          // We only wan the first 150 characters to populate the preview card
           products[i].description = products[i].description.slice(0,100).concat('...');
         }
         this.threeProducts = products;
@@ -59,8 +63,11 @@ export class HomeComponent implements OnInit {
       qty = 1;
     }
     
+
+    // CAlling service to addToCart
     this.productService.addToCart(productID, qty)
-    .subscribe( response => {
+    .subscribe( response => { // The response we get is the quantity of the item in the backend
+
       // console.log(response.json());
       let availableQty = response.json().quantity;
       // console.log(availableQty);
@@ -84,6 +91,7 @@ export class HomeComponent implements OnInit {
           currentItems = [];
         } 
 
+        // Adding item to local storage
         if(currentItems.length == 0){
           currentItems.push(newCartItem);
         } else {
@@ -107,6 +115,8 @@ export class HomeComponent implements OnInit {
           }
 
         }
+
+        // Storing to local storage
         localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
 
         alert(`Successfully added Product: ${newCartItem.productName} Qty: ${newCartItem.quantity} to cart`);

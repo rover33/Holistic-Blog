@@ -8,6 +8,7 @@ import { ProductService } from '../../services/product.service'
 })
 export class ProductAllComponent implements OnInit {
 
+  // Variable to hold all products from back end call
   allProducts = []
 
   constructor(
@@ -16,10 +17,12 @@ export class ProductAllComponent implements OnInit {
 
   ngOnInit() {
 
+    // Function to get all products from backend 
     this.productService.getAllProducts()
       .subscribe (response => {
         console.log("Successfully retreived Products WOO! : ", response.json());
 
+        // Setting all products to products variable
         let products = response.json();
         for(let i = 0; i < products.length; i++){
           // console.log(products[i].blogBody);
@@ -42,13 +45,15 @@ export class ProductAllComponent implements OnInit {
       qty = 1;
     }
 
-
+    // Function that calls the addtocart function from productService
     this.productService.addToCart(productID, qty)
       .subscribe( response => {
         // console.log(response.json());
         let availableQty = response.json().quantity;
         // console.log(availableQty);
 
+
+        // Checking quantity from backend.
         if(qty > availableQty){
           alert(`Sorry, there are only ${availableQty} items left in our inventory.`);
         } else {
@@ -93,7 +98,7 @@ export class ProductAllComponent implements OnInit {
           }
 
          
-
+          // setting cart in local storage
           localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
 
           alert(`Successfully added Product: ${newCartItem.productName} Qty: ${newCartItem.quantity} to cart`);

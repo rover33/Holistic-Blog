@@ -15,6 +15,7 @@ export class ShoppingCartService {
   	}
   }
 
+// Function add items to cart /localstorage
   purchase(){
     console.log('hit purchase service');
     let shoppingList = [];

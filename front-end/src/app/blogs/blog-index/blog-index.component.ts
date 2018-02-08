@@ -22,6 +22,7 @@ export class BlogIndexComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap
       .subscribe( params => {
+        // This function will retrieve a single blog using the blogService. 
         this.blogService.getSingleBlog(params.get('id'))
           .subscribe(response => {
             // console.log(response.json());
@@ -30,6 +31,7 @@ export class BlogIndexComponent implements OnInit {
       });
   }
 
+  // This function allows the user to go back to the page they were previously on without refreshing the page
   backClicked() {
     this._location.back();
   }

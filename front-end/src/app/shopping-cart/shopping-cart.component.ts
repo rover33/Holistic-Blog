@@ -8,6 +8,7 @@ import { ShoppingCartService } from '../services/shopping-cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
+  // VAriables to hold cart items and total
   currentCart : object
   grandTotal : number = 0
 
@@ -17,6 +18,7 @@ export class ShoppingCartComponent implements OnInit {
 
   ngOnInit() {
     
+    // getting all items from local storage cart
     let cart = JSON.parse(localStorage.getItem('shoppingCart'));
     // Adding total amount per item to cart
     if(cart){
@@ -36,14 +38,17 @@ export class ShoppingCartComponent implements OnInit {
 
   }
 
+  // Function to empty the cart/ localStorage
   emptyCart(){
     localStorage.clear();
     this.currentCart = JSON.parse(localStorage.getItem('shoppingCart'))
   }
 
+  // Function to send request to backend
   purchase(){
     // console.log('Purchasing...');
 
+    // Calling service to purchase itmes
     this.shoppingCartService.purchase()
       .subscribe( response => {
 
