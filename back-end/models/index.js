@@ -7,7 +7,8 @@ mongoose.connect(process.env.MONGODB_URI||
                  process.env.MONGOHQ_URL ||
                  'mongodb://localhost/holisticBlog', () => console.log('connected to mongodb'));
 
-let user = os.userInfo().username, sequelize;;
+let user = os.userInfo().username, sequelize;
+console.log(">>>>>>>>>>>> please note if you are trying to run this on your local machine you need to establish you postgreSQL database and add connections to it in /backend/models/index.js>>>>>>>>>");
 if(user === 'miladabujarada') {
 	sequelize = new Sequelize('postgres://miladabujarada@localhost:5432/holistic');
 } else if (user === 'jintak') {
