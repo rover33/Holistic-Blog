@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+
+    //checking if the person is logged in and authorized
     this.authService.getAuth().subscribe(auth =>{
       if(auth){
         // console.log('auth')
@@ -36,6 +38,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
+    //Checks email and password to login successfully
     this.authService.login(this.email, this.password)
       .then(res => {
         this.flashMessage.show('You are now logged in', {
@@ -60,6 +63,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/'])
       })
       .catch(err => {
+        //flashes error if user does not exist or wrong credentials.
         this.flashMessage.show(err.message, {
           timeout: 4000
       })

@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    //checking if the person is logged in and authorized
     this.authService.getAuth().subscribe(auth =>{
       if(auth){
         this.router.navigate(['/']);
@@ -29,6 +30,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
+     //Checks email and password to register successfully
     this.authService.register(this.email, this.password)
       .then(res => {
         console.log(this.flashMessage.show)
@@ -39,6 +41,7 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/'])
       })
       .catch(err => {
+        //flashes error if user already exists or does not meet critera.
         console.log(this.flashMessage.show)
         this.flashMessage.show(err.message,{
           timeout: 4000
