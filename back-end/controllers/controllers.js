@@ -6,25 +6,25 @@ let Product = index.models.Product;
 let Order = index.models.Order;
 let Order_detail = index.models.Order_detail;
 
-let getBlogs = (response) => {
+let getBlogs = (response) => { // this return back all the blogs //
 	Blog.find({}, null, {sort:{date: -1}}, (err, results) => {
 		response.json(results)});
 };
 
-let getBlog = (request, response) => {
+let getBlog = (request, response) => { // this return the single blog //
 	Blog.findOne({_id: request.params.id}).then((result) => response.json(result));
 };
 
-let getProducts = (response) => {  
+let getProducts = (response) => {  // this return all the product //
 
 	Product.findAll({where:{quantity: {[Op.gt]: 0} }}).then(results => response.json(results));
 };
 
-let getProduct = (request, response) => {
+let getProduct = (request, response) => { // this return the single product //
 	Product.findOne({where: {product_id: request.params.id}}).then((result) => response.json(result));
 };
 
-let addProduct = (request, response) => {
+let addProduct = (request, response) => { // this add a product // 
 	Product.create({
 		name: request.body.name,
 		description: request.body.description,
@@ -34,7 +34,7 @@ let addProduct = (request, response) => {
 	}, {plain: true}).then((newProduct) => response.json(newProduct));	
 };
 
-let putProduct = (request, response) => {
+let putProduct = (request, response) => { // this edit the product //
 	Product.update({
 		name: request.body.name,
 		description: request.body.description,
@@ -48,12 +48,12 @@ let putProduct = (request, response) => {
 	}).then((updatedProduct) => response.json(updatedProduct));
 };
 
-let deleteProduct = (request, response) => {
+let deleteProduct = (request, response) => { // this delete the product  // 
 	Product.destroy({where: {product_id: request.params.id}})
 	.then((numberOfDeletedProducts) => response.json(numberOfDeletedProducts));
 };
 
-let checkQuantity = (request, response) => {
+let checkQuantity = (request, response) => { // this check if a user requesting if the product more than the inventory //
 	index.sequelize.query(`SELECT * FROM products WHERE product_id ='${request.query.id}'`)
 		.then((result) => {
 			console.log(result[0][0]);
@@ -65,7 +65,7 @@ let checkQuantity = (request, response) => {
 		});
 };
 
-let placeOrder = (request, response) => {
+let placeOrder = (request, response) => { // placing an order from the shopping cart //
 	let userId;
 	if (request.body[1].length) {
 		/*console.log("there is user id", request.body[1]);

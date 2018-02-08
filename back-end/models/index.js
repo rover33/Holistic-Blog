@@ -31,7 +31,7 @@ const Blog = require('./blog');
 const User = require('./user');
 const Order = require('./order');
 const Order_detail = require('./order_detail');
-
+// using relation from sequalize // 
 User.hasMany(Order, {foreignKey: 'user_id'});
 Product.hasMany(Order_detail, {foreignKey: 'product_id'});
 Order.hasMany(Order_detail, {foreignKey: 'order_num'});
