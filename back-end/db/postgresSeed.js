@@ -1,33 +1,48 @@
 let dbConnection = require('../models/index');
 
 let products = [
+	
 	{
-		name: 'Lemongrass Extract',
-		description: 'The essential oil of lemongrass is used as aromatherapy for muscle pain' ,
-		price: 6.99,
-		image_url: 'https://images-na.ssl-images-amazon.com/images/I/710bw7i0W7L._SY355_.jpg',
-		quantity: 10
+		name: 'N-acetyl-L-cysteine',
+		description: 'A highly bioavailable nutrient that supports bronchial and respiratory health. N-acetyl-L-cysteine supports healthy glutathione levels at the cellular level. Glutathione is a potent antioxidant which helps protect neurons from oxidative stress. ',
+		price: 15.29,
+		image_url: 'https://i.imgur.com/pgvT79K.jpg',
+		quantity: 1200
 	},
 	{
-		name: 'Organic Rainbow Hair Dye',
-		description: 'Organic rainbow hair dye made from unicorn droppings. Good for hair, skin, and can also be used as toothpaste.',
-		price: 599.99,
-		image_url: 'https://www.mens-hairstyle.com/wp-content/uploads/2014/12/Just-for-Men-Hair-Color.jpg',
-		quantity: 11
+		name:'Chinese Licorice Liquid Extract',
+		description: 'Chinese Licorice (Glycyrrhiza Uralensis) Root Tincture - Licorice is a common herb which has been used in traditional Chinese medicine for centuries. More than 20 triterpenoids and nearly 300 flavonoids have been isolated from licorice.',
+		price:31.50,
+		image_url:'https://i.imgur.com/cp6HuKv.jpg' ,
+		quantity: 1500
 	},
 	{
-		name: 'Vitamin C',
-		description: 'Vitamin C, also known as ascorbic acid and L-ascorbic acid, is a vitamin found in food and used as a dietary supplement. The disease scurvy is prevented and treated with vitamin C-containing foods or dietary supplements',
-		price: 5.29,
-		image_url: 'https://www.epharmacy.com.au/images/productimages/65054/original.jpg?28%2F08%2F2017+10%3A29%3A48+AM',
-		quantity: 12
+		name: 'DHEA',
+		description: 'DHEA is the body’s most abundant circulating hormone, but as we age DHEA levels begin to decline. Supplementing for healthy DHEA levels can help support immune function, circulatory health, mood and well-being, healthy body weight and lean muscle mass.',
+		price: 18.29,
+		image_url: 'https://i.imgur.com/adQEt39.jpg',
+		quantity: 1300
 	},
 	{
-		name: 'Aloe Vera Extract',
-		description: 'Because of its anti-inflammatory and laxative components, another aloe vera benefit is its ability to help with digestion',
-		price: 8.29,
-		image_url: 'https://www.terrylabs.com/images/layout/aloe-vera-concentrate.jpg',
-		quantity: 13
+		name:'Two-Per-Day',
+		description: 'Two Per Day multivitamins have the highest nutritional potencies of any science-based multivitamin formula that can fit inside two capsules or tablets. This gives you far more of the essential vitamins, minerals and health-promoting nutrients.',
+		price:15.75,
+		image_url: 'https://i.imgur.com/O9Z03VE.jpg',
+		quantity: 1500
+	},
+	{
+		name: 'R lipoic Acid',
+		description: 'Potent antioxidant that achieves healthy plasma levels already within normal range, Helps protect against oxidative stress, supports healthy mitochondrial function, preserves youthful cellular energy, Potent Antioxidant that Achieves Peak Plasma Levels' ,
+		price: 16.99,
+		image_url: 'https://i.imgur.com/IxA8jIH.jpg',
+		quantity: 1000
+	},
+	{
+		name: 'Glutathione',
+		description: 'A peptide molecule synthesized in the body from the three amino acids L-glutamic acid, L-cysteine and glycine. Glutathione is one of the body’s most important and powerful antioxidants,8 helping to detoxify xenobiotics.',
+		price: 20.99,
+		image_url: 'https://i.imgur.com/HChsXx3.jpg',
+		quantity: 1100
 	}
 ];
 
