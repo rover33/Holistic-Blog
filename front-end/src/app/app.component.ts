@@ -27,6 +27,7 @@ export class AppComponent {
 
   ngOnInit(){
 
+    // Checking for authorization
     this.authService.getAuth().subscribe(auth =>{
       if(auth) {
         this.isLoggedIn = true;
@@ -53,6 +54,7 @@ export class AppComponent {
     })
   }
 
+  // Function to logout
     onLogoutClick(){
       this.authService.logout();
       this.flashMessage.show("You are now logged out", {
@@ -63,6 +65,7 @@ export class AppComponent {
       this.router.navigate(['/'])
     }
 
+    // Shows or hides the Holistic Banner 
     showBanner(){
       let showBanner : boolean = true;
 

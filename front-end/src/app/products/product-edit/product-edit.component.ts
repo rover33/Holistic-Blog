@@ -11,11 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductEditComponent implements OnInit {
 
+  // Variables to save products retrieved from back end.
   products = []
-
   productToEdit : object
-
-
 
   constructor(
     private productService : ProductService,
@@ -23,6 +21,8 @@ export class ProductEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    // CAlling service to get all products from back end
     this.productService.getAllProducts()
       .subscribe (response => {
         
@@ -33,11 +33,13 @@ export class ProductEditComponent implements OnInit {
   }
 
   ////////////////////////////////////
+  // set flag to make product editable
   makeProductEditable(product){
     this.productToEdit = product;
   }
 
   ////////////////////////////////////
+  // After editing , save product to database
   doneEditing(productToEdit){
 
     this.productService.saveEditedProduct(productToEdit.product_id, productToEdit)
@@ -49,6 +51,7 @@ export class ProductEditComponent implements OnInit {
   }
 
   ////////////////////////////////////
+  // Delete product by ID
   deleteproduct(productId){
     // console.log(productId);
 

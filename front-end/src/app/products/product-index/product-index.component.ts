@@ -18,6 +18,8 @@ export class ProductIndexComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    // Grabbing the parameter from the URL to pass to the backend.
     this.route.params.forEach( param => {
       this.productsService.getOneProduct(param.id)
       .subscribe(response => {
@@ -40,12 +42,14 @@ export class ProductIndexComponent implements OnInit {
     }
 
 
+    // CAlling service to add to Cart to the backend
     this.productsService.addToCart(productID, qty)
       .subscribe( response => {
         // console.log(response.json());
         let availableQty = response.json().quantity;
         // console.log(availableQty);
 
+        // Checking if use is able to buy number of items
         if(qty > availableQty){
           alert(`Sorry, there are only ${availableQty} items left in our inventory.`);
         } else {
@@ -65,6 +69,7 @@ export class ProductIndexComponent implements OnInit {
             currentItems = [];
           } 
 
+          
           if(currentItems.length == 0){
             currentItems.push(newCartItem);
           } else {
@@ -90,7 +95,7 @@ export class ProductIndexComponent implements OnInit {
           }
 
          
-
+          // adding all items to local storage
           localStorage.setItem('shoppingCart', JSON.stringify(currentItems));
 
           alert(`Successfully added Product: ${newCartItem.productName} Qty: ${newCartItem.quantity} to cart`);

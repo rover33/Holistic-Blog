@@ -9,6 +9,7 @@ import { ProductService } from './../../services/product.service';
 })
 export class ProductNewComponent implements OnInit {
 
+  
   newProduct = <any>{}
 
   saveSuccess: boolean = false
@@ -24,6 +25,7 @@ export class ProductNewComponent implements OnInit {
 
   }
 
+  // Function to save a new product to the product table in the back end
   saveNewProduct(newProduct) {
     if(!newProduct.name || !newProduct.description || !newProduct.price || !newProduct.quantity ){
       // alert('Please fill out form');
@@ -32,6 +34,7 @@ export class ProductNewComponent implements OnInit {
       this.requireFields = false;
 
       
+      // Calling service to save a new product to product database
       this.productService.saveNewProduct(newProduct)
         .subscribe( response => {
           // console.log('Successfully saved new Product: ', response);
