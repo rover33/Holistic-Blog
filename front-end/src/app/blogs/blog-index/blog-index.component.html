@@ -2,7 +2,7 @@
 
 
 <mat-card id="single-blog-container">
-  <button id="back-btn" mat-button (click)="backClicked()">Back</button>
+  <!-- <button id="back-btn" mat-button (click)="backClicked()">Back</button> -->
   
   <div class="blog-header">
     <h1 class="blog-title">{{singleBlog.blogTitle}}</h1>
@@ -10,7 +10,7 @@
       <div class="user-avatar">
         <img src="../assets/images/user-profile.svg" alt="user">
       </div>
-      <p class="blog-date">{{singleBlog.date}} By Bobby Boucher</p>
+      <p class="blog-date">{{singleBlog.date}} - {{singleBlog.author}}</p>
     </div>
   </div>
 
@@ -19,6 +19,11 @@
       {{singleBlog.blogBody}}
     </p>
   </div>
+
+  <!-- <div class="back-btn-container"> -->
+    <button id="back-btn" mat-button (click)="backClicked()">Back</button>
+  <!-- </div> -->
+  
 
   <!-- <div class="blog-comments">
     <h1>COMMENTS</h1>
